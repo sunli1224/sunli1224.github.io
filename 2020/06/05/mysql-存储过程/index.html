@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="mysql," />
 
 
 
@@ -79,11 +79,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="bblike博客小站">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="mysql存储过程存储过程和函数：类似于java中的方法好处：1、提高代码的复用性2、简化操作 存储过程含义：一组预先编译好的SQL语句的集合，理解为批处理语句 1、提高代码的复用性2、简化操作3、减少编译次数并且减少和数据库服务器的连接次数，提高效率 创建语法1234567create procedure 存储过程名（参数列表）begin      存储过程体（一组合法的sql语句）end  注">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql--存储过程">
+<meta property="og:url" content="http://yoursite.com/2020/06/05/mysql-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/index.html">
 <meta property="og:site_name" content="bblike博客小站">
+<meta property="og:description" content="mysql存储过程存储过程和函数：类似于java中的方法好处：1、提高代码的复用性2、简化操作 存储过程含义：一组预先编译好的SQL语句的集合，理解为批处理语句 1、提高代码的复用性2、简化操作3、减少编译次数并且减少和数据库服务器的连接次数，提高效率 创建语法1234567create procedure 存储过程名（参数列表）begin      存储过程体（一组合法的sql语句）end  注">
+<meta property="article:published_time" content="2020-06-05T07:05:11.000Z">
+<meta property="article:modified_time" content="2020-06-05T17:26:52.333Z">
 <meta property="article:author" content="sunli">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
 
 
@@ -114,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/05/mysql-存储过程/"/>
 
 
 
 
 
-  <title>bblike博客小站</title>
+  <title>mysql--存储过程 | bblike博客小站</title>
   
 
 
@@ -139,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -233,9 +237,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -265,9 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/05/mysql-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/" itemprop="url">mysql--存储过程</a></h1>
+          <h1 class="post-title" itemprop="name headline">mysql--存储过程</h1>
         
 
         <div class="post-meta">
@@ -317,9 +319,7 @@
       
 
       
-        
-          
-            <h1 id="mysql存储过程"><a href="#mysql存储过程" class="headerlink" title="mysql存储过程"></a>mysql存储过程</h1><p>存储过程和函数：类似于java中的方法<br>好处：<br>1、提高代码的复用性<br>2、简化操作</p>
+        <h1 id="mysql存储过程"><a href="#mysql存储过程" class="headerlink" title="mysql存储过程"></a>mysql存储过程</h1><p>存储过程和函数：类似于java中的方法<br>好处：<br>1、提高代码的复用性<br>2、简化操作</p>
 <h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><p>含义：一组预先编译好的SQL语句的集合，理解为批处理语句</p>
 <p>1、提高代码的复用性<br>2、简化操作<br>3、减少编译次数并且减少和数据库服务器的连接次数，提高效率</p>
 <h2 id="创建语法"><a href="#创建语法" class="headerlink" title="创建语法"></a>创建语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">create procedure 存储过程名（参数列表）</span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">      存储过程体（一组合法的sql语句）</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
@@ -368,8 +368,6 @@
 
 
 
-          
-        
       
     </div>
     
@@ -384,252 +382,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/03/mysql-%E7%B4%A2%E5%BC%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="sunli">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="bblike博客小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/03/mysql-%E7%B4%A2%E5%BC%95/" itemprop="url">mysql--索引</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-03T03:33:20+08:00">
-                2020-06-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="sunli">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="bblike博客小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/" itemprop="url">java基础之接口</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+              <a href="/2020/06/03/mysql-%E7%B4%A2%E5%BC%95/" rel="next" title="mysql--索引">
+                <i class="fa fa-chevron-left"></i> mysql--索引
+              </a>
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-03T01:46:58+08:00">
-                2020-06-03
-              </time>
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -639,149 +421,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/%E5%9F%BA%E4%BA%8Edocker-compose-%E6%90%AD%E5%BB%BAmysql/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="sunli">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="bblike博客小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/27/%E5%9F%BA%E4%BA%8Edocker-compose-%E6%90%AD%E5%BB%BAmysql/" itemprop="url">基于docker-compose 安装mysql</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-27T00:03:02+08:00">
-                2020-05-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="docker-compose-安装mysql"><a href="#docker-compose-安装mysql" class="headerlink" title="docker-compose 安装mysql"></a>docker-compose 安装mysql</h1><p>  首先，必须要安装docker，以及docker-compose。</p>
-<h2 id="1、在Linux环境下创建需要的文件夹"><a href="#1、在Linux环境下创建需要的文件夹" class="headerlink" title="1、在Linux环境下创建需要的文件夹"></a>1、在Linux环境下创建需要的文件夹</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;local&#x2F;etc&#x2F;  #进入该目录下</span><br><span class="line">mkdir -p &#x2F;mysql&#x2F;data  #数据存储目录</span><br><span class="line">mkdir -p &#x2F;mysql&#x2F;conf  #配置目录</span><br></pre></td></tr></table></figure>
-
-<h2 id="2、将mysql配置文件放到conf目录下"><a href="#2、将mysql配置文件放到conf目录下" class="headerlink" title="2、将mysql配置文件放到conf目录下"></a>2、将mysql配置文件放到conf目录下</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;local&#x2F;etc&#x2F;mysql&#x2F;conf #进入到该目录下</span><br><span class="line">vi my.cnf                   #编写自定义的mysql配置文件</span><br></pre></td></tr></table></figure>
-<p>将mysql配置内容复制到该文件中</p>
-<p> 以下是mysql的配置文件内容</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"> #</span><br><span class="line"># The MySQL database server configuration file.</span><br><span class="line">#</span><br><span class="line"># You can copy this to one of:</span><br><span class="line"># - &quot;&#x2F;etc&#x2F;mysql&#x2F;my.cnf&quot; to set global options,</span><br><span class="line"># - &quot;~&#x2F;.my.cnf&quot; to set user-specific options.</span><br><span class="line">#</span><br><span class="line"># One can use all long options that the program supports.</span><br><span class="line"># Run program with --help to get a list of available options and with</span><br><span class="line"># --print-defaults to see which it would actually understand and use.</span><br><span class="line">#</span><br><span class="line"># For explanations see</span><br><span class="line"># http:&#x2F;&#x2F;dev.mysql.com&#x2F;doc&#x2F;mysql&#x2F;en&#x2F;server-system-variables.html</span><br><span class="line"></span><br><span class="line"># This will be passed to all mysql clients</span><br><span class="line"># It has been reported that passwords should be enclosed with ticks&#x2F;quotes</span><br><span class="line"># escpecially if they contain &quot;#&quot; chars...</span><br><span class="line"># Remember to edit &#x2F;etc&#x2F;mysql&#x2F;debian.cnf when changing the socket location.</span><br><span class="line"></span><br><span class="line"># Here is entries for some specific programs</span><br><span class="line"># The following values assume you have at least 32M ram</span><br><span class="line"></span><br><span class="line">[mysqld_safe]</span><br><span class="line">socket		&#x3D; &#x2F;var&#x2F;run&#x2F;mysqld&#x2F;mysqld.sock</span><br><span class="line">nice		&#x3D; 0</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line">#</span><br><span class="line"># * Basic Settings</span><br><span class="line">#</span><br><span class="line">user		&#x3D; mysql</span><br><span class="line">pid-file	&#x3D; &#x2F;var&#x2F;run&#x2F;mysqld&#x2F;mysqld.pid</span><br><span class="line">socket		&#x3D; &#x2F;var&#x2F;run&#x2F;mysqld&#x2F;mysqld.sock</span><br><span class="line">port		&#x3D; 3306</span><br><span class="line">basedir		&#x3D; &#x2F;usr</span><br><span class="line">datadir		&#x3D; &#x2F;var&#x2F;lib&#x2F;mysql</span><br><span class="line">tmpdir		&#x3D; &#x2F;tmp</span><br><span class="line">lc-messages-dir	&#x3D; &#x2F;usr&#x2F;share&#x2F;mysql</span><br><span class="line">skip-external-locking</span><br><span class="line">#</span><br><span class="line"># Instead of skip-networking the default is now to listen only on</span><br><span class="line"># localhost which is more compatible and is not less secure.</span><br><span class="line">bind-address		&#x3D; 0.0.0.0</span><br><span class="line">#</span><br><span class="line"># * Fine Tuning</span><br><span class="line">#</span><br><span class="line">key_buffer_size		&#x3D; 16M</span><br><span class="line">max_allowed_packet	&#x3D; 16M</span><br><span class="line">thread_stack		&#x3D; 192K</span><br><span class="line">thread_cache_size       &#x3D; 8</span><br><span class="line"># This replaces the startup script and checks MyISAM tables if needed</span><br><span class="line"># the first time they are touched</span><br><span class="line">myisam-recover-options  &#x3D; BACKUP</span><br><span class="line">#max_connections        &#x3D; 100</span><br><span class="line">#table_cache            &#x3D; 64</span><br><span class="line">#thread_concurrency     &#x3D; 10</span><br><span class="line">#</span><br><span class="line"># * Query Cache Configuration</span><br><span class="line">#</span><br><span class="line">query_cache_limit	&#x3D; 1M</span><br><span class="line">query_cache_size        &#x3D; 16M</span><br><span class="line">#</span><br><span class="line"># * Logging and Replication</span><br><span class="line">#</span><br><span class="line"># Both location gets rotated by the cronjob.</span><br><span class="line"># Be aware that this log type is a performance killer.</span><br><span class="line"># As of 5.1 you can enable the log at runtime!</span><br><span class="line">#general_log_file        &#x3D; &#x2F;var&#x2F;log&#x2F;mysql&#x2F;mysql.log</span><br><span class="line">#general_log             &#x3D; 1</span><br><span class="line">#</span><br><span class="line"># Error log - should be very few entries.</span><br><span class="line">#</span><br><span class="line">log_error &#x3D; &#x2F;var&#x2F;log&#x2F;mysql&#x2F;error.log</span><br><span class="line">#</span><br><span class="line"># Here you can see queries with especially long duration</span><br><span class="line">#log_slow_queries	&#x3D; &#x2F;var&#x2F;log&#x2F;mysql&#x2F;mysql-slow.log</span><br><span class="line">#long_query_time &#x3D; 2</span><br><span class="line">#log-queries-not-using-indexes</span><br><span class="line">#</span><br><span class="line"># The following can be used as easy to replay backup logs or for replication.</span><br><span class="line"># note: if you are setting up a replication slave, see README.Debian about</span><br><span class="line">#       other settings you may need to change.</span><br><span class="line">#server-id		&#x3D; 1</span><br><span class="line">#log_bin			&#x3D; &#x2F;var&#x2F;log&#x2F;mysql&#x2F;mysql-bin.log</span><br><span class="line">expire_logs_days	&#x3D; 10</span><br><span class="line">max_binlog_size   &#x3D; 100M</span><br><span class="line">#binlog_do_db		&#x3D; include_database_name</span><br><span class="line">#binlog_ignore_db	&#x3D; include_database_name</span><br><span class="line">#</span><br><span class="line"># * InnoDB</span><br><span class="line">#</span><br><span class="line"># InnoDB is enabled by default with a 10MB datafile in &#x2F;var&#x2F;lib&#x2F;mysql&#x2F;.</span><br><span class="line"># Read the manual for more InnoDB related options. There are many!</span><br><span class="line">#</span><br><span class="line"># * Security Features</span><br><span class="line">#</span><br><span class="line"># Read the manual, too, if you want chroot!</span><br><span class="line"># chroot &#x3D; &#x2F;var&#x2F;lib&#x2F;mysql&#x2F;</span><br><span class="line">#</span><br><span class="line"># For generating SSL certificates I recommend the OpenSSL GUI &quot;tinyca&quot;.</span><br><span class="line">#</span><br><span class="line"># ssl-ca&#x3D;&#x2F;etc&#x2F;mysql&#x2F;cacert.pem</span><br><span class="line"># ssl-cert&#x3D;&#x2F;etc&#x2F;mysql&#x2F;server-cert.pem</span><br><span class="line"># ssl-key&#x3D;&#x2F;etc&#x2F;mysql&#x2F;server-key.pem</span><br></pre></td></tr></table></figure>
-
-<h2 id="3、编写docker-compose-yaml-文件"><a href="#3、编写docker-compose-yaml-文件" class="headerlink" title="3、编写docker-compose.yaml 文件"></a>3、编写docker-compose.yaml 文件</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;local&#x2F;etc       #进入到该目录下</span><br><span class="line">vi docker-compose.yaml  #编写该文件</span><br></pre></td></tr></table></figure>
-
-<p> docker-compose里的内容</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> version: &#39;3&#39;</span><br><span class="line">services:</span><br><span class="line">  mysql_compose:</span><br><span class="line">    image: mysql:5.7</span><br><span class="line">    restart: always</span><br><span class="line">    container_name: mysql_compose</span><br><span class="line">    ports:</span><br><span class="line">      - 6606:3306</span><br><span class="line">    volumes:</span><br><span class="line">      - .&#x2F;data:&#x2F;var&#x2F;lib&#x2F;mysql</span><br><span class="line">      - .&#x2F;conf&#x2F;my.cnf:&#x2F;etc&#x2F;mysql&#x2F;mysql.conf.d&#x2F;mysqld.cnf</span><br><span class="line">    environment:</span><br><span class="line">      MYSQL_ROOT_PASSWORD: &quot;123456&quot; #自定义密码</span><br></pre></td></tr></table></figure>
-
-
-<h1 id="4、启动docker-compose"><a href="#4、启动docker-compose" class="headerlink" title="4、启动docker-compose"></a>4、启动docker-compose</h1> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d #安装并部署mysql</span><br></pre></td></tr></table></figure>
-
-
-<p> 这样就可以通过远程连接的方式连接mysql了</p>
-<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p> 如果是虚拟机的话，则需要手动开启相应的端口号<br> 如果是阿里云服务器的话，则需要在阿里云服务器控制台的安全组内，自定义开启相应的端口号</p>
-<p>参考原文: <a href="https://cloud.tencent.com/developer/article/1548931" target="_blank" rel="noopener">腾讯社区</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -789,6 +433,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -809,8 +457,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -861,6 +518,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql存储过程"><span class="nav-number">1.</span> <span class="nav-text">mysql存储过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储过程"><span class="nav-number">1.1.</span> <span class="nav-text">存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建语法"><span class="nav-number">1.2.</span> <span class="nav-text">创建语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用语法"><span class="nav-number">1.3.</span> <span class="nav-text">调用语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#空参实例"><span class="nav-number">1.3.1.</span> <span class="nav-text">空参实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无返回值参数实例"><span class="nav-number">1.3.2.</span> <span class="nav-text">无返回值参数实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有返回值参数实例"><span class="nav-number">1.3.3.</span> <span class="nav-text">有返回值参数实例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#注意的是：-在mysql中是定义局部变量，-在mysql中定义全局变量"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">注意的是：@在mysql中是定义局部变量，@@在mysql中定义全局变量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#既有输入值又有返回值实例"><span class="nav-number">1.3.4.</span> <span class="nav-text">既有输入值又有返回值实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除存储过程"><span class="nav-number">1.3.5.</span> <span class="nav-text">删除存储过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看存储过程信息"><span class="nav-number">1.3.6.</span> <span class="nav-text">查看存储过程信息</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建语法-1"><span class="nav-number">2.1.</span> <span class="nav-text">创建语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用语法-1"><span class="nav-number">2.2.</span> <span class="nav-text">调用语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#案例演示"><span class="nav-number">2.3.</span> <span class="nav-text">案例演示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无参返回"><span class="nav-number">2.3.1.</span> <span class="nav-text">无参返回</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有参返回"><span class="nav-number">2.3.2.</span> <span class="nav-text">有参返回</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看函数"><span class="nav-number">2.4.</span> <span class="nav-text">查看函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除函数"><span class="nav-number">2.5.</span> <span class="nav-text">删除函数</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1001,6 +674,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
