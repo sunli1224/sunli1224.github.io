@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="#排序算法 使用Python编写算法 冒泡排序123456789101112131415161718192021222324252627282930# coding:utf-8&#39;&#39;&#39;冒泡排序法外层循环代表共进行几轮交换内层循环是一轮交换几次算法思路：相邻两数进行交换&#39;&#39;&#39;class BubbleSort(object):    def __init_">
+<meta name="description" content="排序算法使用Python编写算法 冒泡排序123456789101112131415161718192021222324252627282930# coding:utf-8&#39;&#39;&#39;冒泡排序法外层循环代表共进行几轮交换内层循环是一轮交换几次算法思路：相邻两数进行交换&#39;&#39;&#39;class BubbleSort(object):    def __init__(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法之排序算法">
 <meta property="og:url" content="http://yoursite.com/2020/06/06/%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="bblike博客小站">
-<meta property="og:description" content="#排序算法 使用Python编写算法 冒泡排序123456789101112131415161718192021222324252627282930# coding:utf-8&#39;&#39;&#39;冒泡排序法外层循环代表共进行几轮交换内层循环是一轮交换几次算法思路：相邻两数进行交换&#39;&#39;&#39;class BubbleSort(object):    def __init_">
+<meta property="og:description" content="排序算法使用Python编写算法 冒泡排序123456789101112131415161718192021222324252627282930# coding:utf-8&#39;&#39;&#39;冒泡排序法外层循环代表共进行几轮交换内层循环是一轮交换几次算法思路：相邻两数进行交换&#39;&#39;&#39;class BubbleSort(object):    def __init__(">
 <meta property="article:published_time" content="2020-06-06T14:50:20.000Z">
-<meta property="article:modified_time" content="2020-06-06T14:52:45.652Z">
+<meta property="article:modified_time" content="2020-06-06T14:56:12.003Z">
 <meta property="article:author" content="sunli">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -319,8 +319,7 @@
       
 
       
-        <p>#排序算法</p>
-<p>使用Python编写算法</p>
+        <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p>使用Python编写算法</p>
 <h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># coding:utf-8</span><br><span class="line"></span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">冒泡排序法</span><br><span class="line">外层循环代表共进行几轮交换</span><br><span class="line">内层循环是一轮交换几次</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">相邻两数进行交换</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class BubbleSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)):</span><br><span class="line">            for j in range(0, len(self.List) - 1):</span><br><span class="line">                if (self.List[j] &gt; self.List[j+1]):</span><br><span class="line">                    self.List[j], self.List[j+1] &#x3D; self.List[j+1], self.List[j]</span><br><span class="line">                continue</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line">if  __name__&#x3D;&#x3D;&#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; BubbleSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
 
 
@@ -488,7 +487,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡排序"><span class="nav-number">1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择排序"><span class="nav-number">2.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-number">3.</span> <span class="nav-text">插入排序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#排序算法"><span class="nav-number">1.</span> <span class="nav-text">排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡排序"><span class="nav-number">1.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择排序"><span class="nav-number">1.2.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-number">1.3.</span> <span class="nav-text">插入排序</span></a></li></ol></li></ol></div>
             
 
           </div>
