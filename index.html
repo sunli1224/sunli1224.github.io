@@ -248,6 +248,133 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/06/%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sunli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="bblike博客小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/06/%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" itemprop="url">算法之排序算法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-06T22:50:20+08:00">
+                2020-06-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#排序算法</p>
+<p>使用Python编写算法</p>
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># coding:utf-8</span><br><span class="line"></span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">冒泡排序法</span><br><span class="line">外层循环代表共进行几轮交换</span><br><span class="line">内层循环是一轮交换几次</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">相邻两数进行交换</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class BubbleSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)):</span><br><span class="line">            for j in range(0, len(self.List) - 1):</span><br><span class="line">                if (self.List[j] &gt; self.List[j+1]):</span><br><span class="line">                    self.List[j], self.List[j+1] &#x3D; self.List[j+1], self.List[j]</span><br><span class="line">                continue</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line">if  __name__&#x3D;&#x3D;&#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; BubbleSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"># coding:utf-8</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">选择排序算法</span><br><span class="line">外层循环表示几轮比较</span><br><span class="line">内存循环表示比较多少次</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">每次比较找到最小值并进行交换</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class SelectionSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)-1):</span><br><span class="line">            if (self.List[i] !&#x3D; min(self.List[i:])):</span><br><span class="line">                minIndex &#x3D; self.List.index(min(self.List[i:]))</span><br><span class="line">                self.List[i], self.List[minIndex] &#x3D; self.List[minIndex], self.List[i]</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line">    def sort1(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)):</span><br><span class="line">            minIndex &#x3D; i</span><br><span class="line">            for j in range(i+1, len(self.List)):</span><br><span class="line">                if (self.List[minIndex] &gt; self.List[j]):</span><br><span class="line">                    self.List[minIndex], self.List[j] &#x3D; self.List[j], self.List[minIndex]</span><br><span class="line">                    minIndex &#x3D; j</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; SelectionSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort1()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
+
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># coding:utf-8</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">插入排序</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">类似于抽排游戏</span><br><span class="line">左侧代表手中的牌，有测代表抽的牌</span><br><span class="line">每次抽牌，都需要和左侧手牌进行比较，将抽的牌放在合理的位置</span><br><span class="line">当抽玩牌后，左侧的手牌就是排好序的数组</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class InsertionSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for right in range(1, len(self.List)):</span><br><span class="line">            target &#x3D; self.List[right]</span><br><span class="line">            for left in range(0, right):</span><br><span class="line">                if (target &lt; self.List[left]):</span><br><span class="line">                    self.List[left+1:right+1] &#x3D; self.List[left:right]</span><br><span class="line">                    self.List[left] &#x3D; target</span><br><span class="line">                    break</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; InsertionSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/05/mysql-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -825,7 +952,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -838,7 +965,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
