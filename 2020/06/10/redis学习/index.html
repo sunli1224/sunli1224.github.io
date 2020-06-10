@@ -85,11 +85,13 @@
 <meta property="og:url" content="http://yoursite.com/2020/06/10/redis%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="bblike博客小站">
 <meta property="og:description" content="redis&amp;#x5B66;&amp;#x4E60;   redis&amp;#x6709;&amp;#x4E94;&amp;#x79CD;&amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#xFF1A;string&amp;#xFF08;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#xFF09;&amp;#x3001;hash&amp;#xFF08;&amp;#x54C8;&amp;#x5E0C;&amp;#xFF09;&amp;#x3001;list&amp;#xFF">
+<meta property="og:image" content="http://yoursite.com/2020/06/10/redis%E5%AD%A6%E4%B9%A0/sp01.png">
 <meta property="article:published_time" content="2020-06-10T09:26:43.000Z">
-<meta property="article:modified_time" content="2020-06-10T10:33:17.991Z">
+<meta property="article:modified_time" content="2020-06-10T10:48:31.169Z">
 <meta property="article:author" content="sunli">
 <meta property="article:tag" content="redis">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/06/10/redis%E5%AD%A6%E4%B9%A0/sp01.png">
 
 
 
@@ -320,8 +322,10 @@
 
       
         <h1 id="redis&#x5B66;&#x4E60;"><a href="#redis&#x5B66;&#x4E60;" class="headerlink" title="redis&#x5B66;&#x4E60;"></a>redis&#x5B66;&#x4E60;</h1><p>   redis&#x6709;&#x4E94;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;string&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#xFF09;&#x3001;hash&#xFF08;&#x54C8;&#x5E0C;&#xFF09;&#x3001;list&#xFF08;&#x5217;&#x8868;&#xFF09;&#x3001;set&#xFF08;&#x96C6;&#x5408;&#xFF09;&#x3001;zset(sorted set &#x6709;&#x5E8F;&#x96C6;&#x5408;)</p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>key &#x2014; value</p>
+<h2 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="headerlink" title="&#x5E38;&#x7528;&#x547D;&#x4EE4;"></a>&#x5E38;&#x7528;&#x547D;&#x4EE4;</h2><p>1&#x3001;</p>
 <h2 id="hash"><a href="#hash" class="headerlink" title="hash"></a>hash</h2><p>key &#x2014; key-&gt; value</p>
-<p>&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;<br>1&#x3001;<strong>HSET key field value</strong></p>
+<h2 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;"><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;" class="headerlink" title="&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;"></a>&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;</h2><p>1&#x3001;<strong>HSET key field value</strong></p>
 <p>&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x4E00;&#x7EC4;hash&#x503C;</p>
 <p>heset web one one</p>
 <p>2&#x3001;<strong>HGET key field</strong> </p>
@@ -360,14 +364,11 @@
 <p>&#x53EA;&#x6709;&#x5728;&#x5B57;&#x6BB5; field &#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x54C8;&#x5E0C;&#x8868;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x3002;</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; HGETALL web</span><br><span class="line"> 1) &quot;two&quot;</span><br><span class="line"> 2) &quot;two&quot;</span><br><span class="line"> 3) &quot;one&quot;</span><br><span class="line"> 4) &quot;one&quot;</span><br><span class="line"> 5) &quot;three&quot;</span><br><span class="line"> 6) &quot;three&quot;</span><br><span class="line"> 7) &quot;four&quot;</span><br><span class="line"> 8) &quot;four&quot;</span><br><span class="line"> 9) &quot;five&quot;</span><br><span class="line">10) &quot;five&quot;</span><br><span class="line">11) &quot;six&quot;</span><br><span class="line">12) &quot;six&quot;</span><br><span class="line">127.0.0.1:6379&gt;  hsetnx web one 122</span><br><span class="line">(integer) 0</span><br><span class="line">127.0.0.1:6379&gt; HGETALL web</span><br><span class="line"> 1) &quot;two&quot;</span><br><span class="line"> 2) &quot;two&quot;</span><br><span class="line"> 3) &quot;one&quot;</span><br><span class="line"> 4) &quot;one&quot;</span><br><span class="line"> 5) &quot;three&quot;</span><br><span class="line"> 6) &quot;three&quot;</span><br><span class="line"> 7) &quot;four&quot;</span><br><span class="line"> 8) &quot;four&quot;</span><br><span class="line"> 9) &quot;five&quot;</span><br><span class="line">10) &quot;five&quot;</span><br><span class="line">11) &quot;six&quot;</span><br><span class="line">12) &quot;six&quot;</span><br><span class="line">127.0.0.1:6379&gt;  hsetnx web ten 122</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt;</span><br><span class="line">127.0.0.1:6379&gt; HGETALL web</span><br><span class="line"> 1) &quot;two&quot;</span><br><span class="line"> 2) &quot;two&quot;</span><br><span class="line"> 3) &quot;one&quot;</span><br><span class="line"> 4) &quot;one&quot;</span><br><span class="line"> 5) &quot;three&quot;</span><br><span class="line"> 6) &quot;three&quot;</span><br><span class="line"> 7) &quot;four&quot;</span><br><span class="line"> 8) &quot;four&quot;</span><br><span class="line"> 9) &quot;five&quot;</span><br><span class="line">10) &quot;five&quot;</span><br><span class="line">11) &quot;six&quot;</span><br><span class="line">12) &quot;six&quot;</span><br><span class="line">13) &quot;ten&quot;</span><br><span class="line">14) &quot;122&quot;</span><br></pre></td></tr></table></figure>
 
+<h2 id="&#x5E94;&#x7528;&#x573A;&#x666F;"><a href="#&#x5E94;&#x7528;&#x573A;&#x666F;" class="headerlink" title="&#x5E94;&#x7528;&#x573A;&#x666F;"></a>&#x5E94;&#x7528;&#x573A;&#x666F;</h2><p>&#x4F8B;&#x5B50;: </p>
+<p>&#x5B58;&#x50A8;&#x7528;&#x6237;&#x4FE1;&#x606F;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hmset 160310328sunli id 1 stuId 160310328 name sunli sex M phone 13965540902 email 3398536845@qq.com</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; HGETALL  160310328sunli</span><br><span class="line"> 1) &quot;id&quot;</span><br><span class="line"> 2) &quot;1&quot;</span><br><span class="line"> 3) &quot;stuId&quot;</span><br><span class="line"> 4) &quot;160310328&quot;</span><br><span class="line"> 5) &quot;name&quot;</span><br><span class="line"> 6) &quot;sunli&quot;</span><br><span class="line"> 7) &quot;sex&quot;</span><br><span class="line"> 8) &quot;M&quot;</span><br><span class="line"> 9) &quot;phone&quot;</span><br><span class="line">10) &quot;13965540902&quot;</span><br><span class="line">11) &quot;email&quot;</span><br><span class="line">12) &quot;3398536845@qq.com&quot;</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
-
-
+<p><img src="/2020/06/10/redis%E5%AD%A6%E4%B9%A0/sp01.png" alt></p>
 
       
     </div>
@@ -529,7 +530,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#redis&#x5B66;&#x4E60;"><span class="nav-number">1.</span> <span class="nav-text">redis&amp;#x5B66;&amp;#x4E60;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hash"><span class="nav-number">1.1.</span> <span class="nav-text">hash</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#redis&#x5B66;&#x4E60;"><span class="nav-number">1.</span> <span class="nav-text">redis&amp;#x5B66;&amp;#x4E60;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#String"><span class="nav-number">1.1.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;"><span class="nav-number">1.2.</span> <span class="nav-text">&amp;#x5E38;&amp;#x7528;&amp;#x547D;&amp;#x4EE4;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hash"><span class="nav-number">1.3.</span> <span class="nav-text">hash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;"><span class="nav-number">1.4.</span> <span class="nav-text">&amp;#x5E38;&amp;#x7528;&amp;#x547D;&amp;#x4EE4;&amp;#xFF1A;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x5E94;&#x7528;&#x573A;&#x666F;"><span class="nav-number">1.5.</span> <span class="nav-text">&amp;#x5E94;&amp;#x7528;&amp;#x573A;&amp;#x666F;</span></a></li></ol></li></ol></div>
             
 
           </div>
