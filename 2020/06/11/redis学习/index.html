@@ -21,7 +21,7 @@
   var CONFIG = {
     hostname: new URL('http://yoursite.com').hostname,
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '7.7.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
@@ -40,7 +40,7 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
   };
@@ -49,19 +49,19 @@
   <meta name="description" content="redis&amp;#x5B66;&amp;#x4E60; redis&amp;#x9ED8;&amp;#x8BA4;&amp;#x6709;16&amp;#x4E2A;&amp;#x5E93;&amp;#x3002; 1&amp;#x3001;select index &amp;#x5207;&amp;#x6362;&amp;#x5B58;&amp;#x50A8;&amp;#x5E93; redis &amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#x4ECB;&amp;#x7ECD;  red">
 <meta property="og:type" content="article">
 <meta property="og:title" content="redis学习">
-<meta property="og:url" content="http://yoursite.com/2020/06/10/redis%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/06/11/redis%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="bblike博客小站">
 <meta property="og:description" content="redis&amp;#x5B66;&amp;#x4E60; redis&amp;#x9ED8;&amp;#x8BA4;&amp;#x6709;16&amp;#x4E2A;&amp;#x5E93;&amp;#x3002; 1&amp;#x3001;select index &amp;#x5207;&amp;#x6362;&amp;#x5B58;&amp;#x50A8;&amp;#x5E93; redis &amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#x4ECB;&amp;#x7ECD;  red">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/06/10/redis%E5%AD%A6%E4%B9%A0/sp01.png">
-<meta property="article:published_time" content="2020-06-10T09:26:43.000Z">
+<meta property="og:image" content="http://yoursite.com/2020/06/11/redis%E5%AD%A6%E4%B9%A0/sp01.png">
+<meta property="article:published_time" content="2020-06-10T17:26:43.000Z">
 <meta property="article:modified_time" content="2020-06-11T09:12:59.504Z">
 <meta property="article:author" content="孙力">
 <meta property="article:tag" content="redis">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/06/10/redis%E5%AD%A6%E4%B9%A0/sp01.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/06/11/redis%E5%AD%A6%E4%B9%A0/sp01.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/06/10/redis%E5%AD%A6%E4%B9%A0/">
+<link rel="canonical" href="http://yoursite.com/2020/06/11/redis%E5%AD%A6%E4%B9%A0/">
 
 
 <script id="page-configurations">
@@ -104,6 +104,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="bblike博客小站" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -177,9 +178,34 @@
     <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>公益 404</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
@@ -203,10 +229,10 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/10/redis%E5%AD%A6%E4%B9%A0/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/11/redis%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/1111.jpg">
       <meta itemprop="name" content="孙力">
       <meta itemprop="description" content="总结分享的个人博客平台">
     </span>
@@ -226,7 +252,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-06-10 09:26:43" itemprop="dateCreated datePublished" datetime="2020-06-10T09:26:43Z">2020-06-10</time>
+              <time title="创建时间：2020-06-10 17:26:43" itemprop="dateCreated datePublished" datetime="2020-06-10T17:26:43Z">2020-06-10</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -345,7 +371,7 @@
 <p>&#x5B58;&#x50A8;&#x7528;&#x6237;&#x4FE1;&#x606F;</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hmset 160310328sunli id 1 stuId 160310328 name sunli sex M phone 13965540902 email 3398536845@qq.com</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; HGETALL  160310328sunli</span><br><span class="line"> 1) &quot;id&quot;</span><br><span class="line"> 2) &quot;1&quot;</span><br><span class="line"> 3) &quot;stuId&quot;</span><br><span class="line"> 4) &quot;160310328&quot;</span><br><span class="line"> 5) &quot;name&quot;</span><br><span class="line"> 6) &quot;sunli&quot;</span><br><span class="line"> 7) &quot;sex&quot;</span><br><span class="line"> 8) &quot;M&quot;</span><br><span class="line"> 9) &quot;phone&quot;</span><br><span class="line">10) &quot;13965540902&quot;</span><br><span class="line">11) &quot;email&quot;</span><br><span class="line">12) &quot;3398536845@qq.com&quot;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/06/10/redis%E5%AD%A6%E4%B9%A0/sp01.png" alt></p>
+<p><img src="/2020/06/11/redis%E5%AD%A6%E4%B9%A0/sp01.png" alt></p>
 <h2 id="reids-&#x7684;&#x6301;&#x4E45;&#x5316;&#x673A;&#x5236;"><a href="#reids-&#x7684;&#x6301;&#x4E45;&#x5316;&#x673A;&#x5236;" class="headerlink" title="reids &#x7684;&#x6301;&#x4E45;&#x5316;&#x673A;&#x5236;"></a>reids &#x7684;&#x6301;&#x4E45;&#x5316;&#x673A;&#x5236;</h2><h2 id="RDB"><a href="#RDB" class="headerlink" title="RDB"></a>RDB</h2><p>&#x200B;    &#x5728;&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x5185;&#x5C06;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5FEB;&#x7167;&#x5199;&#x5165;&#x78C1;&#x76D8;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x884C;&#x8BDD;&#x8BB2;&#x7684;&#x5FEB;&#x7167;Snapshot,&#x5B83;&#x6062;&#x590D;&#x65F6;&#x662F;&#x5C06;&#x5FEB;&#x7167;&#x6587;&#x4EF6;&#x76F4;&#x63A5;&#x8BFB;&#x53D6;&#x5230;&#x5185;&#x5B58;&#x91CC;&#x3002;</p>
 <p>   redis&#x4F1A;&#x5355;&#x72EC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B50;&#x7EBF;&#x7A0B;&#x6765;&#x8FDB;&#x884C;&#x6301;&#x4E45;&#x5316;&#xFF0C;&#x4F1A;&#x5148;&#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5F85;&#x6301;&#x4E45;&#x5316;&#x8FC7;&#x7A0B;&#x7ED3;&#x675F;&#x4E86;&#xFF0C;&#x518D;&#x7528;&#x8FD9;&#x4E2A;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x66FF;&#x6362;&#x4E0A;&#x6B21;&#x6301;&#x4E45;&#x5316;&#x597D;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E3B;&#x8FDB;&#x7A0B;&#x662F;&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;IO&#x64CD;&#x4F5C;&#x7684;&#xFF0C;&#x8FD9;&#x5C31;&#x786E;&#x4FDD;&#x4E86;&#x6781;&#x9AD8;&#x7684;&#x6027;&#x80FD;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x5927;&#x89C4;&#x6A21;&#x6570;&#x636E;&#x7684;&#x6062;&#x590D;&#xFF0C;&#x4E14;&#x5BF9;&#x4E8E;&#x6570;&#x636E;&#x6062;&#x590D;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x4E0D;&#x662F;&#x975E;&#x5E38;&#x654F;&#x611F;&#xFF0C;&#x90A3;RDB&#x65B9;&#x5F0F;&#x8981;&#x6BD4;AOF&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#x3002;RDB&#x7684;&#x7F3A;&#x70B9;&#x5C31;&#x662F;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x6301;&#x4E45;&#x5316;&#x540E;&#x7684;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x4F1A;&#x4E22;&#x5931;&#x3002;</p>
 <p>Fork&#x7684;&#x4F5C;&#x7528;&#x662F;&#x590D;&#x5236;&#x4E00;&#x4E2A;&#x4E0E;&#x5F53;&#x524D;&#x4E00;&#x6837;&#x7684;&#x8FDB;&#x7A0B;&#x3002;&#x65B0;&#x8FDB;&#x7A0B;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF08;&#x53D8;&#x91CF;&#x3001;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3001;&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;&#x7B49;&#xFF09;&#x6570;&#x503C;&#x90FD;&#x548C;&#x539F;&#x8FDB;&#x7A0B;&#x4E00;&#x81F4;&#xFF0C;&#x4F46;&#x662F;&#x662F;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x5E76;&#x4F5C;&#x4E3A;&#x539F;&#x8FDB;&#x7A0B;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#x3002;</p>
@@ -397,11 +423,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/09/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/" rel="prev" title="java基础之集合--深入研究">
+    <a href="/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/" rel="prev" title="java基础之集合--深入研究">
       <i class="fa fa-chevron-left"></i> java基础之集合--深入研究
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/06/11/java%E5%B9%B6%E5%8F%91%E5%AD%A6%E4%B9%A0/" rel="next" title="java并发学习">
+    <a href="/2020/06/12/java%E5%B9%B6%E5%8F%91%E5%AD%A6%E4%B9%A0/" rel="next" title="java并发学习">
       java并发学习 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -469,6 +495,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="孙力"
+      src="/images/1111.jpg">
   <p class="site-author-name" itemprop="name">孙力</p>
   <div class="site-description" itemprop="description">总结分享的个人博客平台</div>
 </div>
@@ -508,7 +536,7 @@
 
 <div class="copyright">
   
-  &copy; 
+  &copy; 2020 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
@@ -518,7 +546,7 @@
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Muse</a> v7.7.0
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Gemini</a> v7.7.0
   </div>
 
         
@@ -544,7 +572,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -555,6 +583,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 

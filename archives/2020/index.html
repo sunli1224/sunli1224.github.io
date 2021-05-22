@@ -21,7 +21,7 @@
   var CONFIG = {
     hostname: new URL('http://yoursite.com').hostname,
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '7.7.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
@@ -40,7 +40,7 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
   };
@@ -100,6 +100,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="bblike博客小站" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -173,9 +174,34 @@
     <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>公益 404</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
@@ -213,9 +239,9 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2020-06-13T16:19:01Z"
-              content="2020-06-13">
-          06-13
+              datetime="2020-06-14T00:19:01Z"
+              content="2020-06-14">
+          06-14
         </time>
       </div>
 
@@ -233,14 +259,14 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2020-06-11T09:12:37Z"
+              datetime="2020-06-11T17:12:37Z"
               content="2020-06-11">
           06-11
         </time>
       </div>
 
       <h2 class="post-title">
-          <a class="post-title-link" href="/2020/06/11/java%E5%B9%B6%E5%8F%91%E5%AD%A6%E4%B9%A0/" itemprop="url">
+          <a class="post-title-link" href="/2020/06/12/java%E5%B9%B6%E5%8F%91%E5%AD%A6%E4%B9%A0/" itemprop="url">
             <span itemprop="name">java并发学习</span>
           </a>
       </h2>
@@ -253,14 +279,14 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2020-06-10T09:26:43Z"
+              datetime="2020-06-10T17:26:43Z"
               content="2020-06-10">
           06-10
         </time>
       </div>
 
       <h2 class="post-title">
-          <a class="post-title-link" href="/2020/06/10/redis%E5%AD%A6%E4%B9%A0/" itemprop="url">
+          <a class="post-title-link" href="/2020/06/11/redis%E5%AD%A6%E4%B9%A0/" itemprop="url">
             <span itemprop="name">redis学习</span>
           </a>
       </h2>
@@ -273,14 +299,14 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2020-06-09T13:31:38Z"
+              datetime="2020-06-09T21:31:38Z"
               content="2020-06-09">
           06-09
         </time>
       </div>
 
       <h2 class="post-title">
-          <a class="post-title-link" href="/2020/06/09/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/" itemprop="url">
+          <a class="post-title-link" href="/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/" itemprop="url">
             <span itemprop="name">java基础之集合--深入研究</span>
           </a>
       </h2>
@@ -293,9 +319,9 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2020-06-07T16:23:05Z"
-              content="2020-06-07">
-          06-07
+              datetime="2020-06-08T00:23:05Z"
+              content="2020-06-08">
+          06-08
         </time>
       </div>
 
@@ -313,9 +339,9 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2020-06-06T16:26:31Z"
-              content="2020-06-06">
-          06-06
+              datetime="2020-06-07T00:26:31Z"
+              content="2020-06-07">
+          06-07
         </time>
       </div>
 
@@ -333,14 +359,14 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2020-06-06T14:50:20Z"
+              datetime="2020-06-06T22:50:20Z"
               content="2020-06-06">
           06-06
         </time>
       </div>
 
       <h2 class="post-title">
-          <a class="post-title-link" href="/2020/06/06/%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" itemprop="url">
+          <a class="post-title-link" href="/2020/06/07/%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" itemprop="url">
             <span itemprop="name">算法之排序算法</span>
           </a>
       </h2>
@@ -353,7 +379,7 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2020-06-05T07:05:11Z"
+              datetime="2020-06-05T15:05:11Z"
               content="2020-06-05">
           06-05
         </time>
@@ -373,9 +399,9 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2020-06-02T19:33:20Z"
-              content="2020-06-02">
-          06-02
+              datetime="2020-06-03T03:33:20Z"
+              content="2020-06-03">
+          06-03
         </time>
       </div>
 
@@ -393,9 +419,9 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2020-06-02T17:46:58Z"
-              content="2020-06-02">
-          06-02
+              datetime="2020-06-03T01:46:58Z"
+              content="2020-06-03">
+          06-03
         </time>
       </div>
 
@@ -475,6 +501,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="孙力"
+      src="/images/1111.jpg">
   <p class="site-author-name" itemprop="name">孙力</p>
   <div class="site-description" itemprop="description">总结分享的个人博客平台</div>
 </div>
@@ -514,7 +542,7 @@
 
 <div class="copyright">
   
-  &copy; 
+  &copy; 2020 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
@@ -524,7 +552,7 @@
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Muse</a> v7.7.0
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Gemini</a> v7.7.0
   </div>
 
         
@@ -550,7 +578,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -561,6 +589,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
