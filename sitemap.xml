@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2021-05-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/guestbook/index.html</loc>
     
     <lastmod>2021-05-23</lastmod>
@@ -96,13 +103,6 @@
     <loc>http://yoursite.com/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</loc>
     
     <lastmod>2020-06-02</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
-    
-    <lastmod>2020-05-20</lastmod>
     
   </url>
   
