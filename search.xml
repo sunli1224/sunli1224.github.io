@@ -225,7 +225,63 @@
   <entry>
     <title>mysql性能优化</title>
     <url>/2021/05/23/mysql%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
-    <content><![CDATA[<h1 id="mysql&#x6027;&#x80FD;&#x4F18;&#x5316;"><a href="#mysql&#x6027;&#x80FD;&#x4F18;&#x5316;" class="headerlink" title="mysql&#x6027;&#x80FD;&#x4F18;&#x5316;"></a>mysql&#x6027;&#x80FD;&#x4F18;&#x5316;</h1><h2 id="mysql-&#x903B;&#x8F91;&#x67B6;&#x6784;"><a href="#mysql-&#x903B;&#x8F91;&#x67B6;&#x6784;" class="headerlink" title="mysql &#x903B;&#x8F91;&#x67B6;&#x6784;"></a>mysql &#x903B;&#x8F91;&#x67B6;&#x6784;</h2>]]></content>
+    <content><![CDATA[<h1 id="mysql&#x6027;&#x80FD;&#x4F18;&#x5316;"><a href="#mysql&#x6027;&#x80FD;&#x4F18;&#x5316;" class="headerlink" title="mysql&#x6027;&#x80FD;&#x4F18;&#x5316;"></a>mysql&#x6027;&#x80FD;&#x4F18;&#x5316;</h1><h2 id="mysql-&#x903B;&#x8F91;&#x67B6;&#x6784;"><a href="#mysql-&#x903B;&#x8F91;&#x67B6;&#x6784;" class="headerlink" title="mysql &#x903B;&#x8F91;&#x67B6;&#x6784;"></a>mysql &#x903B;&#x8F91;&#x67B6;&#x6784;</h2><p>![](D:\npm Registry\ss\source_posts\mysql&#x6027;&#x80FD;&#x4F18;&#x5316;\Snipaste_2021-05-24_10-06-25.png)</p>
+<p>![](D:\npm Registry\ss\source_posts\mysql&#x6027;&#x80FD;&#x4F18;&#x5316;\Snipaste_2021-05-24_10-10-34.png)</p>
+<p>&#x5982;&#x4F55;&#x67E5;&#x770B;&#x73B0;&#x6709;&#x7684;mysql&#x4F7F;&#x7528;&#x4EC0;&#x4E48;&#x6570;&#x636E;&#x5F15;&#x64CE;&#xFF1F;</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">engines</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">variables</span> <span class="keyword">like</span> <span class="string">&apos;%storage_engine%&apos;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>mysql&#x9ED8;&#x8BA4;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x662F;innodb</p>
+<table>
+<thead>
+<tr>
+<th align="center">&#x5BF9;&#x6BD4;&#x9879;</th>
+<th align="center">myisam</th>
+<th align="center">innodb</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&#x4E3B;&#x5916;&#x952E;</td>
+<td align="center">&#x4E0D;&#x652F;&#x6301;</td>
+<td align="center">&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td align="center">&#x4E8B;&#x52A1;</td>
+<td align="center">&#x4E0D;&#x652F;&#x6301;</td>
+<td align="center">&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td align="center">&#x884C;&#x8868;&#x9501;</td>
+<td align="center">&#x8868;&#x9501;&#xFF0C;&#x5373;&#x4F7F;&#x64CD;&#x4F5C;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x4E5F;&#x4F1A;&#x9501;&#x4F4F;&#x6574;&#x5F20;&#x8868;&#xFF0C;&#x4E0D;&#x9002;&#x5408;&#x9AD8;&#x5E76;&#x53D1;</td>
+<td align="center">&#x884C;&#x9501;&#xFF0C;&#x64CD;&#x4F5C;&#x67D0;&#x4E00;&#x884C;&#xFF0C;&#x4E0D;&#x4F1A;&#x5BF9;&#x5176;&#x4ED6;&#x884C;&#x6709;&#x5F71;&#x54CD;&#xFF0C;&#x9002;&#x5408;&#x9AD8;&#x5E76;&#x53D1;&#x3002;</td>
+</tr>
+<tr>
+<td align="center">&#x7F13;&#x5B58;</td>
+<td align="center">&#x53EA;&#x7F13;&#x5B58;&#x7D22;&#x5F15;</td>
+<td align="center">&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x7F13;&#x5B58;&#x7D22;&#x5F15;&#x8FD8;&#x8981;&#x7F13;&#x5B58;&#x771F;&#x5B9E;&#x6570;&#x636E;&#xFF0C;&#x5BF9;&#x5185;&#x5B58;&#x8981;&#x6C42;&#x8F83;&#x9AD8;&#xFF0C;&#x800C;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#x4F1A;&#x6709;&#x51B3;&#x5B9A;&#x6027;&#x7684;&#x5F71;&#x54CD;&#x3002;</td>
+</tr>
+<tr>
+<td align="center">&#x8868;&#x7A7A;&#x95F4;</td>
+<td align="center">&#x5C0F;</td>
+<td align="center">&#x5927;</td>
+</tr>
+<tr>
+<td align="center">&#x5173;&#x6CE8;&#x70B9;</td>
+<td align="center">&#x6027;&#x80FD;&#xFF08;&#x9002;&#x5408;&#x53EA;&#x8BFB;&#x8868;&#xFF09;</td>
+<td align="center">&#x5927;</td>
+</tr>
+<tr>
+<td align="center">&#x9ED8;&#x8BA4;&#x5B89;&#x88C5;</td>
+<td align="center">&#x662F;</td>
+<td align="center">&#x662F;</td>
+</tr>
+</tbody></table>
+<h3 id="sql&#x6027;&#x80FD;&#x4E0B;&#x964D;&#x7684;&#x539F;&#x56E0;&#xFF1F;"><a href="#sql&#x6027;&#x80FD;&#x4E0B;&#x964D;&#x7684;&#x539F;&#x56E0;&#xFF1F;" class="headerlink" title="sql&#x6027;&#x80FD;&#x4E0B;&#x964D;&#x7684;&#x539F;&#x56E0;&#xFF1F;"></a>sql&#x6027;&#x80FD;&#x4E0B;&#x964D;&#x7684;&#x539F;&#x56E0;&#xFF1F;</h3><p>1&#x3001;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x5199;&#x7684;&#x70C2;&#xFF0C;&#x53EF;&#x80FD;&#x6D89;&#x53CA;&#x591A;&#x6B21;&#x7684;&#x5173;&#x8054;&#x67E5;&#x8BE2;&#x3001;&#x5B50;&#x67E5;&#x8BE2;&#xFF0C;&#x5BFC;&#x81F4;sql&#x6027;&#x80FD;&#x4E0B;&#x964D;&#x3002;</p>
+<p>2&#x3001;&#x7D22;&#x5F15;&#x5931;&#x6548;&#xFF08;&#x5355;&#x503C;&#x3001;&#x590D;&#x5408;&#xFF09;</p>
+<p>3&#x3001;&#x5173;&#x8054;&#x67E5;&#x8BE2;&#x6D89;&#x53CA;&#x592A;&#x591A;join</p>
+<p>4&#x3001;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x4F18;&#x4EE5;&#x53CA;&#x5404;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x8BBE;&#x7F6E;&#xFF08;&#x7F13;&#x51B2;&#x3001;&#x7EBF;&#x7A0B;&#x7B49;&#xFF09;</p>
+<h3 id="sql&#x6267;&#x884C;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;"><a href="#sql&#x6267;&#x884C;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;" class="headerlink" title="sql&#x6267;&#x884C;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;?"></a>sql&#x6267;&#x884C;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;?</h3><p>   mysql&#x5728;&#x6267;&#x884C;sql&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x6309;&#x7167;&#x4EBA;&#x5199;&#x7684;sql&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;mysql&#x7684;&#x670D;&#x52A1;&#x5C42;&#x91CC;&#x9762;&#x7684;sql&#x7684;&#x4F18;&#x5316;&#x5668;&#xFF0C;&#x89E3;&#x6790;sql&#x7684;&#x987A;&#x5E8F;&#x6267;&#x884C;sql&#x8BED;&#x53E5;&#xFF0C;&#x4F7F;&#x5F97;sql&#x7684;&#x6267;&#x884C;&#x6548;&#x7387;&#x66F4;&#x9AD8;&#x3002;</p>
+<p>![](D:\npm Registry\ss\source_posts\mysql&#x6027;&#x80FD;&#x4F18;&#x5316;\Snipaste_2021-05-24_10-47-40.png)</p>
+]]></content>
       <tags>
         <tag>mysql</tag>
       </tags>
