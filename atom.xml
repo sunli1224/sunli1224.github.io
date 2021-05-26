@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-05-25T17:46:38.391Z</updated>
+  <updated>2021-05-26T03:52:05.805Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JVM学习</title>
+    <link href="http://yoursite.com/2021/05/26/JVM%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2021/05/26/JVM%E5%AD%A6%E4%B9%A0/</id>
+    <published>2021-05-26T01:58:38.000Z</published>
+    <updated>2021-05-26T03:52:05.805Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;&amp;#x4EC0;&amp;#x4E48;&amp;#x662F;&amp;#x865A;&amp;#x62DF;&amp;#x673A;&amp;#xFF1F;&quot;&gt;&lt;a href=&quot;#&amp;#x4EC0;&amp;#x4E48;&amp;#x662F;&amp;#x865A;&amp;#x62DF;&amp;#x673A;&amp;#xFF1F;&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
+    
+  </entry>
   
   <entry>
     <title>kafka</title>

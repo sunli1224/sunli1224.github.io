@@ -153,7 +153,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">10</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -163,7 +163,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">13</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">14</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -233,6 +233,124 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/05/26/JVM%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1111.jpg">
+      <meta itemprop="name" content="孙力">
+      <meta itemprop="description" content="总结分享的个人博客平台">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="bblike博客小站">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/26/JVM%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">JVM学习</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-05-26 01:58:38 / 修改时间：03:52:05" itemprop="dateCreated datePublished" datetime="2021-05-26T01:58:38Z">2021-05-26</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/05/26/JVM%E5%AD%A6%E4%B9%A0/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/26/JVM%E5%AD%A6%E4%B9%A0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="&#x4EC0;&#x4E48;&#x662F;&#x865A;&#x62DF;&#x673A;&#xFF1F;"><a href="#&#x4EC0;&#x4E48;&#x662F;&#x865A;&#x62DF;&#x673A;&#xFF1F;" class="headerlink" title="&#x4EC0;&#x4E48;&#x662F;&#x865A;&#x62DF;&#x673A;&#xFF1F;"></a>&#x4EC0;&#x4E48;&#x662F;&#x865A;&#x62DF;&#x673A;&#xFF1F;</h3><p>&#x6240;&#x8C13;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x5C31;&#x662F;&#x4E00;&#x53F0;&#x865A;&#x62DF;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#x3002;&#x5B83;&#x662F;&#x4E00;&#x6B3E;&#x8F6F;&#x4EF6;&#xFF0C;&#x7528;&#x6765;&#x6267;&#x884C;&#x4E00;&#x7CFB;&#x5217;&#x865A;&#x62DF;&#x8BA1;&#x7B97;&#x673A;&#x6307;&#x4EE4;&#xFF0C;&#x5927;&#x4F53;&#x4E0A;&#xFF0C;&#x865A;&#x62DF;&#x673A;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x7CFB;&#x7EDF;&#x865A;&#x62DF;&#x673A;&#x548C;&#x7A0B;&#x5E8F;&#x865A;&#x62DF;&#x673A;&#x3002;</p>
+<p>vmware&#x5C31;&#x662F;&#x5C5E;&#x4E8E;&#x7CFB;&#x7EDF;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x5B83;&#x5B8C;&#x5168;&#x662F;&#x5BF9;&#x7269;&#x7406;&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x4EFF;&#x771F;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x53EF;&#x8FD0;&#x884C;&#x5B8C;&#x6574;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x8F6F;&#x4EF6;&#x5E73;&#x53F0;&#x3002;</p>
+<p>&#x7A0B;&#x5E8F;&#x865A;&#x62DF;&#x673A;&#x7684;&#x5178;&#x578B;&#x4EE3;&#x8868;&#x5C31;&#x662F;java&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x5B83;&#x4E13;&#x95E8;&#x4E3A;&#x6267;&#x884C;&#x5355;&#x4E2A;&#x8BA1;&#x7B97;&#x673A;&#x7A0B;&#x5E8F;&#x800C;&#x8BBE;&#x8BA1;&#xFF0C;&#x5728;java&#x865A;&#x62DF;&#x673A;&#x4E2D;&#x6267;&#x884C;&#x7684;&#x6307;&#x4EE4;&#x6211;&#x4EEC;&#x79F0;&#x4E3A;java&#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#x3002;</p>
+<p>&#x65E0;&#x8BBA;&#x662F;&#x7CFB;&#x7EDF;&#x865A;&#x62DF;&#x673A;&#x8FD8;&#x662F;&#x7A0B;&#x5E8F;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x8FD0;&#x884C;&#x7684;&#x8F6F;&#x4EF6;&#x90FD;&#x88AB;&#x9650;&#x5236;&#x4E8E;&#x865A;&#x62DF;&#x673A;&#x63D0;&#x4F9B;&#x8D44;&#x6E90;&#x3002;</p>
+<p>&#x4F5C;&#x7528;&#xFF1A;<br>java&#x865A;&#x62DF;&#x673A;&#x5C31;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x5B57;&#x8282;&#x7801;&#x7684;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#xFF0C;&#x8D1F;&#x8D23;&#x88C5;&#x8F7D;&#x5B57;&#x8282;&#x7801;&#x5230;&#x5176;&#x5185;&#x90E8;&#xFF0C;&#x89E3;&#x91CA;/&#x7F16;&#x8BD1;&#x4E3A;&#x5BF9;&#x5E94;&#x5E73;&#x53F0;&#x4E0A;&#x7684;&#x673A;&#x5668;&#x6307;&#x4EE4;&#x6267;&#x884C;&#xFF0C;</p>
+<p>&#x6BCF;&#x4E00;&#x6761;java&#x6307;&#x4EE4;&#xFF0C;java&#x865A;&#x62DF;&#x673A;&#x89C4;&#x8303;&#x4E2D;&#x90FD;&#x6709;&#x8BE6;&#x7EC6;&#x5B9A;&#x4E49;&#xFF0C;&#x5982;&#x600E;&#x4E48;&#x53D6;&#x64CD;&#x4F5C;&#x6570;&#xFF0C;&#x600E;&#x4E48;&#x5904;&#x7406;&#x64CD;&#x4F5C;&#x6570;&#xFF0C;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x653E;&#x54EA;&#x91CC;</p>
+<p>&#x3002;</p>
+<p>&#x7279;&#x70B9;&#xFF1A;</p>
+<p>1&#x3001;&#x4E00;&#x6B21;&#x7F16;&#x8BD1;&#xFF0C;&#x5230;&#x5904;&#x8FD0;&#x884C;</p>
+<p>2&#x3001;&#x81EA;&#x52A8;&#x5185;&#x5B58;&#x7BA1;&#x7406;</p>
+<p>3&#x3001;&#x81EA;&#x52A8;&#x5783;&#x573E;&#x56DE;&#x6536;</p>
+<p><strong>JVM&#x4F4D;&#x7F6E;&#xFF1A;</strong></p>
+<p>![](D:\npm Registry\ss\source_posts\JVM&#x5B66;&#x4E60;\Snipaste_2021-05-26_02-14-38.png)</p>
+<p><strong>JVM&#x6574;&#x4F53;&#x7ED3;&#x6784;&#xFF1A;</strong></p>
+<p>hotSpot VM&#x662F;&#x76EE;&#x524D;&#x5E02;&#x9762;&#x4E0A;&#x9AD8;&#x6027;&#x80FD;&#x865A;&#x62DF;&#x673A;&#x7684;&#x4EE3;&#x8868;&#x4E4B;&#x4E00;</p>
+<p>&#x5B83;&#x91C7;&#x7528;&#x89E3;&#x91CA;&#x5668;&#x4E0E;&#x5373;&#x65F6;&#x7F16;&#x8BD1;&#x5668;&#x5E76;&#x5B58;&#x7684;&#x67B6;&#x6784;</p>
+<p>![](D:\npm Registry\ss\source_posts\JVM&#x5B66;&#x4E60;\Snipaste_2021-05-26_02-20-09.png)</p>
+<p>![](D:\npm Registry\ss\source_posts\JVM&#x5B66;&#x4E60;\Snipaste_2021-05-26_10-10-25.png)</p>
+<p>![](D:\npm Registry\ss\source_posts\JVM&#x5B66;&#x4E60;\Snipaste_2021-05-26_10-15-24.png)</p>
+<p>![](D:\npm Registry\ss\source_posts\JVM&#x5B66;&#x4E60;\Snipaste_2021-05-26_10-32-36.png)</p>
+<p><strong>&#x52A0;&#x8F7D;&#xFF1A;</strong></p>
+<p>1&#x3001;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x5168;&#x9650;&#x5B9A;&#x540D;&#x83B7;&#x53D6;&#x5B9A;&#x4E49;&#x6B64;&#x7C7B;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5B57;&#x8282;&#x6D41;</p>
+<p>2&#x3001;&#x5C06;&#x8FD9;&#x4E2A;&#x5B57;&#x8282;&#x6D41;&#x6240;&#x4EE3;&#x8868;&#x7684;&#x9759;&#x6001;&#x5B58;&#x50A8;&#x7ED3;&#x6784;&#x8F6C;&#x6362;&#x4E3A;&#x65B9;&#x6CD5;&#x533A;&#x7684;&#x8FD0;&#x884C;&#x65F6;</p>
+<p>&#x6570;&#x636E;&#x7ED3;&#x6784;</p>
+<p>3&#x3001;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x4EE3;&#x8868;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684;java.lang.Class&#x5BF9;&#x8C61;&#xFF0C;&#x4F5C;&#x4E3A;</p>
+<p>&#x65B9;&#x6CD5;&#x533A;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684;&#x5404;&#x79CD;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#x5165;&#x53E3;</p>
+<p>![](D:\npm Registry\ss\source_posts\JVM&#x5B66;&#x4E60;\Snipaste_2021-05-26_10-59-24.png)</p>
+<p><strong>&#x94FE;&#x63A5;&#xFF1A;</strong></p>
+<p>![](D:\npm Registry\ss\source_posts\JVM&#x5B66;&#x4E60;\Snipaste_2021-05-26_11-08-10.png)</p>
+<p><strong>&#x521D;&#x59CB;&#x5316;&#xFF1A;</strong></p>
+<p>![](D:\npm Registry\ss\source_posts\JVM&#x5B66;&#x4E60;\Snipaste_2021-05-26_11-33-23.png)</p>
+<p>![](D:\npm Registry\ss\source_posts\JVM&#x5B66;&#x4E60;\Snipaste_2021-05-26_10-34-24.png)</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -1570,140 +1688,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/05/mysql-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/1111.jpg">
-      <meta itemprop="name" content="孙力">
-      <meta itemprop="description" content="总结分享的个人博客平台">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="bblike博客小站">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/05/mysql-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/" class="post-title-link" itemprop="url">mysql--存储过程</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-06-05 15:05:11 / 修改时间：17:26:52" itemprop="dateCreated datePublished" datetime="2020-06-05T15:05:11Z">2020-06-05</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/06/05/mysql-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/05/mysql-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.4k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="mysql&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><a href="#mysql&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;" class="headerlink" title="mysql&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"></a>mysql&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</h1><p>&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x548C;&#x51FD;&#x6570;&#xFF1A;&#x7C7B;&#x4F3C;&#x4E8E;java&#x4E2D;&#x7684;&#x65B9;&#x6CD5;<br>&#x597D;&#x5904;&#xFF1A;<br>1&#x3001;&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x7684;&#x590D;&#x7528;&#x6027;<br>2&#x3001;&#x7B80;&#x5316;&#x64CD;&#x4F5C;</p>
-<h2 id="&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><a href="#&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;" class="headerlink" title="&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"></a>&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</h2><p>&#x542B;&#x4E49;&#xFF1A;&#x4E00;&#x7EC4;&#x9884;&#x5148;&#x7F16;&#x8BD1;&#x597D;&#x7684;SQL&#x8BED;&#x53E5;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x7406;&#x89E3;&#x4E3A;&#x6279;&#x5904;&#x7406;&#x8BED;&#x53E5;</p>
-<p>1&#x3001;&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x7684;&#x590D;&#x7528;&#x6027;<br>2&#x3001;&#x7B80;&#x5316;&#x64CD;&#x4F5C;<br>3&#x3001;&#x51CF;&#x5C11;&#x7F16;&#x8BD1;&#x6B21;&#x6570;&#x5E76;&#x4E14;&#x51CF;&#x5C11;&#x548C;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8FDE;&#x63A5;&#x6B21;&#x6570;&#xFF0C;&#x63D0;&#x9AD8;&#x6548;&#x7387;</p>
-<h2 id="&#x521B;&#x5EFA;&#x8BED;&#x6CD5;"><a href="#&#x521B;&#x5EFA;&#x8BED;&#x6CD5;" class="headerlink" title="&#x521B;&#x5EFA;&#x8BED;&#x6CD5;"></a>&#x521B;&#x5EFA;&#x8BED;&#x6CD5;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">create procedure &#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x540D;&#xFF08;&#x53C2;&#x6570;&#x5217;&#x8868;&#xFF09;</span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">      &#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x4F53;&#xFF08;&#x4E00;&#x7EC4;&#x5408;&#x6CD5;&#x7684;sql&#x8BED;&#x53E5;&#xFF09;</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-
-<p>&#x6CE8;&#x610F;&#xFF1A;<br>1&#x3001;&#x53C2;&#x6570;&#x5217;&#x8868;&#x5305;&#x542B;&#x4E09;&#x90E8;&#x5206;<br>&#x53C2;&#x6570;&#x6A21;&#x5F0F;  &#x53C2;&#x6570;&#x540D; &#x53C2;&#x6570;&#x7C7B;&#x578B;</p>
-<p>&#x4E3E;&#x4F8B;&#xFF1A;<br>IN stuname varchar(20)</p>
-<p>&#x53C2;&#x6570;&#x6A21;&#x5F0F;&#xFF1A;<br>in&#xFF1A; &#x8BE5;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BE5;&#x53C2;&#x6570;&#x9700;&#x8981;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x4F20;&#x5165;&#x503C;</p>
-<p>out&#xFF1A; &#x8BE5;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x8F93;&#x51FA;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BE5;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x8FD4;&#x56DE;&#x503C;</p>
-<p>inout&#xFF1A;&#x8BE5;&#x53C2;&#x6570;&#x65E2;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x53C8;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x8F93;&#x51FA;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BE5;&#x53C2;&#x6570;&#x65E2;&#x9700;&#x8981;&#x4F20;&#x5165;&#x503C;&#xFF0C;&#x53C8;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x503C;</p>
-<p>2&#x3001;&#x5982;&#x679C;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x4F53;&#x4EC5;&#x4EC5;&#x53EA;&#x6709;&#x4E00;&#x53E5;&#x8BDD;&#xFF0C;begin end &#x53EF;&#x4EE5;&#x7701;&#x7565;<br>&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x4E2D;&#x6BCF;&#x6761;sql&#x8BED;&#x53E5;&#x7684;&#x7ED3;&#x5C3E;&#x8981;&#x6C42;&#x5FC5;&#x987B;&#x52A0;&#x5206;&#x53F7;&#x3002;<br>&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x7684;&#x7ED3;&#x5C3E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;delimiter &#x91CD;&#x65B0;&#x8BBE;&#x7F6E;</p>
-<p>&#x8BED;&#x6CD5;&#xFF1A;<br>delimiter &#x7ED3;&#x675F;&#x6807;&#x8BB0;</p>
-<p>&#x6848;&#x4F8B;&#xFF1A;<br>delimiter $</p>
-<h2 id="&#x8C03;&#x7528;&#x8BED;&#x6CD5;"><a href="#&#x8C03;&#x7528;&#x8BED;&#x6CD5;" class="headerlink" title="&#x8C03;&#x7528;&#x8BED;&#x6CD5;"></a>&#x8C03;&#x7528;&#x8BED;&#x6CD5;</h2><p>call &#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x540D;&#xFF08;&#x5B9E;&#x53C2;&#x5217;&#x8868;&#xFF09;;</p>
-<h3 id="&#x7A7A;&#x53C2;&#x5B9E;&#x4F8B;"><a href="#&#x7A7A;&#x53C2;&#x5B9E;&#x4F8B;" class="headerlink" title="&#x7A7A;&#x53C2;&#x5B9E;&#x4F8B;"></a>&#x7A7A;&#x53C2;&#x5B9E;&#x4F8B;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS `pro01`;</span><br><span class="line">DELIMITER $$</span><br><span class="line">CREATE PROCEDURE `pro01`()</span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">DECLARE item INT DEFAULT 0;</span><br><span class="line">WHILE item &lt; 5 DO</span><br><span class="line">INSERT INTO user(`username`,`password`) VALUES(CONCAT(&apos;stu&apos;,item),&apos;123&apos;);</span><br><span class="line">SET item=item+1;</span><br><span class="line">END WHILE;</span><br><span class="line">END $$</span><br></pre></td></tr></table></figure>
-
-<h3 id="&#x65E0;&#x8FD4;&#x56DE;&#x503C;&#x53C2;&#x6570;&#x5B9E;&#x4F8B;"><a href="#&#x65E0;&#x8FD4;&#x56DE;&#x503C;&#x53C2;&#x6570;&#x5B9E;&#x4F8B;" class="headerlink" title="&#x65E0;&#x8FD4;&#x56DE;&#x503C;&#x53C2;&#x6570;&#x5B9E;&#x4F8B;"></a>&#x65E0;&#x8FD4;&#x56DE;&#x503C;&#x53C2;&#x6570;&#x5B9E;&#x4F8B;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">DROP PROCEDURE IF EXISTS `pro02`;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE `pro02`(IN username VARCHAR(20),IN password VARCHAR(20))</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE result INT DEFAULT 0;</span><br><span class="line">SELECT COUNT(*) INTO result</span><br><span class="line">FROM `user` u</span><br><span class="line">WHERE u.username = username AND u.password = password;</span><br><span class="line">SELECT IF(result&gt;0,&apos;&#x6210;&#x529F;&apos;,&apos;&#x5931;&#x8D25;&apos;);</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">CALL pro02(&apos;admin&apos;,&apos;123&apos;)$</span><br></pre></td></tr></table></figure>
-
-<h3 id="&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x53C2;&#x6570;&#x5B9E;&#x4F8B;"><a href="#&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x53C2;&#x6570;&#x5B9E;&#x4F8B;" class="headerlink" title="&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x53C2;&#x6570;&#x5B9E;&#x4F8B;"></a>&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x53C2;&#x6570;&#x5B9E;&#x4F8B;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS `pro03`;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE `pro03`(IN id INT, OUT pass VARCHAR(20), OUT username VARCHAR(20))</span><br><span class="line">BEGIN</span><br><span class="line">SELECT u.username, u.password INTO username, pass</span><br><span class="line">FROM `user` u</span><br><span class="line">WHERE u.id = id;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">CALL pro03(1,@pass,@name)$</span><br><span class="line">SELECT @pass,@name</span><br></pre></td></tr></table></figure>
-<h4 id="&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;-&#x5728;mysql&#x4E2D;&#x662F;&#x5B9A;&#x4E49;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;-&#x5728;mysql&#x4E2D;&#x5B9A;&#x4E49;&#x5168;&#x5C40;&#x53D8;&#x91CF;"><a href="#&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;-&#x5728;mysql&#x4E2D;&#x662F;&#x5B9A;&#x4E49;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;-&#x5728;mysql&#x4E2D;&#x5B9A;&#x4E49;&#x5168;&#x5C40;&#x53D8;&#x91CF;" class="headerlink" title="&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;@&#x5728;mysql&#x4E2D;&#x662F;&#x5B9A;&#x4E49;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;@@&#x5728;mysql&#x4E2D;&#x5B9A;&#x4E49;&#x5168;&#x5C40;&#x53D8;&#x91CF;"></a>&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;@&#x5728;mysql&#x4E2D;&#x662F;&#x5B9A;&#x4E49;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;@@&#x5728;mysql&#x4E2D;&#x5B9A;&#x4E49;&#x5168;&#x5C40;&#x53D8;&#x91CF;</h4><h3 id="&#x65E2;&#x6709;&#x8F93;&#x5165;&#x503C;&#x53C8;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x5B9E;&#x4F8B;"><a href="#&#x65E2;&#x6709;&#x8F93;&#x5165;&#x503C;&#x53C8;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x5B9E;&#x4F8B;" class="headerlink" title="&#x65E2;&#x6709;&#x8F93;&#x5165;&#x503C;&#x53C8;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x5B9E;&#x4F8B;"></a>&#x65E2;&#x6709;&#x8F93;&#x5165;&#x503C;&#x53C8;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x5B9E;&#x4F8B;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS `pro04`;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE `pro04`(INOUT a INT,INOUT b INT)</span><br><span class="line">BEGIN</span><br><span class="line">SET a=a*2;</span><br><span class="line">SET b=b*2;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SET @a = 10;</span><br><span class="line">SET @b = 12;</span><br><span class="line"></span><br><span class="line">CALL pro04(@a,@b)$</span><br><span class="line">SELECT @a,@b;</span><br></pre></td></tr></table></figure>
-
-<h3 id="&#x5220;&#x9664;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><a href="#&#x5220;&#x9664;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;" class="headerlink" title="&#x5220;&#x9664;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"></a>&#x5220;&#x9664;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP PROCEDURE &#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x540D;</span><br></pre></td></tr></table></figure>
-
-<h3 id="&#x67E5;&#x770B;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x4FE1;&#x606F;"><a href="#&#x67E5;&#x770B;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x4FE1;&#x606F;" class="headerlink" title="&#x67E5;&#x770B;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x4FE1;&#x606F;"></a>&#x67E5;&#x770B;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x4FE1;&#x606F;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show create procedure &#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x540D;</span><br></pre></td></tr></table></figure>
-
-<h1 id="&#x51FD;&#x6570;"><a href="#&#x51FD;&#x6570;" class="headerlink" title="&#x51FD;&#x6570;"></a>&#x51FD;&#x6570;</h1><p>&#x51FD;&#x6570;&#x548C;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x7C7B;&#x4F3C;</p>
-<p>&#x533A;&#x522B;&#xFF1A;<br>&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#xFF1A;&#x53EF;&#x4EE5;&#x6709;0&#x4E2A;&#x8FD4;&#x56DE;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x8FD4;&#x56DE;&#xFF0C;&#x9002;&#x5408;&#x505A;&#x6279;&#x91CF;&#x63D2;&#x5165;&#x3001;&#x6279;&#x91CF;&#x66F4;&#x65B0;<br>&#x51FD;&#x6570;&#xFF1A;&#x6709;&#x4E14;&#x4EC5;&#x6709;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#xFF0C;&#x9002;&#x5408;&#x505A;&#x5904;&#x7406;&#x6570;&#x636E;&#x540E;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</p>
-<h2 id="&#x521B;&#x5EFA;&#x8BED;&#x6CD5;-1"><a href="#&#x521B;&#x5EFA;&#x8BED;&#x6CD5;-1" class="headerlink" title="&#x521B;&#x5EFA;&#x8BED;&#x6CD5;"></a>&#x521B;&#x5EFA;&#x8BED;&#x6CD5;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">create function &#x51FD;&#x6570;&#x540D;&#xFF08;&#x53C2;&#x6570;&#x5217;&#x8868;&#xFF09;returns &#x8FD4;&#x56DE;&#x7C7B;&#x578B;</span><br><span class="line">begin</span><br><span class="line">&#x51FD;&#x6570;&#x4F53;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-
-<p>1&#x3001;### &#x6CE8;&#x610F;&#xFF1A;<br>&#x53C2;&#x6570;&#x5217;&#x8868; &#x5305;&#x542B;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;<br>&#x53C2;&#x6570;&#x540D; &#x53C2;&#x6570;&#x7C7B;&#x578B;</p>
-<p>2&#x3001;&#x51FD;&#x6570;&#x4F53;&#xFF1A;&#x80AF;&#x5B9A;&#x4F1A;&#x6709;return&#x8BED;&#x53E5;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x62A5;&#x9519;<br>&#x5982;&#x679C;return&#x8BED;&#x53E5;&#x6CA1;&#x6709;&#x653E;&#x5728;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x7684;&#x6700;&#x540E;&#x4E5F;&#x4E0D;&#x62A5;&#x9519;&#xFF0C;&#x4F46;&#x4E0D;&#x5EFA;&#x8BAE;</p>
-<p>3&#x3001;return&#x503C;<br>&#x51FD;&#x6570;&#x4F53;&#x4E2D;&#x4EC5;&#x6709;&#x4E00;&#x53E5;&#x8BDD;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x7701;&#x7565;begin end</p>
-<p>4&#x3001;&#x4F7F;&#x7528;delimiter&#x8BED;&#x53E5;&#x8BBE;&#x7F6E;&#x7ED3;&#x675F;&#x6807;&#x8BB0;</p>
-<h2 id="&#x8C03;&#x7528;&#x8BED;&#x6CD5;-1"><a href="#&#x8C03;&#x7528;&#x8BED;&#x6CD5;-1" class="headerlink" title="&#x8C03;&#x7528;&#x8BED;&#x6CD5;"></a>&#x8C03;&#x7528;&#x8BED;&#x6CD5;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select &#x51FD;&#x6570;&#x540D;&#xFF08;&#x53C2;&#x6570;&#x5217;&#x8868;&#xFF09;</span><br></pre></td></tr></table></figure>
-
-<h2 id="&#x6848;&#x4F8B;&#x6F14;&#x793A;"><a href="#&#x6848;&#x4F8B;&#x6F14;&#x793A;" class="headerlink" title="&#x6848;&#x4F8B;&#x6F14;&#x793A;"></a>&#x6848;&#x4F8B;&#x6F14;&#x793A;</h2><h3 id="&#x65E0;&#x53C2;&#x8FD4;&#x56DE;"><a href="#&#x65E0;&#x53C2;&#x8FD4;&#x56DE;" class="headerlink" title="&#x65E0;&#x53C2;&#x8FD4;&#x56DE;"></a>&#x65E0;&#x53C2;&#x8FD4;&#x56DE;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CREATE FUNCTION `fuc05`()</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE name VARCHAR(20) DEFAULT &apos;&apos;;</span><br><span class="line">SELECT u.username INTO name</span><br><span class="line">FROM `user` u</span><br><span class="line">WHERE u.d=1;</span><br><span class="line">RETURN name;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SELECT fuc05() $</span><br></pre></td></tr></table></figure>
-
-<h3 id="&#x6709;&#x53C2;&#x8FD4;&#x56DE;"><a href="#&#x6709;&#x53C2;&#x8FD4;&#x56DE;" class="headerlink" title="&#x6709;&#x53C2;&#x8FD4;&#x56DE;"></a>&#x6709;&#x53C2;&#x8FD4;&#x56DE;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CREATE FUNCTION `fuc05`(`name` VARCHAR(20)) RETURNS VARCHAR</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE na VARCHAR(20) DEFAULT &apos;&apos;;</span><br><span class="line">SELECT u.username INTO na</span><br><span class="line">FROM `user` u</span><br><span class="line">WHERE u.username=`name`;</span><br><span class="line">RETURN na;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SELECT fuc05() $</span><br></pre></td></tr></table></figure>
-
-<h2 id="&#x67E5;&#x770B;&#x51FD;&#x6570;"><a href="#&#x67E5;&#x770B;&#x51FD;&#x6570;" class="headerlink" title="&#x67E5;&#x770B;&#x51FD;&#x6570;"></a>&#x67E5;&#x770B;&#x51FD;&#x6570;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show create function &#x51FD;&#x6570;&#x540D;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="&#x5220;&#x9664;&#x51FD;&#x6570;"><a href="#&#x5220;&#x9664;&#x51FD;&#x6570;" class="headerlink" title="&#x5220;&#x9664;&#x51FD;&#x6570;"></a>&#x5220;&#x9664;&#x51FD;&#x6570;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop function &#x51FD;&#x6570;&#x540D;;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1776,14 +1760,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1823,13 +1807,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">27k</span>
+    <span title="站点总字数">28k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">24 分钟</span>
+    <span title="站点阅读时长">25 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>
