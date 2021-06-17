@@ -308,31 +308,6 @@
       </tags>
   </entry>
   <entry>
-    <title>zookeeper学习</title>
-    <url>/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="zookeeper"><a href="#zookeeper" class="headerlink" title="zookeeper"></a>zookeeper</h1><p><strong>zookeeper是开源的分布式的、为分布式应用提供协调服务的Apache项目。</strong></p>
-<p>​     zookeeper从设计模式角度来理解：是一个基于观察者模式设计的分布式服务管理框架，它负责</p>
-<p>存储和管理大家关心的数据，然后接受观察者的注册，一旦这些数据的状态发生变化，zookeeper就</p>
-<p>将负责通知已经在zookeeper上注册的那些观察者做出相应的反应。</p>
-<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_00-46-15.png" alt></p>
-<p><strong>注意：</strong>了解了zookeeper的工作机制，我们就可以将zookeeper类比为<strong>文件系统+通知机制</strong></p>
-<h4 id="zookeeper特点"><a href="#zookeeper特点" class="headerlink" title="zookeeper特点"></a>zookeeper特点</h4><p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_00-52-18.png" alt></p>
-<p>1、zookeeper： 一个领导者（Leader），多个跟随者（Follower）组成的集群。</p>
-<p>2、集群中只要半数以上节点存活，zookeeper集群就能正常服务。</p>
-<p>3、全局数据一致性： 每个server保存一份相同的数据副本，client无论连接到那个</p>
-<p>server，数据都是一致。</p>
-<p>4、更新请求顺序进行，来自同一个client的更新请求按其顺序发送依次执行。</p>
-<p>5、数据更新原子性，一次数据更新要么成功，要么失败。</p>
-<p>6、实时性，在一定时间范围内，client能读到最新数据。</p>
-<h4 id="zookeeper数据结构"><a href="#zookeeper数据结构" class="headerlink" title="zookeeper数据结构"></a>zookeeper数据结构</h4><p>​     zookeeper的数据模型的结构与unix文件系统类似，整体可以看做是一颗树，每个节点称作一个znode。</p>
-<p>每个znode默认能够存储1MB的数据，每个znode都可以通过其路径唯一标识。</p>
-<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_01-06-38.png" alt></p>
-]]></content>
-      <tags>
-        <tag>大数据</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>rabbitmq学习</title>
     <url>/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h1 id="rabbitmq学习"><a href="#rabbitmq学习" class="headerlink" title="rabbitmq学习"></a>rabbitmq学习</h1><p>rabbitmq整体架构就是生产者消费者模型，主要负责接收、存储和转发消息。</p>
@@ -370,6 +345,31 @@
 ]]></content>
       <tags>
         <tag>消息队列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>zookeeper学习</title>
+    <url>/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="zookeeper"><a href="#zookeeper" class="headerlink" title="zookeeper"></a>zookeeper</h1><p><strong>zookeeper是开源的分布式的、为分布式应用提供协调服务的Apache项目。</strong></p>
+<p>​     zookeeper从设计模式角度来理解：是一个基于观察者模式设计的分布式服务管理框架，它负责</p>
+<p>存储和管理大家关心的数据，然后接受观察者的注册，一旦这些数据的状态发生变化，zookeeper就</p>
+<p>将负责通知已经在zookeeper上注册的那些观察者做出相应的反应。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_00-46-15.png" alt></p>
+<p><strong>注意：</strong>了解了zookeeper的工作机制，我们就可以将zookeeper类比为<strong>文件系统+通知机制</strong></p>
+<h4 id="zookeeper特点"><a href="#zookeeper特点" class="headerlink" title="zookeeper特点"></a>zookeeper特点</h4><p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_00-52-18.png" alt></p>
+<p>1、zookeeper： 一个领导者（Leader），多个跟随者（Follower）组成的集群。</p>
+<p>2、集群中只要半数以上节点存活，zookeeper集群就能正常服务。</p>
+<p>3、全局数据一致性： 每个server保存一份相同的数据副本，client无论连接到那个</p>
+<p>server，数据都是一致。</p>
+<p>4、更新请求顺序进行，来自同一个client的更新请求按其顺序发送依次执行。</p>
+<p>5、数据更新原子性，一次数据更新要么成功，要么失败。</p>
+<p>6、实时性，在一定时间范围内，client能读到最新数据。</p>
+<h4 id="zookeeper数据结构"><a href="#zookeeper数据结构" class="headerlink" title="zookeeper数据结构"></a>zookeeper数据结构</h4><p>​     zookeeper的数据模型的结构与unix文件系统类似，整体可以看做是一颗树，每个节点称作一个znode。</p>
+<p>每个znode默认能够存储1MB的数据，每个znode都可以通过其路径唯一标识。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_01-06-38.png" alt></p>
+]]></content>
+      <tags>
+        <tag>大数据</tag>
       </tags>
   </entry>
   <entry>
