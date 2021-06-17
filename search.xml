@@ -28,14 +28,6 @@
       </tags>
   </entry>
   <entry>
-    <title>java基础之接口</title>
-    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>java基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JVM学习</title>
     <url>/2021/05/26/JVM%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h3 id="什么是虚拟机？"><a href="#什么是虚拟机？" class="headerlink" title="什么是虚拟机？"></a>什么是虚拟机？</h3><p>所谓虚拟机，就是一台虚拟的计算机。它是一款软件，用来执行一系列虚拟计算机指令，大体上，虚拟机可以分为系统虚拟机和程序虚拟机。</p>
@@ -73,6 +65,22 @@
 ]]></content>
       <tags>
         <tag>JVM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java基础之接口</title>
+    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>java基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java基础之集合--深入研究</title>
+    <url>/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/</url>
+    <content><![CDATA[<h1 id="java基础之集合"><a href="#java基础之集合" class="headerlink" title="java基础之集合"></a>java基础之集合</h1>]]></content>
+      <tags>
+        <tag>java基础</tag>
       </tags>
   </entry>
   <entry>
@@ -186,14 +194,6 @@
       </tags>
   </entry>
   <entry>
-    <title>java基础之集合--深入研究</title>
-    <url>/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/</url>
-    <content><![CDATA[<h1 id="java基础之集合"><a href="#java基础之集合" class="headerlink" title="java基础之集合"></a>java基础之集合</h1>]]></content>
-      <tags>
-        <tag>java基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>kafka</title>
     <url>/2021/05/26/kafka/</url>
     <content><![CDATA[<h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><p>分布式的基于发布/订阅模式的消息队列</p>
@@ -240,15 +240,6 @@
 ]]></content>
       <tags>
         <tag>消息队列</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mysql--索引</title>
-    <url>/2020/06/03/mysql-%E7%B4%A2%E5%BC%95/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>mysql</tag>
-        <tag>索引</tag>
       </tags>
   </entry>
   <entry>
@@ -308,6 +299,40 @@
       </tags>
   </entry>
   <entry>
+    <title>mysql--索引</title>
+    <url>/2020/06/03/mysql-%E7%B4%A2%E5%BC%95/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>mysql</tag>
+        <tag>索引</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>zookeeper学习</title>
+    <url>/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="zookeeper"><a href="#zookeeper" class="headerlink" title="zookeeper"></a>zookeeper</h1><p><strong>zookeeper是开源的分布式的、为分布式应用提供协调服务的Apache项目。</strong></p>
+<p>​     zookeeper从设计模式角度来理解：是一个基于观察者模式设计的分布式服务管理框架，它负责</p>
+<p>存储和管理大家关心的数据，然后接受观察者的注册，一旦这些数据的状态发生变化，zookeeper就</p>
+<p>将负责通知已经在zookeeper上注册的那些观察者做出相应的反应。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_00-46-15.png" alt></p>
+<p><strong>注意：</strong>了解了zookeeper的工作机制，我们就可以将zookeeper类比为<strong>文件系统+通知机制</strong></p>
+<h4 id="zookeeper特点"><a href="#zookeeper特点" class="headerlink" title="zookeeper特点"></a>zookeeper特点</h4><p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_00-52-18.png" alt></p>
+<p>1、zookeeper： 一个领导者（Leader），多个跟随者（Follower）组成的集群。</p>
+<p>2、集群中只要半数以上节点存活，zookeeper集群就能正常服务。</p>
+<p>3、全局数据一致性： 每个server保存一份相同的数据副本，client无论连接到那个</p>
+<p>server，数据都是一致。</p>
+<p>4、更新请求顺序进行，来自同一个client的更新请求按其顺序发送依次执行。</p>
+<p>5、数据更新原子性，一次数据更新要么成功，要么失败。</p>
+<p>6、实时性，在一定时间范围内，client能读到最新数据。</p>
+<h4 id="zookeeper数据结构"><a href="#zookeeper数据结构" class="headerlink" title="zookeeper数据结构"></a>zookeeper数据结构</h4><p>​     zookeeper的数据模型的结构与unix文件系统类似，整体可以看做是一颗树，每个节点称作一个znode。</p>
+<p>每个znode默认能够存储1MB的数据，每个znode都可以通过其路径唯一标识。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_01-06-38.png" alt></p>
+]]></content>
+      <tags>
+        <tag>大数据</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>rabbitmq学习</title>
     <url>/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h1 id="rabbitmq学习"><a href="#rabbitmq学习" class="headerlink" title="rabbitmq学习"></a>rabbitmq学习</h1><p>rabbitmq整体架构就是生产者消费者模型，主要负责接收、存储和转发消息。</p>
@@ -348,46 +373,6 @@
       </tags>
   </entry>
   <entry>
-    <title>zookeeper学习</title>
-    <url>/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="zookeeper"><a href="#zookeeper" class="headerlink" title="zookeeper"></a>zookeeper</h1><p><strong>zookeeper是开源的分布式的、为分布式应用提供协调服务的Apache项目。</strong></p>
-<p>​     zookeeper从设计模式角度来理解：是一个基于观察者模式设计的分布式服务管理框架，它负责</p>
-<p>存储和管理大家关心的数据，然后接受观察者的注册，一旦这些数据的状态发生变化，zookeeper就</p>
-<p>将负责通知已经在zookeeper上注册的那些观察者做出相应的反应。</p>
-<p>![](D:\npm Registry\ss\source_posts\zookeeper学习\Snipaste_2021-06-17_00-46-15.png)</p>
-<p><strong>注意：</strong>了解了zookeeper的工作机制，我们就可以将zookeeper类比为<strong>文件系统+通知机制</strong></p>
-<h4 id="zookeeper特点"><a href="#zookeeper特点" class="headerlink" title="zookeeper特点"></a>zookeeper特点</h4><p>![](D:\npm Registry\ss\source_posts\zookeeper学习\Snipaste_2021-06-17_00-52-18.png)</p>
-<p>1、zookeeper： 一个领导者（Leader），多个跟随者（Follower）组成的集群。</p>
-<p>2、集群中只要半数以上节点存活，zookeeper集群就能正常服务。</p>
-<p>3、全局数据一致性： 每个server保存一份相同的数据副本，client无论连接到那个</p>
-<p>server，数据都是一致。</p>
-<p>4、更新请求顺序进行，来自同一个client的更新请求按其顺序发送依次执行。</p>
-<p>5、数据更新原子性，一次数据更新要么成功，要么失败。</p>
-<p>6、实时性，在一定时间范围内，client能读到最新数据。</p>
-<h4 id="zookeeper数据结构"><a href="#zookeeper数据结构" class="headerlink" title="zookeeper数据结构"></a>zookeeper数据结构</h4><p>​     zookeeper的数据模型的结构与unix文件系统类似，整体可以看做是一颗树，每个节点称作一个znode。</p>
-<p>每个znode默认能够存储1MB的数据，每个znode都可以通过其路径唯一标识。</p>
-<p>![](D:\npm Registry\ss\source_posts\zookeeper学习\Snipaste_2021-06-17_01-06-38.png)</p>
-]]></content>
-      <tags>
-        <tag>大数据</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法之排序算法</title>
-    <url>/2020/06/07/%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p>使用Python编写算法</p>
-<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"># coding:utf-8</span><br><span class="line"></span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">冒泡排序法</span><br><span class="line">外层循环代表共进行几轮交换</span><br><span class="line">内层循环是一轮交换几次</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">相邻两数进行交换</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class BubbleSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)):</span><br><span class="line">            for j in range(0, len(self.List) - 1):</span><br><span class="line">                if (self.List[j] &gt; self.List[j+1]):</span><br><span class="line">                    self.List[j], self.List[j+1] &#x3D; self.List[j+1], self.List[j]</span><br><span class="line">                continue</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line">if  __name__&#x3D;&#x3D;&#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; BubbleSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding:utf-8</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">选择排序算法</span><br><span class="line">外层循环表示几轮比较</span><br><span class="line">内存循环表示比较多少次</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">每次比较找到最小值并进行交换</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class SelectionSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)-1):</span><br><span class="line">            if (self.List[i] !&#x3D; min(self.List[i:])):</span><br><span class="line">                minIndex &#x3D; self.List.index(min(self.List[i:]))</span><br><span class="line">                self.List[i], self.List[minIndex] &#x3D; self.List[minIndex], self.List[i]</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line">    def sort1(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)):</span><br><span class="line">            minIndex &#x3D; i</span><br><span class="line">            for j in range(i+1, len(self.List)):</span><br><span class="line">                if (self.List[minIndex] &gt; self.List[j]):</span><br><span class="line">                    self.List[minIndex], self.List[j] &#x3D; self.List[j], self.List[minIndex]</span><br><span class="line">                    minIndex &#x3D; j</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; SelectionSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort1()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
-
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"># coding:utf-8</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">插入排序</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">类似于抽排游戏</span><br><span class="line">左侧代表手中的牌，有测代表抽的牌</span><br><span class="line">每次抽牌，都需要和左侧手牌进行比较，将抽的牌放在合理的位置</span><br><span class="line">当抽玩牌后，左侧的手牌就是排好序的数组</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class InsertionSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for right in range(1, len(self.List)):</span><br><span class="line">            target &#x3D; self.List[right]</span><br><span class="line">            for left in range(0, right):</span><br><span class="line">                if (target &lt; self.List[left]):</span><br><span class="line">                    self.List[left+1:right+1] &#x3D; self.List[left:right]</span><br><span class="line">                    self.List[left] &#x3D; target</span><br><span class="line">                    break</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; InsertionSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基于docker-compose 安装mysql</title>
     <url>/2020/05/27/%E5%9F%BA%E4%BA%8Edocker-compose-%E6%90%AD%E5%BB%BAmysql/</url>
     <content><![CDATA[<h1 id="docker-compose-安装mysql"><a href="#docker-compose-安装mysql" class="headerlink" title="docker-compose 安装mysql"></a>docker-compose 安装mysql</h1><p>  首先，必须要安装docker，以及docker-compose。</p>
@@ -414,6 +399,21 @@
       <tags>
         <tag>mysql</tag>
         <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法之排序算法</title>
+    <url>/2020/06/07/%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p>使用Python编写算法</p>
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"># coding:utf-8</span><br><span class="line"></span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">冒泡排序法</span><br><span class="line">外层循环代表共进行几轮交换</span><br><span class="line">内层循环是一轮交换几次</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">相邻两数进行交换</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class BubbleSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)):</span><br><span class="line">            for j in range(0, len(self.List) - 1):</span><br><span class="line">                if (self.List[j] &gt; self.List[j+1]):</span><br><span class="line">                    self.List[j], self.List[j+1] &#x3D; self.List[j+1], self.List[j]</span><br><span class="line">                continue</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line">if  __name__&#x3D;&#x3D;&#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; BubbleSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding:utf-8</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">选择排序算法</span><br><span class="line">外层循环表示几轮比较</span><br><span class="line">内存循环表示比较多少次</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">每次比较找到最小值并进行交换</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class SelectionSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)-1):</span><br><span class="line">            if (self.List[i] !&#x3D; min(self.List[i:])):</span><br><span class="line">                minIndex &#x3D; self.List.index(min(self.List[i:]))</span><br><span class="line">                self.List[i], self.List[minIndex] &#x3D; self.List[minIndex], self.List[i]</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line">    def sort1(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)):</span><br><span class="line">            minIndex &#x3D; i</span><br><span class="line">            for j in range(i+1, len(self.List)):</span><br><span class="line">                if (self.List[minIndex] &gt; self.List[j]):</span><br><span class="line">                    self.List[minIndex], self.List[j] &#x3D; self.List[j], self.List[minIndex]</span><br><span class="line">                    minIndex &#x3D; j</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; SelectionSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort1()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
+
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"># coding:utf-8</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">插入排序</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">类似于抽排游戏</span><br><span class="line">左侧代表手中的牌，有测代表抽的牌</span><br><span class="line">每次抽牌，都需要和左侧手牌进行比较，将抽的牌放在合理的位置</span><br><span class="line">当抽玩牌后，左侧的手牌就是排好序的数组</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class InsertionSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for right in range(1, len(self.List)):</span><br><span class="line">            target &#x3D; self.List[right]</span><br><span class="line">            for left in range(0, right):</span><br><span class="line">                if (target &lt; self.List[left]):</span><br><span class="line">                    self.List[left+1:right+1] &#x3D; self.List[left:right]</span><br><span class="line">                    self.List[left] &#x3D; target</span><br><span class="line">                    break</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; InsertionSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>

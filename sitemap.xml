@@ -4,7 +4,7 @@
   <url>
     <loc>http://yoursite.com/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/</loc>
     
-    <lastmod>2021-06-16</lastmod>
+    <lastmod>2021-06-17</lastmod>
     
   </url>
   
@@ -151,14 +151,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/java%E5%9F%BA%E7%A1%80/</loc>
+    <loc>http://yoursite.com/tags/JVM/</loc>
     <lastmod>2021-06-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/JVM/</loc>
+    <loc>http://yoursite.com/tags/java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2021-06-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -200,14 +200,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://yoursite.com/tags/docker/</loc>
     <lastmod>2021-06-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/docker/</loc>
+    <loc>http://yoursite.com/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-06-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
