@@ -46,12 +46,12 @@
   };
 </script>
 
-  <meta name="description" content="Kafka&amp;#x5206;&amp;#x5E03;&amp;#x5F0F;&amp;#x7684;&amp;#x57FA;&amp;#x4E8E;&amp;#x53D1;&amp;#x5E03;&#x2F;&amp;#x8BA2;&amp;#x9605;&amp;#x6A21;&amp;#x5F0F;&amp;#x7684;&amp;#x6D88;&amp;#x606F;&amp;#x961F;&amp;#x5217; &amp;#x6D88;&amp;#x606F;&amp;#x961F;&amp;#x5217;&amp;#x5F02;&amp;#x6B65;&amp;#x5904;&amp;">
+  <meta name="description" content="Kafka分布式的基于发布&#x2F;订阅模式的消息队列 消息队列异步处理任务 1、解耦 2、流量削峰 3、缓冲 4、可恢复性 5、灵活性 6、异步处理能力 消息队列的两种模式 1、点对点模式  一对一模式 2、发布与订阅模式 一对多模式 producer   — 消息推送  —- topic（阻塞队列） —-  广播的形式发送到订阅的消费者中去 —- 多个消费者（消费者必须采取轮训的方式去查看topic中">
 <meta property="og:type" content="article">
 <meta property="og:title" content="kafka">
 <meta property="og:url" content="http://yoursite.com/2021/05/26/kafka/index.html">
 <meta property="og:site_name" content="bblike博客小站">
-<meta property="og:description" content="Kafka&amp;#x5206;&amp;#x5E03;&amp;#x5F0F;&amp;#x7684;&amp;#x57FA;&amp;#x4E8E;&amp;#x53D1;&amp;#x5E03;&#x2F;&amp;#x8BA2;&amp;#x9605;&amp;#x6A21;&amp;#x5F0F;&amp;#x7684;&amp;#x6D88;&amp;#x606F;&amp;#x961F;&amp;#x5217; &amp;#x6D88;&amp;#x606F;&amp;#x961F;&amp;#x5217;&amp;#x5F02;&amp;#x6B65;&amp;#x5904;&amp;">
+<meta property="og:description" content="Kafka分布式的基于发布&#x2F;订阅模式的消息队列 消息队列异步处理任务 1、解耦 2、流量削峰 3、缓冲 4、可恢复性 5、灵活性 6、异步处理能力 消息队列的两种模式 1、点对点模式  一对一模式 2、发布与订阅模式 一对多模式 producer   — 消息推送  —- topic（阻塞队列） —-  广播的形式发送到订阅的消费者中去 —- 多个消费者（消费者必须采取轮训的方式去查看topic中">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-25T19:52:05.000Z">
 <meta property="article:modified_time" content="2021-05-27T09:30:15.747Z">
@@ -318,47 +318,47 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><p>&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x57FA;&#x4E8E;&#x53D1;&#x5E03;/&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#x7684;&#x6D88;&#x606F;&#x961F;&#x5217;</p>
-<p>&#x6D88;&#x606F;&#x961F;&#x5217;&#x5F02;&#x6B65;&#x5904;&#x7406;&#x4EFB;&#x52A1;</p>
-<p>1&#x3001;&#x89E3;&#x8026;</p>
-<p>2&#x3001;&#x6D41;&#x91CF;&#x524A;&#x5CF0;</p>
-<p>3&#x3001;&#x7F13;&#x51B2;</p>
-<p>4&#x3001;&#x53EF;&#x6062;&#x590D;&#x6027;</p>
-<p>5&#x3001;&#x7075;&#x6D3B;&#x6027;</p>
-<p>6&#x3001;&#x5F02;&#x6B65;&#x5904;&#x7406;&#x80FD;&#x529B;</p>
-<p>&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x4E24;&#x79CD;&#x6A21;&#x5F0F;</p>
-<p>1&#x3001;&#x70B9;&#x5BF9;&#x70B9;&#x6A21;&#x5F0F;  &#x4E00;&#x5BF9;&#x4E00;&#x6A21;&#x5F0F;</p>
-<p>2&#x3001;&#x53D1;&#x5E03;&#x4E0E;&#x8BA2;&#x9605;&#x6A21;&#x5F0F; &#x4E00;&#x5BF9;&#x591A;&#x6A21;&#x5F0F;</p>
-<p>producer   &#x2014; &#x6D88;&#x606F;&#x63A8;&#x9001;  &#x2014;- topic&#xFF08;&#x963B;&#x585E;&#x961F;&#x5217;&#xFF09; &#x2014;-  &#x5E7F;&#x64AD;&#x7684;&#x5F62;&#x5F0F;&#x53D1;&#x9001;&#x5230;&#x8BA2;&#x9605;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x4E2D;&#x53BB; &#x2014;- &#x591A;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#xFF08;&#x6D88;&#x8D39;&#x8005;&#x5FC5;&#x987B;&#x91C7;&#x53D6;&#x8F6E;&#x8BAD;&#x7684;&#x65B9;&#x5F0F;&#x53BB;&#x67E5;&#x770B;topic&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x6D88;&#x606F;&#x672A;&#x6D88;&#x8D39;&#xFF09;</p>
-<p><strong>kafka&#x67B6;&#x6784;</strong></p>
+        <h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><p>分布式的基于发布/订阅模式的消息队列</p>
+<p>消息队列异步处理任务</p>
+<p>1、解耦</p>
+<p>2、流量削峰</p>
+<p>3、缓冲</p>
+<p>4、可恢复性</p>
+<p>5、灵活性</p>
+<p>6、异步处理能力</p>
+<p>消息队列的两种模式</p>
+<p>1、点对点模式  一对一模式</p>
+<p>2、发布与订阅模式 一对多模式</p>
+<p>producer   — 消息推送  —- topic（阻塞队列） —-  广播的形式发送到订阅的消费者中去 —- 多个消费者（消费者必须采取轮训的方式去查看topic中是否存在消息未消费）</p>
+<p><strong>kafka架构</strong></p>
 <p>![](D:\npm Registry\ss\source_posts\kafka\Snipaste_2021-05-25_19-54-42.png)</p>
-<p>1&#x3001;producer: &#x6D88;&#x606F;&#x751F;&#x4EA7;&#x8005;&#xFF0C;&#x5C31;&#x662F;&#x5411;kafka broker &#xFF08;&#x5206;&#x533A;&#xFF09;&#x53D1;&#x9001;&#x6D88;&#x606F;</p>
-<p>2&#x3001;consumer&#xFF1A; &#x6D88;&#x606F;&#x6D88;&#x8D39;&#x8005;&#xFF0C;&#x5411;kafka broker &#x53D6;&#x6D88;&#x606F;&#x7684;&#x5BA2;&#x6237;&#x7AEF;</p>
-<p>3&#x3001;consumer group&#xFF1A; &#x6D88;&#x8D39;&#x8005;&#x7EC4;&#xFF0C;&#x7531;&#x591A;&#x4E2A;consumer&#x7EC4;&#x6210;&#x3002;</p>
-<p><strong>&#x4E00;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#x7EC4;&#x91CC;&#x9762;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x53EA;&#x80FD;&#x6D88;&#x8D39;&#x4E0D;&#x540C;&#x5206;&#x533A;&#x7684;topic&#x6D88;&#x606F;&#x3002;</strong></p>
-<p>&#x521B;&#x5EFA;topic</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181  --topic test --partitions 1  -replication-factor 1</span><br><span class="line"></span><br><span class="line">&#x521B;&#x5EFA;&#x526F;&#x672C;&#x6570;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;&#x57FA;&#x6570;</span><br></pre></td></tr></table></figure>
+<p>1、producer: 消息生产者，就是向kafka broker （分区）发送消息</p>
+<p>2、consumer： 消息消费者，向kafka broker 取消息的客户端</p>
+<p>3、consumer group： 消费者组，由多个consumer组成。</p>
+<p><strong>一个消费者组里面的消费者只能消费不同分区的topic消息。</strong></p>
+<p>创建topic</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181  --topic test --partitions 1  -replication-factor 1</span><br><span class="line"></span><br><span class="line">创建副本数不能超过基数</span><br></pre></td></tr></table></figure>
 
-<p>&#x67E5;&#x770B;topic&#x603B;&#x6570;</p>
+<p>查看topic总数</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-topics.sh --list --zookeeper localhost:2181</span><br></pre></td></tr></table></figure>
 
-<p>&#x5220;&#x9664;topic</p>
+<p>删除topic</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-topics.sh --delete --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
 
-<p>topic&#x63CF;&#x8FF0;</p>
+<p>topic描述</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
 
-<p>&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x53F7;9092</p>
-<p>&#x53D1;&#x9001;&#x6D88;&#x606F;</p>
+<p>默认端口号9092</p>
+<p>发送消息</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x96C6;&#x7FA4;&#x63A5;&#x6536;&#x6D88;&#x606F;</span><br><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092 --from-beginning</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">集群接收消息</span><br><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092 --from-beginning</span><br></pre></td></tr></table></figure>
 
 
 
 
 
-<p><strong>kafka&#x5DE5;&#x4F5C;&#x533A;&#x6D41;&#x7A0B;&#xFF1A;</strong></p>
+<p><strong>kafka工作区流程：</strong></p>
 
     </div>
 

@@ -46,12 +46,12 @@
   };
 </script>
 
-  <meta name="description" content="mysql&amp;#x6027;&amp;#x80FD;&amp;#x4F18;&amp;#x5316;mysql &amp;#x903B;&amp;#x8F91;&amp;#x67B6;&amp;#x6784;![](D:\npm Registry\ss\source_posts\mysql&amp;#x6027;&amp;#x80FD;&amp;#x4F18;&amp;#x5316;\Snipaste_2021-05-24_10-06-25.png) ![](D:\npm Regist">
+  <meta name="description" content="mysql性能优化mysql 逻辑架构![](D:\npm Registry\ss\source_posts\mysql性能优化\Snipaste_2021-05-24_10-06-25.png) ![](D:\npm Registry\ss\source_posts\mysql性能优化\Snipaste_2021-05-24_10-10-34.png) 如何查看现有的mysql使用什么数据引擎？">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql性能优化">
 <meta property="og:url" content="http://yoursite.com/2021/05/23/mysql%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/index.html">
 <meta property="og:site_name" content="bblike博客小站">
-<meta property="og:description" content="mysql&amp;#x6027;&amp;#x80FD;&amp;#x4F18;&amp;#x5316;mysql &amp;#x903B;&amp;#x8F91;&amp;#x67B6;&amp;#x6784;![](D:\npm Registry\ss\source_posts\mysql&amp;#x6027;&amp;#x80FD;&amp;#x4F18;&amp;#x5316;\Snipaste_2021-05-24_10-06-25.png) ![](D:\npm Regist">
+<meta property="og:description" content="mysql性能优化mysql 逻辑架构![](D:\npm Registry\ss\source_posts\mysql性能优化\Snipaste_2021-05-24_10-06-25.png) ![](D:\npm Registry\ss\source_posts\mysql性能优化\Snipaste_2021-05-24_10-10-34.png) 如何查看现有的mysql使用什么数据引擎？">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-22T16:40:19.000Z">
 <meta property="article:modified_time" content="2021-06-07T09:47:50.689Z">
@@ -318,281 +318,281 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="mysql&#x6027;&#x80FD;&#x4F18;&#x5316;"><a href="#mysql&#x6027;&#x80FD;&#x4F18;&#x5316;" class="headerlink" title="mysql&#x6027;&#x80FD;&#x4F18;&#x5316;"></a>mysql&#x6027;&#x80FD;&#x4F18;&#x5316;</h1><h2 id="mysql-&#x903B;&#x8F91;&#x67B6;&#x6784;"><a href="#mysql-&#x903B;&#x8F91;&#x67B6;&#x6784;" class="headerlink" title="mysql &#x903B;&#x8F91;&#x67B6;&#x6784;"></a>mysql &#x903B;&#x8F91;&#x67B6;&#x6784;</h2><p>![](D:\npm Registry\ss\source_posts\mysql&#x6027;&#x80FD;&#x4F18;&#x5316;\Snipaste_2021-05-24_10-06-25.png)</p>
-<p>![](D:\npm Registry\ss\source_posts\mysql&#x6027;&#x80FD;&#x4F18;&#x5316;\Snipaste_2021-05-24_10-10-34.png)</p>
-<p>&#x5982;&#x4F55;&#x67E5;&#x770B;&#x73B0;&#x6709;&#x7684;mysql&#x4F7F;&#x7528;&#x4EC0;&#x4E48;&#x6570;&#x636E;&#x5F15;&#x64CE;&#xFF1F;</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">engines</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">variables</span> <span class="keyword">like</span> <span class="string">&apos;%storage_engine%&apos;</span>;</span><br></pre></td></tr></table></figure>
+        <h1 id="mysql性能优化"><a href="#mysql性能优化" class="headerlink" title="mysql性能优化"></a>mysql性能优化</h1><h2 id="mysql-逻辑架构"><a href="#mysql-逻辑架构" class="headerlink" title="mysql 逻辑架构"></a>mysql 逻辑架构</h2><p>![](D:\npm Registry\ss\source_posts\mysql性能优化\Snipaste_2021-05-24_10-06-25.png)</p>
+<p>![](D:\npm Registry\ss\source_posts\mysql性能优化\Snipaste_2021-05-24_10-10-34.png)</p>
+<p>如何查看现有的mysql使用什么数据引擎？</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">engines</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">variables</span> <span class="keyword">like</span> <span class="string">'%storage_engine%'</span>;</span><br></pre></td></tr></table></figure>
 
-<p>mysql&#x9ED8;&#x8BA4;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x662F;innodb</p>
+<p>mysql默认的存储引擎是innodb</p>
 <table>
 <thead>
 <tr>
-<th align="center">&#x5BF9;&#x6BD4;&#x9879;</th>
+<th align="center">对比项</th>
 <th align="center">myisam</th>
 <th align="center">innodb</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">&#x4E3B;&#x5916;&#x952E;</td>
-<td align="center">&#x4E0D;&#x652F;&#x6301;</td>
-<td align="center">&#x652F;&#x6301;</td>
+<td align="center">主外键</td>
+<td align="center">不支持</td>
+<td align="center">支持</td>
 </tr>
 <tr>
-<td align="center">&#x4E8B;&#x52A1;</td>
-<td align="center">&#x4E0D;&#x652F;&#x6301;</td>
-<td align="center">&#x652F;&#x6301;</td>
+<td align="center">事务</td>
+<td align="center">不支持</td>
+<td align="center">支持</td>
 </tr>
 <tr>
-<td align="center">&#x884C;&#x8868;&#x9501;</td>
-<td align="center">&#x8868;&#x9501;&#xFF0C;&#x5373;&#x4F7F;&#x64CD;&#x4F5C;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x4E5F;&#x4F1A;&#x9501;&#x4F4F;&#x6574;&#x5F20;&#x8868;&#xFF0C;&#x4E0D;&#x9002;&#x5408;&#x9AD8;&#x5E76;&#x53D1;</td>
-<td align="center">&#x884C;&#x9501;&#xFF0C;&#x64CD;&#x4F5C;&#x67D0;&#x4E00;&#x884C;&#xFF0C;&#x4E0D;&#x4F1A;&#x5BF9;&#x5176;&#x4ED6;&#x884C;&#x6709;&#x5F71;&#x54CD;&#xFF0C;&#x9002;&#x5408;&#x9AD8;&#x5E76;&#x53D1;&#x3002;</td>
+<td align="center">行表锁</td>
+<td align="center">表锁，即使操作一条记录也会锁住整张表，不适合高并发</td>
+<td align="center">行锁，操作某一行，不会对其他行有影响，适合高并发。</td>
 </tr>
 <tr>
-<td align="center">&#x7F13;&#x5B58;</td>
-<td align="center">&#x53EA;&#x7F13;&#x5B58;&#x7D22;&#x5F15;</td>
-<td align="center">&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x7F13;&#x5B58;&#x7D22;&#x5F15;&#x8FD8;&#x8981;&#x7F13;&#x5B58;&#x771F;&#x5B9E;&#x6570;&#x636E;&#xFF0C;&#x5BF9;&#x5185;&#x5B58;&#x8981;&#x6C42;&#x8F83;&#x9AD8;&#xFF0C;&#x800C;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#x4F1A;&#x6709;&#x51B3;&#x5B9A;&#x6027;&#x7684;&#x5F71;&#x54CD;&#x3002;</td>
+<td align="center">缓存</td>
+<td align="center">只缓存索引</td>
+<td align="center">不仅可以缓存索引还要缓存真实数据，对内存要求较高，而内存大小会有决定性的影响。</td>
 </tr>
 <tr>
-<td align="center">&#x8868;&#x7A7A;&#x95F4;</td>
-<td align="center">&#x5C0F;</td>
-<td align="center">&#x5927;</td>
+<td align="center">表空间</td>
+<td align="center">小</td>
+<td align="center">大</td>
 </tr>
 <tr>
-<td align="center">&#x5173;&#x6CE8;&#x70B9;</td>
-<td align="center">&#x6027;&#x80FD;&#xFF08;&#x9002;&#x5408;&#x53EA;&#x8BFB;&#x8868;&#xFF09;</td>
-<td align="center">&#x5927;</td>
+<td align="center">关注点</td>
+<td align="center">性能（适合只读表）</td>
+<td align="center">大</td>
 </tr>
 <tr>
-<td align="center">&#x9ED8;&#x8BA4;&#x5B89;&#x88C5;</td>
-<td align="center">&#x662F;</td>
-<td align="center">&#x662F;</td>
+<td align="center">默认安装</td>
+<td align="center">是</td>
+<td align="center">是</td>
 </tr>
 </tbody></table>
-<h3 id="sql&#x6027;&#x80FD;&#x4E0B;&#x964D;&#x7684;&#x539F;&#x56E0;&#xFF1F;"><a href="#sql&#x6027;&#x80FD;&#x4E0B;&#x964D;&#x7684;&#x539F;&#x56E0;&#xFF1F;" class="headerlink" title="sql&#x6027;&#x80FD;&#x4E0B;&#x964D;&#x7684;&#x539F;&#x56E0;&#xFF1F;"></a>sql&#x6027;&#x80FD;&#x4E0B;&#x964D;&#x7684;&#x539F;&#x56E0;&#xFF1F;</h3><p>1&#x3001;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x5199;&#x7684;&#x70C2;&#xFF0C;&#x53EF;&#x80FD;&#x6D89;&#x53CA;&#x591A;&#x6B21;&#x7684;&#x5173;&#x8054;&#x67E5;&#x8BE2;&#x3001;&#x5B50;&#x67E5;&#x8BE2;&#xFF0C;&#x5BFC;&#x81F4;sql&#x6027;&#x80FD;&#x4E0B;&#x964D;&#x3002;</p>
-<p>2&#x3001;&#x7D22;&#x5F15;&#x5931;&#x6548;&#xFF08;&#x5355;&#x503C;&#x3001;&#x590D;&#x5408;&#xFF09;</p>
-<p>3&#x3001;&#x5173;&#x8054;&#x67E5;&#x8BE2;&#x6D89;&#x53CA;&#x592A;&#x591A;join</p>
-<p>4&#x3001;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x4F18;&#x4EE5;&#x53CA;&#x5404;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x8BBE;&#x7F6E;&#xFF08;&#x7F13;&#x51B2;&#x3001;&#x7EBF;&#x7A0B;&#x7B49;&#xFF09;</p>
-<h3 id="sql&#x6267;&#x884C;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;"><a href="#sql&#x6267;&#x884C;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;" class="headerlink" title="sql&#x6267;&#x884C;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;?"></a>sql&#x6267;&#x884C;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;?</h3><p>   mysql&#x5728;&#x6267;&#x884C;sql&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x6309;&#x7167;&#x4EBA;&#x5199;&#x7684;sql&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;mysql&#x7684;&#x670D;&#x52A1;&#x5C42;&#x91CC;&#x9762;&#x7684;sql&#x7684;&#x4F18;&#x5316;&#x5668;&#xFF0C;&#x89E3;&#x6790;sql&#x7684;&#x987A;&#x5E8F;&#x6267;&#x884C;sql&#x8BED;&#x53E5;&#xFF0C;&#x4F7F;&#x5F97;sql&#x7684;&#x6267;&#x884C;&#x6548;&#x7387;&#x66F4;&#x9AD8;&#x3002;</p>
-<p>![](D:\npm Registry\ss\source_posts\mysql&#x6027;&#x80FD;&#x4F18;&#x5316;\Snipaste_2021-05-24_10-47-40.png)</p>
-<h3 id="&#x4EC0;&#x4E48;&#x662F;&#x7D22;&#x5F15;&#xFF1F;"><a href="#&#x4EC0;&#x4E48;&#x662F;&#x7D22;&#x5F15;&#xFF1F;" class="headerlink" title="&#x4EC0;&#x4E48;&#x662F;&#x7D22;&#x5F15;&#xFF1F;"></a>&#x4EC0;&#x4E48;&#x662F;&#x7D22;&#x5F15;&#xFF1F;</h3><p>&#x200B;    mysql&#x5B98;&#x65B9;&#x5BF9;&#x7D22;&#x5F15;&#x7684;&#x5B9A;&#x4E49;&#x4E3A;&#xFF1A;&#x7D22;&#x5F15;&#xFF08;Index&#xFF09;&#x662F;&#x5E2E;&#x52A9;mysql&#x9AD8;&#x6548;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x7D22;&#x5F15;&#x7684;&#x672C;&#x8D28;&#xFF1A;&#x7D22;&#x5F15;&#x662F;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7406;&#x89E3;&#x4E3A;&#x6392;&#x597D;&#x5E8F;&#x7684;&#x5FEB;&#x901F;&#x67E5;&#x627E;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</p>
-<p>&#x200B;     &#x4E00;&#x822C;&#x6765;&#x8BF4;&#x7D22;&#x5F15;&#x672C;&#x8EAB;&#x4E5F;&#x5F88;&#x5927;&#xFF0C;&#x4E0D;&#x53EF;&#x80FD;&#x5168;&#x90E8;&#x5B58;&#x50A8;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x56E0;&#x6B64;&#x7D22;&#x5F15;&#x5F80;&#x5F80;&#x4EE5;&#x7D22;&#x5F15;&#x6587;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#x3002;&#x6211;&#x4EEC;&#x5E73;&#x5E38;&#x6240;&#x8BF4;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7279;&#x522B;&#x6307;&#x660E;&#xFF0C;&#x90FD;&#x662F;&#x6307;B&#x6811;(&#x591A;&#x8DEF;&#x641C;&#x7D22;&#x6811;&#xFF0C;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x4E8C;&#x53C9;&#x6811;)&#x7ED3;&#x6784;&#x7EC4;&#x7EC7;&#x7684;&#x7D22;&#x5F15;</p>
-<p>&#x200B;        &#x5728;&#x6570;&#x636E;&#x4E4B;&#x5916;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#x8FD8;&#x7EF4;&#x62A4;&#x7740;&#x6EE1;&#x8DB3;&#x7279;&#x5B9A;&#x67E5;&#x627E;&#x7B97;&#x6CD5;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4EE5;&#x67D0;&#x79CD;&#x65B9;&#x5F0F;&#x6307;&#x5411;&#x6570;&#x636E;</p>
-<p>&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x5B9E;&#x73B0;&#x9AD8;&#x7EA7;&#x67E5;&#x627E;&#x7B97;&#x6CD5;&#xFF0C;&#x8FD9;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5C31;&#x662F;&#x7D22;&#x5F15;&#x3002;&#x5176;&#x4E2D;&#x805A;&#x96C6;&#x7D22;&#x5F15;&#x3001;&#x6B21;&#x8981;&#x7D22;&#x5F15;&#x3001;&#x590D;&#x5408;&#x7D22;&#x5F15;&#x3001;&#x524D;&#x7F00;&#x7D22;&#x5F15;&#x3001;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x9ED8;&#x8BA4;&#x90FD;&#x662F;&#x4F7F;&#x7528;B&#x52A0;&#x6811;&#x7D22;&#x5F15;&#xFF0C;&#x4F46;&#x662F;&#x9664;&#x4E86;B&#x6570;&#x7D22;&#x5F15;&#xFF0C;&#x8FD8;&#x6709;&#x54C8;&#x5E0C;&#x7D22;&#x5F15;&#x3002;</p>
-<p>![](D:\npm Registry\ss\source_posts\mysql&#x6027;&#x80FD;&#x4F18;&#x5316;\Snipaste_2021-05-24_14-23-46.png)</p>
-<p>&#x200B;                                    &#x5DE6;&#x8FB9;&#x662F;&#x6570;&#x636E;&#x8868;&#xFF0C;&#x4E00;&#x5171;&#x4E24;&#x5217;&#x4E03;&#x6761;&#x8BB0;&#x5F55;&#xFF0C;&#x6700;&#x5DE6;&#x8FB9;&#x7684;&#x662F;&#x6570;&#x636E;&#x8BB0;&#x5F55;&#x7684;&#x7269;&#x7406;&#x5730;&#x5740;&#x3002;</p>
-<p>&#x200B;      &#x4E3A;&#x4E86;&#x52A0;&#x5FEB;Col2&#x7684;&#x67E5;&#x627E;&#xFF0C;&#x53EF;&#x4EE5;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x53F3;&#x8FB9;&#x6240;&#x793A;&#x7684;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x5206;&#x522B;&#x5305;&#x542B;&#x7D22;&#x5F15;&#x952E;&#x503C;&#x548C;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x8BB0;&#x5F55;&#x7269;&#x7406;&#x5730;&#x5740;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x8FD0;&#x7528;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x5728;&#x4E00;&#x5B9A;&#x590D;&#x6742;&#x5EA6;&#x5185;&#x83B7;&#x53D6;&#x5230;&#x76F8;&#x5E94;&#x6570;&#x636E;&#xFF0C;&#x4ECE;&#x800C;&#x5FEB;&#x901F;&#x7684;&#x68C0;&#x7D22;&#x51FA;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x8BB0;&#x5F55;&#x3002;</p>
-<h3 id="&#x7D22;&#x5F15;&#x7684;&#x4F18;&#x52BF;&#x548C;&#x52A3;&#x52BF;&#xFF1F;"><a href="#&#x7D22;&#x5F15;&#x7684;&#x4F18;&#x52BF;&#x548C;&#x52A3;&#x52BF;&#xFF1F;" class="headerlink" title="&#x7D22;&#x5F15;&#x7684;&#x4F18;&#x52BF;&#x548C;&#x52A3;&#x52BF;&#xFF1F;"></a>&#x7D22;&#x5F15;&#x7684;&#x4F18;&#x52BF;&#x548C;&#x52A3;&#x52BF;&#xFF1F;</h3><p><strong>&#x4F18;&#x52BF;&#xFF1A;</strong> </p>
-<p>&#x7C7B;&#x4F3C;&#x4E8E;&#x5927;&#x5B66;&#x56FE;&#x4E66;&#x9986;&#x5EFA;&#x4E66;&#x76EE;&#x7D22;&#x5F15;&#xFF0C;&#x63D0;&#x9AD8;&#x6570;&#x636E;&#x68C0;&#x7D22;&#x7684;&#x6548;&#x7387;&#xFF0C;&#x964D;&#x4F4E;&#x6570;&#x636E;&#x5E93;&#x7684;IO&#x6210;&#x672C;</p>
-<p>&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x5217;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x964D;&#x4F4E;&#x6570;&#x636E;&#x6392;&#x5E8F;&#x7684;&#x6210;&#x672C;&#xFF0C;&#x964D;&#x4F4E;CPU&#x7684;&#x6D88;&#x8017;</p>
-<p><strong>&#x52A3;&#x52BF;&#xFF1A;</strong></p>
-<p>&#x5B9E;&#x9645;&#x4E0A;&#x7D22;&#x5F15;&#x4E5F;&#x662F;&#x4E00;&#x5F20;&#x8868;&#xFF0C;&#x8BE5;&#x8868;&#x4FDD;&#x5B58;&#x4E86;&#x4E3B;&#x952E;&#x4E0E;&#x7D22;&#x5F15;&#x5B57;&#x6BB5;&#xFF0C;&#x5E76;&#x6307;&#x5411;&#x5B9E;&#x4F53;&#x8868;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x6240;&#x4EE5;&#x7D22;&#x5F15;&#x5217;&#x4E5F;&#x8981;&#x5360;&#x7528;&#x7A7A;&#x95F4;&#x7684;&#x3002;</p>
-<p>&#x867D;&#x7136;&#x7D22;&#x5F15;&#x5927;&#x5927;&#x63D0;&#x9AD8;&#x4E86;&#x67E5;&#x8BE2;&#x901F;&#x5EA6;&#xFF0C;&#x540C;&#x65F6;&#x4F1A;&#x964D;&#x4F4E;&#x66F4;&#x65B0;&#x8868;&#x7684;&#x901F;&#x5EA6;&#xFF0C;&#x5982;&#x5BF9;&#x8868;&#x8FDB;&#x884C;insert&#x3001;update&#x548C;delete&#xFF0C;&#x56E0;&#x4E3A;&#x66F4;&#x65B0;&#x8868;&#x65F6;&#xFF0C;</p>
-<p>mysql&#x4E0D;&#x4EC5;&#x8981;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x8FD8;&#x8981;&#x4FDD;&#x5B58;&#x4E00;&#x4E0B;&#x7D22;&#x5F15;&#x6587;&#x4EF6;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x6DFB;&#x52A0;&#x4E86;&#x7D22;&#x5F15;&#x5217;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x90FD;&#x4F1A;&#x8C03;&#x6574;&#x56E0;&#x4E3A;&#x66F4;&#x65B0;&#x6240;&#x5E26;&#x6765;&#x7684;&#x952E;&#x503C;&#x53D8;&#x6362;&#x540E;&#x7684;&#x7D22;&#x5F15;&#x4FE1;&#x606F;&#x3002;</p>
-<p>&#x7D22;&#x5F15;&#x53EA;&#x662F;&#x63D0;&#x9AD8;&#x4E86;&#x6548;&#x7387;&#x7684;&#x4E00;&#x4E2A;&#x56E0;&#x7D20;&#xFF0C;&#x5165;&#x80A1;&#x4F60;&#x7684;mysql&#x6709;&#x5927;&#x6570;&#x636E;&#x91CF;&#x7684;&#x8868;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x82B1;&#x65F6;&#x95F4;&#x7814;&#x7A76;&#x5EFA;&#x7ACB;&#x6700;&#x4F18;&#x79C0;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x6216;&#x8005;&#x4F18;&#x5316;&#x7D22;&#x5F15;&#x3002;</p>
-<h4 id="&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;"><a href="#&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;" class="headerlink" title="&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;"></a>&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;</h4><p>1&#x3001;&#x5355;&#x503C;&#x7D22;&#x5F15;  &#x5373;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x53EA;&#x5305;&#x542B;&#x5355;&#x4E2A;&#x5217;&#xFF0C;&#x4E00;&#x4E2A;&#x8868;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x5355;&#x5217;&#x7D22;&#x5F15;</p>
-<p>2&#x3001;&#x552F;&#x4E00;&#x7D22;&#x5F15; &#x7D22;&#x5F15;&#x5217;&#x7684;&#x503C;&#x5FC5;&#x987B;&#x552F;&#x4E00;&#xFF0C;&#x4F46;&#x5141;&#x8BB8;&#x6709;&#x7A7A;&#x503C;</p>
-<p>3&#x3001;&#x590D;&#x5408;&#x7D22;&#x5F15; &#x5373;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x5217;</p>
-<p><strong>&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#xFF1A;</strong></p>
-<p>&#x521B;&#x5EFA;</p>
-<p>1&#x3001;</p>
+<h3 id="sql性能下降的原因？"><a href="#sql性能下降的原因？" class="headerlink" title="sql性能下降的原因？"></a>sql性能下降的原因？</h3><p>1、查询语句写的烂，可能涉及多次的关联查询、子查询，导致sql性能下降。</p>
+<p>2、索引失效（单值、复合）</p>
+<p>3、关联查询涉及太多join</p>
+<p>4、服务器调优以及各个参数的设置（缓冲、线程等）</p>
+<h3 id="sql执行加载顺序"><a href="#sql执行加载顺序" class="headerlink" title="sql执行加载顺序?"></a>sql执行加载顺序?</h3><p>   mysql在执行sql时，不会按照人写的sql顺序进行解析，而是通过mysql的服务层里面的sql的优化器，解析sql的顺序执行sql语句，使得sql的执行效率更高。</p>
+<p>![](D:\npm Registry\ss\source_posts\mysql性能优化\Snipaste_2021-05-24_10-47-40.png)</p>
+<h3 id="什么是索引？"><a href="#什么是索引？" class="headerlink" title="什么是索引？"></a>什么是索引？</h3><p>​    mysql官方对索引的定义为：索引（Index）是帮助mysql高效获取数据的数据结构。可以得到索引的本质：索引是数据结构，可以简单理解为排好序的快速查找数据结构。</p>
+<p>​     一般来说索引本身也很大，不可能全部存储在内存中，因此索引往往以索引文件的形式存储在磁盘上。我们平常所说的索引，如果没有特别指明，都是指B树(多路搜索树，并不一定是二叉树)结构组织的索引</p>
+<p>​        在数据之外，数据库系统还维护着满足特定查找算法的数据结构，这些数据结构以某种方式指向数据</p>
+<p>，这样就可以在这些数据结构的基础上实现高级查找算法，这种数据结构，就是索引。其中聚集索引、次要索引、复合索引、前缀索引、唯一索引默认都是使用B加树索引，但是除了B数索引，还有哈希索引。</p>
+<p>![](D:\npm Registry\ss\source_posts\mysql性能优化\Snipaste_2021-05-24_14-23-46.png)</p>
+<p>​                                    左边是数据表，一共两列七条记录，最左边的是数据记录的物理地址。</p>
+<p>​      为了加快Col2的查找，可以维护一个右边所示的二叉查找树，每个节点分别包含索引键值和一个指向对应数据记录物理地址的指针，这样就可以运用二叉查找在一定复杂度内获取到相应数据，从而快速的检索出符合条件的记录。</p>
+<h3 id="索引的优势和劣势？"><a href="#索引的优势和劣势？" class="headerlink" title="索引的优势和劣势？"></a>索引的优势和劣势？</h3><p><strong>优势：</strong> </p>
+<p>类似于大学图书馆建书目索引，提高数据检索的效率，降低数据库的IO成本</p>
+<p>通过索引列对数据进行排序，降低数据排序的成本，降低CPU的消耗</p>
+<p><strong>劣势：</strong></p>
+<p>实际上索引也是一张表，该表保存了主键与索引字段，并指向实体表的记录，所以索引列也要占用空间的。</p>
+<p>虽然索引大大提高了查询速度，同时会降低更新表的速度，如对表进行insert、update和delete，因为更新表时，</p>
+<p>mysql不仅要保存数据，还要保存一下索引文件每次更新添加了索引列的字段，都会调整因为更新所带来的键值变换后的索引信息。</p>
+<p>索引只是提高了效率的一个因素，入股你的mysql有大数据量的表，就需要花时间研究建立最优秀的索引，或者优化索引。</p>
+<h4 id="索引类型有哪些？"><a href="#索引类型有哪些？" class="headerlink" title="索引类型有哪些？"></a>索引类型有哪些？</h4><p>1、单值索引  即一个索引只包含单个列，一个表可以有多个单列索引</p>
+<p>2、唯一索引 索引列的值必须唯一，但允许有空值</p>
+<p>3、复合索引 即一个索引包含多个列</p>
+<p><strong>基本语法：</strong></p>
+<p>创建</p>
+<p>1、</p>
 <p> create [unique] index indexName on tableName(colName(length))</p>
-<p>2&#x3001;</p>
+<p>2、</p>
 <p>alter tableName add [unique] index [indexName] on (colName(length))</p>
-<p>&#x5220;&#x9664;</p>
-<p>1&#x3001;</p>
+<p>删除</p>
+<p>1、</p>
 <p>drop index [indexName] on tableName</p>
-<p>&#x67E5;&#x770B;&#x7D22;&#x5F15;</p>
+<p>查看索引</p>
 <p>show index from table_name\G </p>
-<h5 id="mysql-&#x7D22;&#x5F15;&#x7ED3;&#x6784;"><a href="#mysql-&#x7D22;&#x5F15;&#x7ED3;&#x6784;" class="headerlink" title="mysql &#x7D22;&#x5F15;&#x7ED3;&#x6784;"></a>mysql &#x7D22;&#x5F15;&#x7ED3;&#x6784;</h5><p>BTree&#x7D22;&#x5F15;</p>
-<p>Hash&#x7D22;&#x5F15;</p>
-<p>full-text&#x5168;&#x6587;&#x7D22;&#x5F15;</p>
-<p>R-Tree&#x7D22;&#x5F15;</p>
-<p>![](D:\npm Registry\ss\source_posts\mysql&#x6027;&#x80FD;&#x4F18;&#x5316;\Snipaste_2021-05-25_09-16-25.png)</p>
-<p>![](D:\npm Registry\ss\source_posts\mysql&#x6027;&#x80FD;&#x4F18;&#x5316;\Snipaste_2021-05-25_09-17-30.png)</p>
-<h5 id="&#x54EA;&#x4E9B;&#x60C5;&#x51B5;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#xFF1F;"><a href="#&#x54EA;&#x4E9B;&#x60C5;&#x51B5;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#xFF1F;" class="headerlink" title="&#x54EA;&#x4E9B;&#x60C5;&#x51B5;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#xFF1F;"></a>&#x54EA;&#x4E9B;&#x60C5;&#x51B5;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#xFF1F;</h5><p>1&#x3001;&#x4E3B;&#x952E;&#x81EA;&#x52A8;&#x5EFA;&#x7ACB;&#x552F;&#x4E00;&#x7D22;&#x5F15;</p>
-<p>2&#x3001;&#x9891;&#x7E41;&#x4F5C;&#x4E3A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x7684;&#x5B57;&#x6BB5;&#x5E94;&#x8BE5;&#x521B;&#x5EFA;&#x7D22;&#x5F15;</p>
-<p>3&#x3001;&#x67E5;&#x8BE2;&#x4E2D;&#x4E0E;&#x5176;&#x4ED6;&#x5173;&#x8054;&#x8868;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x5916;&#x952E;&#x5173;&#x7CFB;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;</p>
-<p>4&#x3001;&#x9891;&#x7E41;&#x66F4;&#x65B0;&#x7684;&#x5B57;&#x6BB5;&#x4E0D;&#x9002;&#x5408;&#x521B;&#x5EFA;&#x7D22;&#x5F15;</p>
-<p>&#x56E0;&#x4E3A;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x4E0D;&#x5355;&#x662F;&#x66F4;&#x65B0;&#x6570;&#x636E;&#x800C;&#x4E14;&#x7D22;&#x5F15;&#x4E5F;&#x8981;&#x66F4;&#x65B0;</p>
-<p>5&#x3001;where&#x6761;&#x4EF6;&#x91CC;&#x9762;&#x7528;&#x4E0D;&#x5230;&#x7684;&#x5B57;&#x6BB5;&#x4E0D;&#x521B;&#x5EFA;&#x7D22;&#x5F15;</p>
-<p>6&#x3001;&#x5355;&#x503C;/&#x7EC4;&#x5408;&#x7D22;&#x5F15;&#x7684;&#x9009;&#x62E9;&#x95EE;&#x9898;&#xFF08;&#x9AD8;&#x5E76;&#x53D1;&#x6761;&#x4EF6;&#x4E0B;&#x5EFA;&#x7ACB;&#x7EC4;&#x5408;&#x7D22;&#x5F15;&#xFF09;</p>
-<p>7&#x3001;&#x67E5;&#x8BE2;&#x4E2D;&#x6392;&#x5E8F;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x6392;&#x5E8F;&#x5B57;&#x6BB5;&#x82E5;&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x53BB;&#x8BBF;&#x95EE;&#x5C06;&#x5927;&#x5927;&#x63D0;&#x9AD8;&#x6392;&#x5E8F;&#x901F;&#x5EA6;&#x3002;</p>
-<p>8&#x3001;&#x67E5;&#x8BE2;&#x4E2D;&#x7EDF;&#x8BA1;&#x6216;&#x8005;&#x5206;&#x7EC4;&#x5B57;&#x6BB5;</p>
-<h5 id="&#x54EA;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#xFF1F;"><a href="#&#x54EA;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#xFF1F;" class="headerlink" title="&#x54EA;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#xFF1F;"></a>&#x54EA;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#xFF1F;</h5><p>1&#x3001;&#x8868;&#x8BB0;&#x5F55;&#x592A;&#x5C11;</p>
-<p>2&#x3001;&#x7ECF;&#x5E38;&#x589E;&#x5220;&#x6539;&#x7684;&#x8868;</p>
-<p>3&#x3001;&#x6570;&#x636E;&#x91CD;&#x590D;&#x4E14;&#x5206;&#x5E03;&#x7684;&#x8868;&#x5B57;&#x6BB5;&#xFF0C;&#x56E0;&#x6B64;&#x5E94;&#x8BE5;&#x53EA;&#x4E3A;&#x6700;&#x7ECF;&#x5E38;&#x67E5;&#x8BE2;&#x548C;&#x6700;&#x7ECF;&#x5E38;&#x6392;&#x5E8F;</p>
-<p>&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#xFF0C;&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x6570;&#x5217;&#x5305;&#x542B;&#x8BB8;&#x591A;&#x91CD;&#x590D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4E3A;&#x5B83;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#x5C31;</p>
-<p>&#x6CA1;&#x6709;&#x592A;&#x5927;&#x7684;&#x5B9E;&#x9645;&#x6548;&#x679C;&#x3002;</p>
-<p>&#x200B;      &#x5047;&#x5982;&#x4E00;&#x4E2A;&#x8868;&#x6709;10&#x4E07;&#x884C;&#x8BB0;&#x5F55;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;A&#x53EA;&#x6709;T&#x548C;F&#x4E24;&#x79CD;&#x503C;&#xFF0C;&#x4E14;&#x6BCF;&#x4E2A;&#x503C;&#x7684;&#x5206;&#x5E03;&#x5927;&#x6982;&#x5927;&#x7EA6;&#x4E3A;</p>
-<p>50%&#xFF0C;&#x90A3;&#x4E48;&#x5BF9;&#x8FD9;&#x79CD;&#x8868;A&#x5B57;&#x6BB5;&#x5EFA;&#x7D22;&#x5F15;&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x63D0;&#x9AD8;&#x6570;&#x636E;&#x5E93;&#x7684;&#x67E5;&#x8BE2;&#x901F;&#x5EA6;&#x3002;</p>
-<p>&#x200B;      &#x7D22;&#x5F15;&#x7684;&#x9009;&#x62E9;&#x6027;&#x662F;&#x6307;&#x7D22;&#x5F15;&#x5217;&#x4E2D;&#x4E0D;&#x540C;&#x503C;&#x7684;&#x6570;&#x76EE;&#x4E0E;&#x8868;&#x4E2D;&#x8BB0;&#x5F55;&#x6570;&#x7684;&#x6BD4;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x4E00;&#x4E2A;&#x8868;&#x4E2D;&#x6709;2000&#x6761;</p>
-<p>&#x8BB0;&#x5F55;&#xFF0C;&#x8868;&#x7D22;&#x5F15;&#x5217;&#x6709;1980&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x7D22;&#x5F15;&#x7684;&#x9009;&#x62E9;&#x6027;&#x5C31;&#x662F;1980/2000=0.99&#x3002;</p>
-<p>&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x7684;&#x9009;&#x62E9;&#x6027;&#x8D8A;&#x63A5;&#x8FD1;1&#xFF0C;&#x8FD9;&#x4E2A;&#xB7;&#x7D22;&#x5F15;&#x7684;&#x6548;&#x7387;&#x5C31;&#x8D8A;&#x9AD8;&#x3002;</p>
-<h5 id="&#x6027;&#x80FD;&#x5206;&#x6790;"><a href="#&#x6027;&#x80FD;&#x5206;&#x6790;" class="headerlink" title="&#x6027;&#x80FD;&#x5206;&#x6790;"></a>&#x6027;&#x80FD;&#x5206;&#x6790;</h5><p>1&#x3001;&#x901A;&#x8FC7;mysql query Optimizer</p>
-<p>![](D:\npm Registry\ss\source_posts\mysql&#x6027;&#x80FD;&#x4F18;&#x5316;\Snipaste_2021-05-25_10-48-57.png)</p>
-<p>2&#x3001;mysql&#x5E38;&#x89C1;&#x74F6;&#x9888;</p>
-<p>cpu&#xFF1A; &#x5728;&#x9971;&#x548C;&#x7684;&#x65F6;&#x5019;&#x4E00;&#x822C;&#x53D1;&#x751F;&#x5728;&#x6570;&#x636E;&#x88C5;&#x5165;&#x5185;&#x5B58;&#x6216;&#x4ECE;&#x78C1;&#x76D8;&#x4E0A;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x65F6;&#x5019;&#x3002;</p>
-<p>IO&#xFF1A; &#x78C1;&#x76D8;I/O&#x74F6;&#x9888;&#x53D1;&#x751F;&#x5728;&#x88C5;&#x5165;&#x6570;&#x636E;&#x8FDC;&#x5927;&#x4E8E;&#x5185;&#x5B58;&#x5BB9;&#x91CF;&#x7684;&#x65F6;&#x5019;&#x3002;</p>
-<p>&#x670D;&#x52A1;&#x5668;&#x786C;&#x4EF6;&#x6027;&#x80FD;&#x74F6;&#x9888;&#xFF1A; top&#x3002;free&#xFF0C;iostat&#x548C;vmstat&#x6765;&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x7684;&#x6027;&#x80FD;&#x72B6;&#x6001;&#x3002;</p>
-<p>3&#x3001;Explain&#xFF08;mysql&#x6267;&#x884C;&#x8BA1;&#x5212;&#xFF09;</p>
-<p>&#x4F7F;&#x7528;explain&#x5173;&#x952E;&#x5B57;&#x53EF;&#x4EE5;&#x6A21;&#x62DF;&#x4F18;&#x5316;&#x5668;&#x6267;&#x884C;sql&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#xFF0C;&#x4ECE;&#x800C;&#x76F4;&#x5230;mysql&#x662F;&#x5982;&#x4F55;&#x5904;&#x7406;</p>
-<p>&#x4F60;&#x7684;sql&#x8BED;&#x53E5;&#x3002;&#x5206;&#x6790;&#x4F60;&#x7684;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x6216;&#x662F;&#x8868;&#x7ED3;&#x6784;&#x7684;&#x6027;&#x80FD;&#x74F6;&#x9888;&#x3002;</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">explain</span> + <span class="keyword">sql</span> &#x8BED;&#x53E5;</span><br><span class="line"></span><br><span class="line">&#x5B9E;&#x4F8B;&#xFF1A;</span><br><span class="line"><span class="keyword">explain</span> <span class="keyword">select</span> * <span class="keyword">from</span> city_weather;</span><br></pre></td></tr></table></figure>
+<h5 id="mysql-索引结构"><a href="#mysql-索引结构" class="headerlink" title="mysql 索引结构"></a>mysql 索引结构</h5><p>BTree索引</p>
+<p>Hash索引</p>
+<p>full-text全文索引</p>
+<p>R-Tree索引</p>
+<p>![](D:\npm Registry\ss\source_posts\mysql性能优化\Snipaste_2021-05-25_09-16-25.png)</p>
+<p>![](D:\npm Registry\ss\source_posts\mysql性能优化\Snipaste_2021-05-25_09-17-30.png)</p>
+<h5 id="哪些情况需要创建索引？"><a href="#哪些情况需要创建索引？" class="headerlink" title="哪些情况需要创建索引？"></a>哪些情况需要创建索引？</h5><p>1、主键自动建立唯一索引</p>
+<p>2、频繁作为查询条件的字段应该创建索引</p>
+<p>3、查询中与其他关联表的字段，外键关系建立索引</p>
+<p>4、频繁更新的字段不适合创建索引</p>
+<p>因为每次更新不单是更新数据而且索引也要更新</p>
+<p>5、where条件里面用不到的字段不创建索引</p>
+<p>6、单值/组合索引的选择问题（高并发条件下建立组合索引）</p>
+<p>7、查询中排序的字段，排序字段若通过索引去访问将大大提高排序速度。</p>
+<p>8、查询中统计或者分组字段</p>
+<h5 id="哪些情况下不需要建立索引？"><a href="#哪些情况下不需要建立索引？" class="headerlink" title="哪些情况下不需要建立索引？"></a>哪些情况下不需要建立索引？</h5><p>1、表记录太少</p>
+<p>2、经常增删改的表</p>
+<p>3、数据重复且分布的表字段，因此应该只为最经常查询和最经常排序</p>
+<p>建立索引，注意：如果某个数列包含许多重复的内容，为它建立索引就</p>
+<p>没有太大的实际效果。</p>
+<p>​      假如一个表有10万行记录，有一个字段A只有T和F两种值，且每个值的分布大概大约为</p>
+<p>50%，那么对这种表A字段建索引一般不会提高数据库的查询速度。</p>
+<p>​      索引的选择性是指索引列中不同值的数目与表中记录数的比，如果有一个表中有2000条</p>
+<p>记录，表索引列有1980个不同的值，那么这个索引的选择性就是1980/2000=0.99。</p>
+<p>一个索引的选择性越接近1，这个·索引的效率就越高。</p>
+<h5 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h5><p>1、通过mysql query Optimizer</p>
+<p>![](D:\npm Registry\ss\source_posts\mysql性能优化\Snipaste_2021-05-25_10-48-57.png)</p>
+<p>2、mysql常见瓶颈</p>
+<p>cpu： 在饱和的时候一般发生在数据装入内存或从磁盘上读取数据时候。</p>
+<p>IO： 磁盘I/O瓶颈发生在装入数据远大于内存容量的时候。</p>
+<p>服务器硬件性能瓶颈： top。free，iostat和vmstat来查看系统的性能状态。</p>
+<p>3、Explain（mysql执行计划）</p>
+<p>使用explain关键字可以模拟优化器执行sql查询语句，从而直到mysql是如何处理</p>
+<p>你的sql语句。分析你的查询语句或是表结构的性能瓶颈。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">explain</span> + <span class="keyword">sql</span> 语句</span><br><span class="line"></span><br><span class="line">实例：</span><br><span class="line"><span class="keyword">explain</span> <span class="keyword">select</span> * <span class="keyword">from</span> city_weather;</span><br></pre></td></tr></table></figure>
 
-<p>![](D:\npm Registry\ss\source_posts\mysql&#x6027;&#x80FD;&#x4F18;&#x5316;\Snipaste_2021-05-25_11-09-30.png)</p>
-<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
-<p><strong>id&#xFF1A;</strong></p>
-<p>select &#x67E5;&#x8BE2;&#x7684;&#x5E8F;&#x5217;&#x53F7;&#xFF0C;&#x5305;&#x542B;&#x6570;&#x5B57;&#xFF0C;&#x8868;&#x793A;&#x67E5;&#x8BE2;&#x4E2D;&#x6267;&#x884C;select&#x5B57;&#x53E5;&#x6216;&#x64CD;&#x4F5C;&#x8868;&#x7684;&#x987A;&#x5E8F;</p>
-<p>1&#x3001;id&#x76F8;&#x540C;&#xFF0C;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x7531;&#x4E0A;&#x81F3;&#x4E0B;</p>
-<p>2&#x3001;id&#x4E0D;&#x540C;&#xFF0C;&#x5982;&#x679C;&#x5B50;&#x67E5;&#x8BE2;&#xFF0C;id&#x5E8F;&#x53F7;&#x4F1A;&#x9012;&#x589E;&#xFF0C;id&#x503C;&#x8D8A;&#x5927;&#x4F18;&#x5148;&#x7EA7;&#x8D8A;&#x9AD8;&#xFF0C;&#x8D8A;&#x5148;&#x88AB;&#x6267;&#x884C;&#x3002;</p>
-<p>3&#x3001;id&#x76F8;&#x540C;&#x4E0D;&#x540C;&#xFF0C;&#x540C;&#x65F6;&#x5B58;&#x5728;</p>
-<p>id&#x5982;&#x679C;&#x76F8;&#x540C;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x7EC4;&#xFF0C;&#x4ECE;&#x4E0A;&#x5F80;&#x4E0B;&#x987A;&#x5E8F;&#x6267;&#x884C;&#xFF1B;</p>
-<p>&#x5728;&#x6240;&#x6709;&#x7EC4;&#x4E2D;&#xFF0C;id&#x503C;&#x8D8A;&#x5927;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x8D8A;&#x9AD8;&#xFF0C;&#x8D8A;&#x5148;&#x6267;&#x884C;</p>
+<p>![](D:\npm Registry\ss\source_posts\mysql性能优化\Snipaste_2021-05-25_11-09-30.png)</p>
+<p><strong>参数：</strong></p>
+<p><strong>id：</strong></p>
+<p>select 查询的序列号，包含数字，表示查询中执行select字句或操作表的顺序</p>
+<p>1、id相同，执行顺序由上至下</p>
+<p>2、id不同，如果子查询，id序号会递增，id值越大优先级越高，越先被执行。</p>
+<p>3、id相同不同，同时存在</p>
+<p>id如果相同，可以认为是一组，从上往下顺序执行；</p>
+<p>在所有组中，id值越大，优先级越高，越先执行</p>
 <p><strong>select_type:</strong></p>
-<p>&#x67E5;&#x8BE2;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x533A;&#x522B;</p>
-<p>&#x666E;&#x901A;&#x67E5;&#x8BE2;&#x3001;&#x8054;&#x5408;&#x67E5;&#x8BE2;&#x3001;&#x5B50;&#x67E5;&#x8BE2;&#x7B49;&#x590D;&#x6742;&#x67E5;&#x8BE2;</p>
-<p><strong>SIMPLE&#xFF1A;</strong></p>
-<p>&#x7B80;&#x5355;&#x7684;select&#x67E5;&#x8BE2;&#xFF0C;&#x67E5;&#x8BE2;&#x4E2D;&#x4E0D;&#x5305;&#x542B;&#x5B50;&#x67E5;&#x8BE2;&#x6216;&#x8005;union</p>
+<p>查询的类型，主要用于区别</p>
+<p>普通查询、联合查询、子查询等复杂查询</p>
+<p><strong>SIMPLE：</strong></p>
+<p>简单的select查询，查询中不包含子查询或者union</p>
 <p><strong>PRIMARY:</strong></p>
-<p>&#x67E5;&#x8BE2;&#x4E2D;&#x82E5;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x590D;&#x6742;&#x7684;&#x5B50;&#x90E8;&#x5206;&#xFF0C;&#x6700;&#x5916;&#x5C42;&#x67E5;&#x8BE2;&#x5219;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;</p>
+<p>查询中若包含任何复杂的子部分，最外层查询则被标记为</p>
 <p><strong>SUBQUERY:</strong></p>
-<p>&#x5728;select&#x6216;where&#x5217;&#x8868;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x5B50;&#x67E5;&#x8BE2;</p>
+<p>在select或where列表中包含了子查询</p>
 <p><strong>DERIVED:</strong></p>
-<p>&#x5728;from&#x5217;&#x8868;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x5B50;&#x67E5;&#x8BE2;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;derived&#xFF08;&#x884D;&#x751F;&#xFF09;</p>
-<p>mysql&#x4F1A;&#x9012;&#x5F52;&#x6267;&#x884C;&#x8FD9;&#x4E9B;&#x5B50;&#x67E5;&#x8BE2;&#xFF0C;&#x628A;&#x7ED3;&#x679C;&#x653E;&#x5728;&#x4E34;&#x65F6;&#x8868;&#x91CC;</p>
+<p>在from列表中包含的子查询被标记为derived（衍生）</p>
+<p>mysql会递归执行这些子查询，把结果放在临时表里</p>
 <p><strong>UNION:</strong></p>
-<p>&#x82E5;&#x7B2C;&#x4E8C;&#x4E2A;select&#x51FA;&#x73B0;&#x5728;union&#x4E4B;&#x540E;&#xFF0C;&#x5219;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;union</p>
-<p>&#x82E5;union&#x5305;&#x542B;&#x5728;from&#x5B50;&#x67E5;&#x8BE2;&#x4E2D;&#xFF0C;&#x5916;&#x5C42;select&#x5C06;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;&#xFF1A;derived</p>
+<p>若第二个select出现在union之后，则被标记为union</p>
+<p>若union包含在from子查询中，外层select将被标记为：derived</p>
 <p><strong>UNION RESULT:</strong></p>
-<p>&#x4ECE;union&#x8868;&#x4E2D;&#x83B7;&#x53D6;&#x7ED3;&#x679C;&#x7684;select</p>
-<p><strong>table&#xFF1A;</strong></p>
-<p>&#x663E;&#x793A;&#x8FD9;&#x4E00;&#x884C;&#x7684;&#x6570;&#x636E;&#x662F;&#x5173;&#x4E8E;&#x54EA;&#x5F20;&#x8868;&#x7684;</p>
+<p>从union表中获取结果的select</p>
+<p><strong>table：</strong></p>
+<p>显示这一行的数据是关于哪张表的</p>
 <p><strong>type:</strong> </p>
-<p>&#x8BBF;&#x95EE;&#x7C7B;&#x578B;</p>
-<p>&#x662F;&#x8F83;&#x4E3A;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x4E2A;&#x6307;&#x6807;&#xFF0C;&#x7ED3;&#x679C;&#x503C;&#x4ECE;&#x6700;&#x597D;&#x5230;&#x6700;&#x574F;&#x4F9D;&#x6B21;&#x662F;&#xFF1A;</p>
+<p>访问类型</p>
+<p>是较为重要的一个指标，结果值从最好到最坏依次是：</p>
 <p>system&gt;const&gt;eq_ref&gt;ref&gt;fulltext&gt;ref_or_merge&gt;unique_subquery&gt;range&gt;index&gt;ALL</p>
-<p>&#x663E;&#x793A;&#x67E5;&#x8BE2;&#x4F7F;&#x7528;&#x4E86;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#xFF1A;</p>
+<p>显示查询使用了任何类型：</p>
 <p>system&gt;const&gt;eq_ref&gt;ref&gt;range&gt;index&gt;all</p>
-<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x5F97;&#x4FDD;&#x8BC1;&#x67E5;&#x8BE2;&#x81F3;&#x5C11;&#x8FBE;&#x5230;range&#x7EA7;&#x522B;&#xFF0C;&#x6700;&#x597D;&#x80FD;&#x8FBE;&#x5230;ref</p>
-<p><strong>system&#xFF1A;</strong></p>
-<p>&#x8868;&#x53EA;&#x6709;&#x4E00;&#x884C;&#x8BB0;&#x5F55;&#xFF0C;&#x8FD9;&#x662F;const&#x7C7B;&#x578B;&#x7684;&#x7279;&#x5217;&#xFF0C;&#x5E73;&#x5747;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#xFF0C;&#x8FD9;&#x4E2A;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x4E0D;&#x8BA1;&#x3002;</p>
+<p>一般来说，得保证查询至少达到range级别，最好能达到ref</p>
+<p><strong>system：</strong></p>
+<p>表只有一行记录，这是const类型的特列，平均不会出现，这个可以忽略不计。</p>
 <p><strong>const:</strong> </p>
-<p>&#x8868;&#x793A;&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x4E00;&#x6B21;&#x5C31;&#x627E;&#x5230;&#x4E86;&#xFF0C;const&#x7528;&#x4E8E;&#x6BD4;&#x8F83;primary_key&#x6216;&#x8005;unique&#x7D22;&#x5F15;&#x3002;&#x56E0;&#x4E3A;&#x53EA;&#x5339;&#x914D;&#x4E00;&#x884C;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x4EE5;</p>
-<p>&#x5F88;&#x5FEB;&#x5982;&#x5C06;&#x4E3B;&#x952E;&#x7F6E;&#x4E8E;where&#x5217;&#x8868;&#x4E2D;&#xFF0C;mysql&#x5C31;&#x80FD;&#x5C06;&#x8BE5;&#x67E5;&#x8BE2;&#x8F6C;&#x6362;&#x6210;&#x4E00;&#x4E2A;&#x5E38;&#x91CF;&#x3002;</p>
-<p><strong>possible_keys</strong><br>&#x6307;&#x51FA; MySQL &#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x7D22;&#x5F15;&#x5728;&#x8BE5;&#x8868;&#x627E;&#x5230;&#x884C;&#x8BB0;&#x5F55;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x503C;&#x4E3A; NULL&#xFF0C;&#x8BF4;&#x660E;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#xFF0C;&#x53EF;&#x4EE5;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#x63D0;&#x9AD8;&#x6027;&#x80FD;</p>
-<p><strong>key</strong><br>&#x663E;&#x793A; MySQL &#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x7684;&#x7D22;&#x5F15;&#x3002;&#x5982;&#x679C;&#x4E3A; NULL&#xFF0C;&#x5219;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x67E5;&#x8BE2;<br><strong>key_len</strong><br>&#x8868;&#x793A;&#x7D22;&#x5F15;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x5B57;&#x8282;&#x6570;&#xFF0C;&#x901A;&#x8FC7;&#x8BE5;&#x5217;&#x8BA1;&#x7B97;&#x67E5;&#x8BE2;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x7D22;&#x5F15;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x5728;&#x4E0D;&#x635F;&#x5931;&#x7CBE;&#x786E;&#x6027;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x957F;&#x5EA6;&#x8D8A;&#x77ED;&#x8D8A;&#x597D;&#x663E;&#x793A;&#x7684;&#x662F;&#x7D22;&#x5F15;&#x5B57;&#x6BB5;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#xFF0C;&#x5E76;&#x975E;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x957F;&#x5EA6;<br><strong>ref</strong><br>&#x663E;&#x793A;&#x7D22;&#x5F15;&#x7684;&#x54EA;&#x4E00;&#x5217;&#x88AB;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x53EF;&#x80FD;&#x7684;&#x8BDD;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x5E38;&#x6570;&#xFF0C;&#x54EA;&#x4E9B;&#x5217;&#x6216;&#x5E38;&#x91CF;&#x88AB;&#x7528;&#x4E8E;&#x67E5;&#x627E;&#x7D22;&#x5F15;&#x5217;&#x4E0A;&#x7684;&#x503C;<br><strong>rows</strong><br>&#x6839;&#x636E;&#x8868;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#x53CA;&#x9009;&#x7528;&#x60C5;&#x51B5;&#xFF0C;&#x5927;&#x81F4;&#x4F30;&#x7B97;&#x51FA;&#x627E;&#x5230;&#x6240;&#x9700;&#x7684;&#x8BB0;&#x5F55;&#x6216;&#x6240;&#x9700;&#x8BFB;&#x53D6;&#x7684;&#x884C;&#x6570;&#xFF0C;&#x6570;&#x503C;&#x8D8A;&#x5C0F;&#x8D8A;&#x597D;<br><strong>filtered</strong><br>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7684;&#x884C;&#x6570;&#x5360;&#x8BFB;&#x53D6;&#x884C;&#x6570;&#x7684;&#x767E;&#x5206;&#x6BD4;&#xFF0C;&#x503C;&#x8D8A;&#x5927;&#x8D8A;&#x597D;<br><strong>extra</strong><br>  &#x5305;&#x542B;&#x4E0D;&#x9002;&#x5408;&#x5728;&#x5176;&#x4ED6;&#x5217;&#x4E2D;&#x663E;&#x793A;&#x4F46;&#x5341;&#x5206;&#x91CD;&#x8981;&#x7684;&#x989D;&#x5916;&#x4FE1;&#x606F;&#x3002;&#x5E38;&#x89C1;&#x7684;&#x503C;&#x5982;&#x4E0B;</p>
-<p>  <strong>using filesort</strong><br>  MySQL&#x4F1A;&#x5BF9;&#x6570;&#x636E;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x7684;&#x7D22;&#x5F15;&#x6392;&#x5E8F;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6309;&#x7167;&#x8868;&#x5185;&#x7684;&#x7D22;&#x5F15;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x8BFB;&#x53D6;<br>  &#x82E5;&#x51FA;&#x73B0;&#x6709;&#x8BE5;&#x503C;&#xFF0C;&#x5E94;&#x8BE5;&#x4F18;&#x5316;SQL&#x8BED;&#x53E5;<br>  <strong>using temporary</strong><br>  &#x4F7F;&#x7528;&#x4E34;&#x65F6;&#x8868;&#x4FDD;&#x5B58;&#x4E2D;&#x95F4;&#x7ED3;&#x679C;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;MySQL&#x5728;&#x5BF9;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x6392;&#x5E8F;&#x65F6;&#x4F7F;&#x7528;&#x4E34;&#x65F6;&#x8868;<br>  &#x5E38;&#x89C1;&#x4E8E;order by&#x548C;group by<br>  &#x82E5;&#x51FA;&#x73B0;&#x6709;&#x8BE5;&#x503C;&#xFF0C;&#x5E94;&#x8BE5;&#x4F18;&#x5316;SQL&#x8BED;&#x53E5;<br>  <strong>using index</strong><br>  &#x8868;&#x793A;select&#x64CD;&#x4F5C;&#x4F7F;&#x7528;&#x4E86;&#x8986;&#x76D6;&#x7D22;&#x5F15;&#xFF0C;&#x907F;&#x514D;&#x4E86;&#x8BBF;&#x95EE;&#x8868;&#x7684;&#x6570;&#x636E;&#x884C;&#xFF0C;&#x6548;&#x7387;&#x4E0D;&#x9519;<br>  <strong>using where</strong><br>  where &#x5B50;&#x53E5;&#x7528;&#x4E8E;&#x9650;&#x5236;&#x54EA;&#x4E00;&#x884C;<br>  <strong>using join buffer</strong><br>  &#x4F7F;&#x7528;&#x8FDE;&#x63A5;&#x7F13;&#x5B58;<br>  <strong>distinct</strong><br>  &#x53D1;&#x73B0;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x540E;&#xFF0C;&#x505C;&#x6B62;&#x4E3A;&#x5F53;&#x524D;&#x7684;&#x884C;&#x7EC4;&#x5408;&#x641C;&#x7D22;&#x66F4;&#x591A;&#x7684;&#x884C;</p>
+<p>表示通过索引一次就找到了，const用于比较primary_key或者unique索引。因为只匹配一行数据，所以</p>
+<p>很快如将主键置于where列表中，mysql就能将该查询转换成一个常量。</p>
+<p><strong>possible_keys</strong><br>指出 MySQL 使用哪个索引在该表找到行记录。如果该值为 NULL，说明没有使用索引，可以建立索引提高性能</p>
+<p><strong>key</strong><br>显示 MySQL 实际使用的索引。如果为 NULL，则没有使用索引查询<br><strong>key_len</strong><br>表示索引中使用的字节数，通过该列计算查询中使用的索引的长度。在不损失精确性的情况下，长度越短越好显示的是索引字段的最大长度，并非实际使用长度<br><strong>ref</strong><br>显示索引的哪一列被使用了，如果可能的话，是一个常数，哪些列或常量被用于查找索引列上的值<br><strong>rows</strong><br>根据表统计信息及选用情况，大致估算出找到所需的记录或所需读取的行数，数值越小越好<br><strong>filtered</strong><br>返回结果的行数占读取行数的百分比，值越大越好<br><strong>extra</strong><br>  包含不适合在其他列中显示但十分重要的额外信息。常见的值如下</p>
+<p>  <strong>using filesort</strong><br>  MySQL会对数据使用一个外部的索引排序，而不是按照表内的索引顺序进行读取<br>  若出现有该值，应该优化SQL语句<br>  <strong>using temporary</strong><br>  使用临时表保存中间结果，比如，MySQL在对查询结果排序时使用临时表<br>  常见于order by和group by<br>  若出现有该值，应该优化SQL语句<br>  <strong>using index</strong><br>  表示select操作使用了覆盖索引，避免了访问表的数据行，效率不错<br>  <strong>using where</strong><br>  where 子句用于限制哪一行<br>  <strong>using join buffer</strong><br>  使用连接缓存<br>  <strong>distinct</strong><br>  发现第一个匹配后，停止为当前的行组合搜索更多的行</p>
 <p>  <strong>impossible where</strong></p>
-<p>  where &#x5B50;&#x53E5;&#x603B;&#x662F;false&#xFF0C;&#x4E0D;&#x80FD;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x4EFB;&#x4F55;&#x5143;&#x7956;</p>
-<p><strong>sql&#x4F18;&#x5316;&#x6B65;&#x9AA4;</strong></p>
-<p>1&#x3001;&#x89C2;&#x5BDF;&#xFF0C;&#x81F3;&#x5C11;&#x8DD1;&#x4E00;&#x5929;&#xFF0C;&#x770B;&#x770B;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x7684;&#x6162;sql&#x60C5;&#x51B5;</p>
-<p>2&#x3001;&#x5F00;&#x542F;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#xFF0C;&#x8BBE;&#x7F6E;&#x9600;&#x503C;&#xFF0C;&#x6BD4;&#x5982;&#x8D85;&#x8FC7;5&#x79D2;&#x949F;&#x7684;&#x5C31;&#x662F;</p>
-<p>&#x6162;sql&#xFF0C;&#x5E76;&#x5C06;&#x5B83;&#x6293;&#x53D6;&#x51FA;&#x6765;</p>
-<p>3&#x3001;explain + &#x6162;sql&#x5206;&#x6790;</p>
-<p>4&#x3001;show profile</p>
-<p>5&#x3001;&#x8FD0;&#x7EF4;&#x7ECF;&#x7406; or DBA&#xFF0C;&#x8FDB;&#x884C;sql&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x53C2;&#x6570;&#x8C03;&#x4F18;</p>
+<p>  where 子句总是false，不能用来获取任何元祖</p>
+<p><strong>sql优化步骤</strong></p>
+<p>1、观察，至少跑一天，看看生产环境的慢sql情况</p>
+<p>2、开启慢查询日志，设置阀值，比如超过5秒钟的就是</p>
+<p>慢sql，并将它抓取出来</p>
+<p>3、explain + 慢sql分析</p>
+<p>4、show profile</p>
+<p>5、运维经理 or DBA，进行sql数据库服务器参数调优</p>
 <p>========================</p>
-<p>1&#x3001;&#x6162;&#x67E5;&#x8BE2;&#x7684;&#x5F00;&#x542F;&#x548C;&#x6355;&#x83B7;</p>
-<p>2&#x3001;explain + &#x6162;sql&#x5206;&#x6790;</p>
-<p>3&#x3001;show profile &#x67E5;&#x8BE2;sql&#x5728;mysql&#x670D;&#x52A1;&#x5668;&#x91CC;&#x9762;</p>
-<p>&#x7684;&#x6267;&#x884C;&#x7EC6;&#x8282;&#x548C;&#x751F;&#x547D;&#x5468;&#x671F;</p>
-<p>4&#x3001;sql&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x53C2;&#x6570;&#x8C03;&#x4F18;</p>
-<p><strong>&#x5C0F;&#x8868;&#x9A71;&#x52A8;&#x5927;&#x8868;</strong></p>
+<p>1、慢查询的开启和捕获</p>
+<p>2、explain + 慢sql分析</p>
+<p>3、show profile 查询sql在mysql服务器里面</p>
+<p>的执行细节和生命周期</p>
+<p>4、sql数据库服务器参数调优</p>
+<p><strong>小表驱动大表</strong></p>
 <p>select * from A where id in (select id from B)</p>
-<p>&#x7B49;&#x4EF7;&#x4E8E;</p>
+<p>等价于</p>
 <p>for select id from B</p>
 <p>for select * from A where A.id = B.id;</p>
-<p><strong>&#x5F53;B&#x8868;&#x7684;&#x6570;&#x636E;&#x5C0F;&#x4E8E;A&#x8868;&#x6570;&#x636E;&#x96C6;&#x65F6;&#xFF0C; &#x7528;in &#x4F18;&#x4E8E;exists</strong></p>
-<p>select * from A where exists &#xFF08;select 1 from B where B.id = A.id&#xFF09;</p>
+<p><strong>当B表的数据小于A表数据集时， 用in 优于exists</strong></p>
+<p>select * from A where exists （select 1 from B where B.id = A.id）</p>
 <p>for  select * from A</p>
 <p>for select * from B where B.id = A.id;</p>
-<p><strong>&#x5F53;A&#x8868;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5C0F;&#x4E8E;B&#x8868;&#x7684;&#x6570;&#x636E;&#x96C6;&#x65F6;&#xFF0C;&#x7528;&#x4E8E;exists&#x4F18;&#x4E8E;in</strong></p>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A; A&#x8868;&#x548C;B&#x8868;&#x7684;ID&#x5E94;&#x8BE5;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;</strong></p>
+<p><strong>当A表的数据集小于B表的数据集时，用于exists优于in</strong></p>
+<p><strong>注意： A表和B表的ID应该建立索引</strong></p>
 <p><strong>exists</strong></p>
-<p>select &#x2026; from table where exists(subquery)</p>
-<p>&#x5C06;&#x4E3B;&#x67E5;&#x8BE2;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x653E;&#x5230;&#x5B50;&#x67E5;&#x8BE2;&#x4E2D;&#x505A;&#x6761;&#x4EF6;&#xFF0C;</p>
-<p>&#x6839;&#x636E;&#x9A8C;&#x8BC1;&#x7ED3;&#x679C;&#x6765;&#x51B3;&#x5B9A;&#x4E3B;&#x67E5;&#x8BE2;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x679C;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x4FDD;&#x7559;</p>
-<p><strong>&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#xFF1A;</strong></p>
+<p>select … from table where exists(subquery)</p>
+<p>将主查询的数据，放到子查询中做条件，</p>
+<p>根据验证结果来决定主查询的数据结果是否可以保留</p>
+<p><strong>慢查询日志：</strong></p>
 <p><strong>show profile:</strong></p>
-<h4 id="mysql&#x9501;&#x7406;&#x8BBA;&#xFF1A;"><a href="#mysql&#x9501;&#x7406;&#x8BBA;&#xFF1A;" class="headerlink" title="mysql&#x9501;&#x7406;&#x8BBA;&#xFF1A;"></a>mysql&#x9501;&#x7406;&#x8BBA;&#xFF1A;</h4><h1 id="mysql-ACID&#x6267;&#x884C;&#x539F;&#x7406;"><a href="#mysql-ACID&#x6267;&#x884C;&#x539F;&#x7406;" class="headerlink" title="mysql ACID&#x6267;&#x884C;&#x539F;&#x7406;"></a><strong>mysql ACID&#x6267;&#x884C;&#x539F;&#x7406;</strong></h1><p>mysql &#x7684;acid&#x6307;&#x7684;&#x662F; &#x539F;&#x5B50;&#x6027;&#x3001;&#x6301;&#x4E45;&#x6027;&#x3001;&#x9694;&#x79BB;&#x6027;&#x3001;&#x4E00;&#x81F4;&#x6027;</p>
-<p><strong>&#x539F;&#x5B50;&#x6027;&#xFF1A;</strong> </p>
-<p>mysql&#x5B9E;&#x73B0;&#x539F;&#x5B50;&#x6027;&#xFF0C;&#x662F;&#x901A;&#x8FC7;undo.log&#x65E5;&#x5FD7;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;mysql&#x5728;&#x6267;&#x884C;&#x4E8B;&#x52A1;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#xFF0C;</p>
-<p>&#x90FD;&#x4F1A;&#x751F;&#x6210;undo.log&#x65E5;&#x5FD7;&#xFF0C;&#x5C06;&#x6267;&#x884C;&#x7684;sql&#x8BED;&#x53E5;&#x8BB0;&#x5F55;&#x5230;undo.log&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x5BFC;&#x81F4;&#x56DE;&#x6EDA;&#x64CD;</p>
-<p>&#x4F5C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x4F1A;&#x5C06;&#x8BFB;&#x53D6;undo.log&#x7684;&#x8BED;&#x53E5;&#xFF0C;&#x5C06;&#x6267;&#x884C;&#x8FC7;&#x7684;&#x8BED;&#x53E5;&#xFF0C;&#x6267;&#x884C;&#x76F8;&#x53CD;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x56DE;&#x6EDA;&#x56DE;&#x521D;&#x59CB;&#x72B6;&#x6001;&#xFF0C;</p>
-<p>&#x6BD4;&#x5982;&#x6267;&#x884C;&#x63D2;&#x5165;&#x8BED;&#x53E5;&#x4E86;&#xFF0C;&#x56DE;&#x6EDA;&#x65F6;&#x5C31;&#x6267;&#x884C;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x3001;&#x53D1;&#x751F;&#x4E86;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#xFF0C;&#x56DE;&#x6EDA;&#x65F6;&#x5C31;&#x4F1A;&#x671D;&#x76F8;&#x53CD;&#x7684;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;</p>
-<p>&#x53BB;&#x6267;&#x884C;&#x56DE;&#x6EDA;&#x64CD;&#x4F5C;&#x3002;</p>
-<p><strong>&#x6301;&#x4E45;&#x6027;&#xFF1A;</strong> </p>
-<p>mysql&#x6301;&#x4E45;&#x6027;&#xFF0C;&#x4E5F;&#x662F;&#x901A;&#x8FC7;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x5F62;&#x5F0F;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x901A;&#x8FC7;redo.log&#x65E5;&#x5FD7;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;mysql&#x7684;&#x6301;&#x4E45;&#x5316;&#xFF0C;&#x901A;&#x8FC7;&#x7F13;&#x5B58;</p>
-<p>buffer&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#xFF0C;&#x5373;&#x5728;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5148;&#x53BB;&#x67E5;&#x7F13;&#x5B58;buffer&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x67E5;&#x8BE2;&#x5230;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x4F1A;</p>
-<p>&#x67E5;&#x8BE2;&#x78C1;&#x76D8;IO&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x67E5;&#x8BE2;&#x7684;&#x6570;&#x636E;&#x540C;&#x6B65;&#x5230;&#x7F13;&#x5B58;buffer&#x4E2D;&#xFF1B;&#x5728;&#x505A;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x5148;&#x66F4;&#x65B0;&#x7F13;&#x5B58;buffer&#x4E2D;&#x7684;&#x6570;&#x636E;</p>
-<p>&#xFF0C;&#x7136;&#x540E;&#x518D;&#x66F4;&#x65B0;&#x78C1;&#x76D8;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x7684;&#x76EE;&#x7684;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x7F13;&#x5B58;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x51CF;&#x5C11;&#x78C1;&#x76D8;IO&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x4F1A;</p>
-<p>&#x5E26;&#x6765;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x5C31;&#x662F;&#x5982;&#x679C;&#x5728;&#x64CD;&#x4F5C;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;mysql&#x53D1;&#x751F;&#x4E86;&#x5B95;&#x673A;&#xFF0C;&#x90A3;&#x4E48;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5C31;&#x4F1A;&#x6D88;&#x5931;&#xFF0C;&#x5728;&#x505A;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x5148;&#x4F1A;</p>
-<p>&#x66F4;&#x65B0;&#x78C1;&#x76D8;&#xFF0C;&#x7136;&#x540E;&#x66F4;&#x65B0;&#x78C1;&#x76D8;IO&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#x6570;&#x636E;&#x6709;&#x4E22;&#x5931;&#x60C5;&#x51B5;&#xFF0C;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;redo.log&#xFF0C;&#x5728;</p>
-<p>&#x6267;&#x884C;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;sql&#x4F1A;&#x5148;&#x5199;&#x5230;redo.log&#x65E5;&#x5FD7;&#x4E2D;&#xFF0C;&#x5F53;&#x4E8B;&#x52A1;&#x63D0;&#x4EA4;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x5C06;redo&#x65E5;&#x5FD7;&#x540C;&#x6B65;&#x5199;&#x5230;&#x78C1;&#x76D8;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x5373;&#x4F7F;&#x53D1;&#x751F;&#x5B95;&#x673A;&#x60C5;&#x51B5;&#xFF0C;&#x4E5F;&#x4F1A;&#x901A;&#x8FC7;redo.log&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x4E0D;&#x4E22;&#x5931;&#xFF0C;&#x8FBE;&#x5230;&#x6301;&#x4E45;&#x6027;&#x7684;&#x6548;&#x679C;&#x3002;</p>
-<p><strong>&#x9694;&#x79BB;&#x6027;&#xFF1A;</strong></p>
-<p>&#x9694;&#x79BB;&#x6027;&#x7684;&#x610F;&#x601D;&#x5C31;&#x662F;mysql&#x5728;&#x591A;&#x4E2A;&#x4E8B;&#x52A1;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x4E0D;&#x80FD;&#x76F8;&#x4E92;&#x5F71;&#x54CD;</p>
-<p>&#x8FD9;&#x5C31;&#x6D89;&#x53CA;&#x5230;&#x4E24;&#x4E2A;&#x65B9;&#x9762;&#x4E00;&#x4E2A;&#x662F;&#x5199;&#x5199;&#x64CD;&#x4F5C;&#x53E6;&#x4E00;&#x4E2A;&#x5C31;&#x662F;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x4E86;&#xFF0C;</p>
-<p>&#x5199;&#x5199;&#x64CD;&#x4F5C;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x52A0;&#x4E0A;&#x9501;&#x7684;&#x65B9;&#x5F0F;&#x53BB;&#x4FDD;&#x8BC1;&#x4E24;&#x4E2A;&#x4E8B;&#x52A1;&#x7684;&#x9694;&#x79BB;&#x6027;&#xFF0C;</p>
-<p>&#x800C;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#xFF0C;&#x5C31;&#x662F;&#x901A;&#x8FC7;mvcc&#x6765;&#x89E3;&#x51B3;&#xFF08;&#x5305;&#x62EC;&#x810F;&#x8BFB;&#x3001;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#x3001;&#x5E7B;&#x8BFB;&#xFF09;</p>
-<p><strong>&#x4E00;&#x81F4;&#x6027;&#xFF1A;</strong></p>
-<p>&#x4E8B;&#x52A1;&#x5728;&#x6267;&#x884C;&#x524D;&#x540E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x72B6;&#x6001;&#x90FD;&#x662F;&#x6B63;&#x5E38;&#x7684;&#xFF0C;&#x8868;&#x73B0;&#x4E3A;&#x6CA1;&#x6709;&#x8FDD;&#x53CD;&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;&#xFF0C;</p>
-<p>&#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;&#x548C;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x5B8C;&#x6574;&#x6027;&#xFF0C;&#x800C;&#x539F;&#x5B50;&#x6027;&#x3001;&#x6301;&#x4E45;&#x6027;&#x3001;&#x9694;&#x79BB;&#x6027;&#x5C31;&#x662F;&#x4FDD;&#x8BC1;</p>
-<p>&#x6570;&#x636E;&#x5E93;&#x5177;&#x6709;&#x4E00;&#x81F4;&#x6027;&#x3002;</p>
-<h1 id="mysql&#x7684;-mvcc"><a href="#mysql&#x7684;-mvcc" class="headerlink" title="mysql&#x7684; mvcc"></a>mysql&#x7684; mvcc</h1><p>mvcc&#x610F;&#x601D;&#x5C31;&#x662F;&#x591A;&#x7248;&#x672C;&#x63A7;&#x5236;&#xFF0C;</p>
-<p>&#x540C;&#x4E00;&#x884C;&#x6570;&#x636E;&#x53D1;&#x751F;&#x8BFB;&#x5199;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x4F1A;&#x4E0A;&#x9501;&#x963B;&#x585E;&#xFF0C;&#x4F46;&#x662F;mvcc&#x7528;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5904;&#x7406;&#x8BFB;&#x5199;&#x8BF7;&#x6C42;&#xFF0C;&#x505A;&#x5230;&#x5728;&#x53D1;&#x751F;&#x8BFB;&#x5199;&#x8BF7;&#x6C42;&#x51B2;&#x7A81;&#x65F6;&#x4E0D;&#x7528;&#x52A0;&#x9501;&#x3002;</p>
-<p>&#x8FD9;&#x4E2A;&#x8BFB;&#x662F;&#x6307;&#x7684;&#x5FEB;&#x7167;&#x8BFB;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5F53;&#x524D;&#x8BFB;&#xFF0C;&#x5F53;&#x524D;&#x8BFB;&#x662F;&#x4E00;&#x79CD;&#x52A0;&#x9501;&#x64CD;&#x4F5C;&#xFF0C;&#x662F;&#x60B2;&#x89C2;&#x9501;</p>
-<p><strong>&#x4EC0;&#x4E48;&#x662F;&#x5F53;&#x524D;&#x8BFB;&#xFF1F;&#x4EC0;&#x4E48;&#x662F;&#x5FEB;&#x7167;&#x8BFB;&#xFF1F;</strong></p>
-<p>&#x5F53;&#x524D;&#x8BFB;&#xFF1A;</p>
-<p>&#x5B83;&#x8BFB;&#x53D6;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8BB0;&#x5F55;&#xFF0C;&#x90FD;&#x662F;&#x6700;&#x65B0;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x4F1A;&#x5BF9;&#x5F53;&#x524D;&#x8BFB;&#x53D6;&#x7684;&#x6570;&#x636E;</p>
-<p>&#x8FDB;&#x884C;&#x52A0;&#x9501;&#xFF0C;&#x9632;&#x6B62;&#x5176;&#x4ED6;&#x4E8B;&#x52A1;&#x4FEE;&#x6539;&#x6570;&#x636E;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x60B2;&#x89C2;&#x9501;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
-<p>select lock in share mode (&#x5171;&#x4EAB;&#x9501;)</p>
-<p>select for update &#xFF08;&#x6392;&#x5B83;&#x9501;&#xFF09;</p>
-<p>update &#xFF08;&#x6392;&#x5B83;&#x9501;&#xFF09;</p>
-<p>insert &#xFF08;&#x6392;&#x5B83;&#x9501;&#xFF09;</p>
-<p>delete &#xFF08;&#x4E32;&#x884C;&#x5316;&#xFF09;</p>
-<p>&#x4E32;&#x884C;&#x5316;&#x4E8B;&#x52A1;&#x9694;&#x79BB;&#x7EA7;&#x522B;</p>
-<p>&#x5FEB;&#x7167;&#x8BFB;&#xFF1A;</p>
-<p>&#x5FEB;&#x7167;&#x8BFB;&#x7684;&#x5B9E;&#x73B0;&#x662F;&#x57FA;&#x4E8E;&#x591A;&#x7248;&#x672C;&#x5E76;&#x53D1;&#x63A7;&#x5236;&#xFF0C; &#x5373;mvcc&#xFF0C;&#x65E2;&#x7136;&#x662F;&#x591A;&#x7248;&#x672C;&#xFF0C;</p>
-<p>&#x90A3;&#x4E48;&#x5FEB;&#x7167;&#x8BFB;&#x8BFB;&#x5230;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x5F53;&#x524D;&#x6700;&#x65B0;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x4E4B;&#x524D;</p>
-<p>&#x5386;&#x53F2;&#x7248;&#x672C;&#x7684;&#x6570;&#x636E;&#x3002;</p>
-<p>mysql&#x7684;innodb&#x7684;&#x9694;&#x79BB;&#x7EA7;&#x522B;</p>
-<p>1&#x3001;&#x8BFB;&#x5DF2;&#x63D0;&#x4EA4;</p>
-<p>2&#x3001;&#x8BFB;&#x672A;&#x63D0;&#x4EA4;</p>
-<p>3&#x3001;&#x53EF;&#x91CD;&#x590D;&#x8BFB;</p>
-<p>4&#x3001;&#x4E32;&#x884C;&#x5316;</p>
-<p>&#x4E32;&#x884C;&#x5316;&#x662F;&#x901A;&#x8FC7;&#x5F53;&#x524D;&#x8BFB;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x662F;&#x4E8B;&#x52A1;&#x548C;&#x4E8B;&#x52A1;&#x95F4;</p>
-<p>&#x662F;&#x901A;&#x8FC7;&#x52A0;&#x9501;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x3001;&#x5199;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#xFF0C;</p>
-<p>&#x6240;&#x4EE5;&#x6267;&#x884C;&#x6548;&#x7387;&#x5F88;&#x4F4E;&#xFF0C;&#x4E00;&#x822C;&#x4E0D;&#x91C7;&#x53D6;&#x8FD9;&#x79CD;&#x9694;&#x79BB;&#x7EA7;&#x522B;&#x3002;</p>
-<p>![](D:\npm Registry\ss\source_posts\java&#x57FA;&#x7840;&#x9762;&#x8BD5;&#x9898;\Snipaste_2021-06-06_19-22-50.png)</p>
-<p>undo&#x65E5;&#x5FD7;&#x662F;&#x7528;&#x6765;&#x8BB0;&#x5F55;&#x5386;&#x53F2;&#x6570;&#x636E;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x4FEE;&#x6539;&#x4E86;&#x597D;&#x51E0;&#x6B21;&#xFF0C;&#x8FD9;&#x4E9B;&#x5386;&#x53F2;&#x6570;&#x636E;&#x5C31;&#x4F1A;&#x88AB;&#x5B58;&#x50A8;&#x5230; </p>
-<p>undo.log&#x4E2D;&#xFF0C;&#x6BCF;&#x6761;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x4EC5;&#x5305;&#x542B;&#x6570;&#x636E;&#x672C;&#x751F;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x5305;&#x542B;&#x5B58;&#x50A8;&#x4E86;&#x4E8B;&#x52A1;ID&#x548C;&#x56DE;&#x6EDA;&#x6307;&#x9488;&#xFF0C;&#x4E8B;&#x52A1;ID</p>
-<p>&#x662F;&#x81EA;&#x589E;&#x7684;&#xFF0C;&#x56DE;&#x6EDA;&#x6307;&#x9488;&#x6307;&#x5411;&#x4E0A;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x5934;&#x7ED3;&#x70B9;&#x3002;</p>
-<p><strong>&#x7248;&#x672C;&#x94FE;&#xFF1A;</strong>&#x6307;&#x7684;&#x662F;undo.log&#x548C;&#x56DE;&#x6EDA;&#x6307;&#x9488;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x7684;&#x3002;</p>
-<p>![](D:\npm Registry\ss\source_posts\java&#x57FA;&#x7840;&#x9762;&#x8BD5;&#x9898;\Snipaste_2021-06-06_21-56-52.png)</p>
-<p><strong>ReadView&#xFF08;&#x5FEB;&#x7167;&#xFF09;</strong></p>
-<p><strong>&#x4F5C;&#x7528;&#xFF1A;</strong> &#x662F;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#xFF0C;&#x5224;&#x65AD;&#x67E5;&#x8BE2;&#x7684;&#x662F;&#x54EA;&#x6761;&#x8BB0;&#x5F55;&#xFF0C;&#x5728;undo.log&#x4E2D;&#x3002;</p>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>
-<p><strong>&#x53C2;&#x6570;m_ids&#xFF1A;</strong> &#x6307;&#x7684;&#x662F;&#x672A;&#x63D0;&#x4EA4;&#x7684;&#x4E8B;&#x52A1;ID</p>
-<p><strong>ReadView&#x5982;&#x4F55;&#x5224;&#x65AD;&#x7248;&#x672C;&#x94FE;&#x4E2D;&#x54EA;&#x4E2A;&#x7248;&#x672C;&#x53EF;&#x7528;&#xFF1F;</strong></p>
-<p>trx_id&#xFF08;&#x5F53;&#x524D;&#x4E8B;&#x52A1;ID&#xFF09; == creator_id&#xFF08;readView&#x5B58;&#x50A8;&#x7684;&#x4E8B;&#x52A1;ID&#xFF09;: &#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x7248;&#x672C;</p>
-<p>trx_id &lt; min_trx_id: &#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x7248;&#x672C;</p>
-<p>trx_id &lt; min_trx_id: &#x4E0D;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x7248;&#x672C;</p>
-<p>min_trx_id  &lt;= trx_id &lt;= max_trx_id: &#x5982;&#x679C;trx_id&#x5728;m_ids&#x4E2D;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x7684;&#xFF0C;</p>
-<p>&#x53CD;&#x4E4B;&#x53EF;&#x4EE5;</p>
-<p><strong>&#x62BD;&#x8C61;&#x89C6;&#x56FE;&#xFF1A;</strong></p>
-<p>&#x5DF2;&#x63D0;&#x4EA4;&#x4E8B;&#x52A1;  &#x2013; <strong>min_id</strong> &#x2013;  &#x672A;&#x63D0;&#x4EA4;&#x4E0E;&#x5DF2;&#x63D0;&#x4EA4;&#x4E8B;&#x52A1; &#x2013; <strong>max_id</strong> &#x2013; &#x672A;&#x5F00;&#x59CB;&#x4E8B;&#x52A1;</p>
-<p>![](D:\npm Registry\ss\source_posts\java&#x57FA;&#x7840;&#x9762;&#x8BD5;&#x9898;\Snipaste_2021-06-06_22-37-40.png)</p>
-<p>![](D:\npm Registry\ss\source_posts\java&#x57FA;&#x7840;&#x9762;&#x8BD5;&#x9898;\Snipaste_2021-06-06_22-38-11.png)</p>
-<p>![](D:\npm Registry\ss\source_posts\java&#x57FA;&#x7840;&#x9762;&#x8BD5;&#x9898;\Snipaste_2021-06-06_22-38-50.png)</p>
-<h1 id="B&#x6811;&#x548C;B-&#x6811;&#x7684;&#x533A;&#x522B;&#xFF1F;"><a href="#B&#x6811;&#x548C;B-&#x6811;&#x7684;&#x533A;&#x522B;&#xFF1F;" class="headerlink" title="B&#x6811;&#x548C;B+&#x6811;&#x7684;&#x533A;&#x522B;&#xFF1F;"></a>B&#x6811;&#x548C;B+&#x6811;&#x7684;&#x533A;&#x522B;&#xFF1F;</h1><p>b&#x6811;&#x4E5F;&#x662F;&#x591A;&#x8DEF;&#x67E5;&#x627E;&#x641C;&#x7D22;&#x6811;&#xFF0C;&#x5B83;&#x7684;&#x8282;&#x70B9;&#x662F;&#x5B58;&#x50A8;&#x76F8;&#x5E94;&#x7684;key&#x548C;value&#x503C;&#x7684;</p>
-<p>&#x800C;B+&#x6811;&#x4E0E;B&#x6811;&#x7684;&#x533A;&#x522B;&#x5C31;&#x662F;&#x5728;&#x4E8E;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x548C;&#x975E;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x5173;&#x7CFB;</p>
-<p>&#x975E;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5B58;&#x50A8;key&#x503C;&#x800C;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5B58;&#x50A8;value&#x503C;&#xFF0C;&#x5E76;&#x4E14;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;</p>
-<p>&#x6570;&#x636E;&#x662F;&#x4EE5;&#x94FE;&#x8868;&#x7684;&#x65B9;&#x5F0F;&#x8FDE;&#x63A5;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x6709;&#x5E8F;&#x7684;&#x3002;</p>
-<p>B+&#x6811;&#x5C31;&#x662F;&#x89E3;&#x51B3;&#x4E86;B&#x6811;&#x5B58;&#x5728;&#x7684;&#x7F3A;&#x9677;&#xFF0C;&#x5C31;&#x662F;&#x4F1A;&#x51FA;&#x73B0;&#x56DE;&#x65CB;&#x67E5;&#x627E;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
-<h1 id="mysql-&#x805A;&#x7C07;&#x7D22;&#x5F15;&#x548C;&#x975E;&#x805A;&#x7C07;&#x7D22;&#x5F15;"><a href="#mysql-&#x805A;&#x7C07;&#x7D22;&#x5F15;&#x548C;&#x975E;&#x805A;&#x7C07;&#x7D22;&#x5F15;" class="headerlink" title="mysql &#x805A;&#x7C07;&#x7D22;&#x5F15;&#x548C;&#x975E;&#x805A;&#x7C07;&#x7D22;&#x5F15;"></a>mysql &#x805A;&#x7C07;&#x7D22;&#x5F15;&#x548C;&#x975E;&#x805A;&#x7C07;&#x7D22;&#x5F15;</h1><p>&#x805A;&#x7C07;&#x7D22;&#x5F15;:</p>
-<p> &#x627E;&#x5230;&#x4E86;&#x7D22;&#x5F15;&#x5C31;&#x627E;&#x5230;&#x4E86;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x7D22;&#x5F15;&#x5C31;&#x662F;&#x805A;&#x7C07;&#x7D22;&#x5F15;&#xFF0C;&#x6240;&#x4EE5;&#x4E3B;&#x952E;&#x5C31;&#x662F;&#x805A;&#x7C07;&#x7D22;&#x5F15;&#xFF0C;&#x4FEE;&#x6539;&#x805A;&#x7C07;&#x7D22;&#x5F15;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4FEE;&#x6539;&#x4E3B;&#x952E;&#x3002; </p>
-<p>&#x975E;&#x805A;&#x7C07;&#x7D22;&#x5F15;:</p>
-<p> &#x5F15;&#x7684;&#x5B58;&#x50A8;&#x548C;&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x662F;&#x5206;&#x79BB;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x627E;&#x5230;&#x4E86;&#x7D22;&#x5F15;&#x4F46;&#x6CA1;&#x627E;&#x5230;&#x6570;&#x636E;&#xFF0C;&#x9700;&#x8981;&#x6839;&#x636E;&#x7D22;&#x5F15;&#x4E0A;&#x7684;&#x503C;(&#x4E3B;&#x952E;)&#x518D;&#x6B21;&#x56DE;&#x8868;&#x67E5;&#x8BE2;,&#x975E;&#x805A;&#x7C07;&#x7D22;&#x5F15;&#x4E5F;&#x53EB;&#x505A;&#x8F85;&#x52A9;&#x7D22;&#x5F15;&#x3002; </p>
+<h4 id="mysql锁理论："><a href="#mysql锁理论：" class="headerlink" title="mysql锁理论："></a>mysql锁理论：</h4><h1 id="mysql-ACID执行原理"><a href="#mysql-ACID执行原理" class="headerlink" title="mysql ACID执行原理"></a><strong>mysql ACID执行原理</strong></h1><p>mysql 的acid指的是 原子性、持久性、隔离性、一致性</p>
+<p><strong>原子性：</strong> </p>
+<p>mysql实现原子性，是通过undo.log日志实现的，mysql在执行事务操作的时候，</p>
+<p>都会生成undo.log日志，将执行的sql语句记录到undo.log中，如果发生错误，导致回滚操</p>
+<p>作的时候，都会将读取undo.log的语句，将执行过的语句，执行相反的操作，回滚回初始状态，</p>
+<p>比如执行插入语句了，回滚时就执行删除操作、发生了更新操作，回滚时就会朝相反的更新操作</p>
+<p>去执行回滚操作。</p>
+<p><strong>持久性：</strong> </p>
+<p>mysql持久性，也是通过日志记录形式实现的，通过redo.log日志实现的，mysql的持久化，通过缓存</p>
+<p>buffer的方式来提高效率，即在查询数据时，先去查缓存buffer的数据，如果没有查询到数据，就会</p>
+<p>查询磁盘IO的数据，然后将查询的数据同步到缓存buffer中；在做更新操作时，先更新缓存buffer中的数据</p>
+<p>，然后再更新磁盘的操作，这些操作的目的就是通过缓存的方式，减少磁盘IO的次数，提高效率。但是这会</p>
+<p>带来一个问题就是如果在操作过程中，mysql发生了宕机，那么缓存中的数据就会消失，在做更新操作时，先会</p>
+<p>更新磁盘，然后更新磁盘IO，这个时候就会导致数据有丢失情况，为了解决这个问题，就需要使用redo.log，在</p>
+<p>执行修改操作时，sql会先写到redo.log日志中，当事务提交时，就会将redo日志同步写到磁盘中，这样即使发生宕机情况，也会通过redo.log保证数据不丢失，达到持久性的效果。</p>
+<p><strong>隔离性：</strong></p>
+<p>隔离性的意思就是mysql在多个事务执行时，不能相互影响</p>
+<p>这就涉及到两个方面一个是写写操作另一个就是读写操作了，</p>
+<p>写写操作就是通过加上锁的方式去保证两个事务的隔离性，</p>
+<p>而读写操作，就是通过mvcc来解决（包括脏读、不可重复读、幻读）</p>
+<p><strong>一致性：</strong></p>
+<p>事务在执行前后数据库的状态都是正常的，表现为没有违反数据完整性，</p>
+<p>参照完整性和用户自定义完整性，而原子性、持久性、隔离性就是保证</p>
+<p>数据库具有一致性。</p>
+<h1 id="mysql的-mvcc"><a href="#mysql的-mvcc" class="headerlink" title="mysql的 mvcc"></a>mysql的 mvcc</h1><p>mvcc意思就是多版本控制，</p>
+<p>同一行数据发生读写请求时，会上锁阻塞，但是mvcc用更好的方式来处理读写请求，做到在发生读写请求冲突时不用加锁。</p>
+<p>这个读是指的快照读，而不是当前读，当前读是一种加锁操作，是悲观锁</p>
+<p><strong>什么是当前读？什么是快照读？</strong></p>
+<p>当前读：</p>
+<p>它读取的数据库记录，都是最新的版本，会对当前读取的数据</p>
+<p>进行加锁，防止其他事务修改数据，是一种悲观锁的操作。</p>
+<p>select lock in share mode (共享锁)</p>
+<p>select for update （排它锁）</p>
+<p>update （排它锁）</p>
+<p>insert （排它锁）</p>
+<p>delete （串行化）</p>
+<p>串行化事务隔离级别</p>
+<p>快照读：</p>
+<p>快照读的实现是基于多版本并发控制， 即mvcc，既然是多版本，</p>
+<p>那么快照读读到的数据不一定是当前最新的数据，有可能是之前</p>
+<p>历史版本的数据。</p>
+<p>mysql的innodb的隔离级别</p>
+<p>1、读已提交</p>
+<p>2、读未提交</p>
+<p>3、可重复读</p>
+<p>4、串行化</p>
+<p>串行化是通过当前读实现的，是事务和事务间</p>
+<p>是通过加锁的方式来读写操作、写写操作的，</p>
+<p>所以执行效率很低，一般不采取这种隔离级别。</p>
+<p>![](D:\npm Registry\ss\source_posts\java基础面试题\Snipaste_2021-06-06_19-22-50.png)</p>
+<p>undo日志是用来记录历史数据的，比如一条记录修改了好几次，这些历史数据就会被存储到 </p>
+<p>undo.log中，每条数据，不仅包含数据本生之外，还包含存储了事务ID和回滚指针，事务ID</p>
+<p>是自增的，回滚指针指向上条记录的头结点。</p>
+<p><strong>版本链：</strong>指的是undo.log和回滚指针连接起来的。</p>
+<p>![](D:\npm Registry\ss\source_posts\java基础面试题\Snipaste_2021-06-06_21-56-52.png)</p>
+<p><strong>ReadView（快照）</strong></p>
+<p><strong>作用：</strong> 是一个查询语句，判断查询的是哪条记录，在undo.log中。</p>
+<p><strong>注意：</strong></p>
+<p><strong>参数m_ids：</strong> 指的是未提交的事务ID</p>
+<p><strong>ReadView如何判断版本链中哪个版本可用？</strong></p>
+<p>trx_id（当前事务ID） == creator_id（readView存储的事务ID）: 可以访问这个版本</p>
+<p>trx_id &lt; min_trx_id: 可以访问这个版本</p>
+<p>trx_id &lt; min_trx_id: 不可以访问这个版本</p>
+<p>min_trx_id  &lt;= trx_id &lt;= max_trx_id: 如果trx_id在m_ids中是不可以访问这个版本的，</p>
+<p>反之可以</p>
+<p><strong>抽象视图：</strong></p>
+<p>已提交事务  – <strong>min_id</strong> –  未提交与已提交事务 – <strong>max_id</strong> – 未开始事务</p>
+<p>![](D:\npm Registry\ss\source_posts\java基础面试题\Snipaste_2021-06-06_22-37-40.png)</p>
+<p>![](D:\npm Registry\ss\source_posts\java基础面试题\Snipaste_2021-06-06_22-38-11.png)</p>
+<p>![](D:\npm Registry\ss\source_posts\java基础面试题\Snipaste_2021-06-06_22-38-50.png)</p>
+<h1 id="B树和B-树的区别？"><a href="#B树和B-树的区别？" class="headerlink" title="B树和B+树的区别？"></a>B树和B+树的区别？</h1><p>b树也是多路查找搜索树，它的节点是存储相应的key和value值的</p>
+<p>而B+树与B树的区别就是在于叶子节点和非叶子节点的关系</p>
+<p>非叶子节点存储key值而叶子节点存储value值，并且叶子节点的</p>
+<p>数据是以链表的方式连接的，并且是有序的。</p>
+<p>B+树就是解决了B树存在的缺陷，就是会出现回旋查找的问题。</p>
+<h1 id="mysql-聚簇索引和非聚簇索引"><a href="#mysql-聚簇索引和非聚簇索引" class="headerlink" title="mysql 聚簇索引和非聚簇索引"></a>mysql 聚簇索引和非聚簇索引</h1><p>聚簇索引:</p>
+<p> 找到了索引就找到了需要的数据，那么这个索引就是聚簇索引，所以主键就是聚簇索引，修改聚簇索引其实就是修改主键。 </p>
+<p>非聚簇索引:</p>
+<p> 引的存储和数据的存储是分离的，也就是说找到了索引但没找到数据，需要根据索引上的值(主键)再次回表查询,非聚簇索引也叫做辅助索引。 </p>
 
     </div>
 
@@ -715,7 +715,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql&#x6027;&#x80FD;&#x4F18;&#x5316;"><span class="nav-number">1.</span> <span class="nav-text">mysql&amp;#x6027;&amp;#x80FD;&amp;#x4F18;&amp;#x5316;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql-&#x903B;&#x8F91;&#x67B6;&#x6784;"><span class="nav-number">1.1.</span> <span class="nav-text">mysql &amp;#x903B;&amp;#x8F91;&amp;#x67B6;&amp;#x6784;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sql&#x6027;&#x80FD;&#x4E0B;&#x964D;&#x7684;&#x539F;&#x56E0;&#xFF1F;"><span class="nav-number">1.1.1.</span> <span class="nav-text">sql&amp;#x6027;&amp;#x80FD;&amp;#x4E0B;&amp;#x964D;&amp;#x7684;&amp;#x539F;&amp;#x56E0;&amp;#xFF1F;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sql&#x6267;&#x884C;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;"><span class="nav-number">1.1.2.</span> <span class="nav-text">sql&amp;#x6267;&amp;#x884C;&amp;#x52A0;&amp;#x8F7D;&amp;#x987A;&amp;#x5E8F;?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#&#x4EC0;&#x4E48;&#x662F;&#x7D22;&#x5F15;&#xFF1F;"><span class="nav-number">1.1.3.</span> <span class="nav-text">&amp;#x4EC0;&amp;#x4E48;&amp;#x662F;&amp;#x7D22;&amp;#x5F15;&amp;#xFF1F;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#&#x7D22;&#x5F15;&#x7684;&#x4F18;&#x52BF;&#x548C;&#x52A3;&#x52BF;&#xFF1F;"><span class="nav-number">1.1.4.</span> <span class="nav-text">&amp;#x7D22;&amp;#x5F15;&amp;#x7684;&amp;#x4F18;&amp;#x52BF;&amp;#x548C;&amp;#x52A3;&amp;#x52BF;&amp;#xFF1F;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">&amp;#x7D22;&amp;#x5F15;&amp;#x7C7B;&amp;#x578B;&amp;#x6709;&amp;#x54EA;&amp;#x4E9B;&amp;#xFF1F;</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#mysql-&#x7D22;&#x5F15;&#x7ED3;&#x6784;"><span class="nav-number">1.1.4.1.1.</span> <span class="nav-text">mysql &amp;#x7D22;&amp;#x5F15;&amp;#x7ED3;&amp;#x6784;</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#&#x54EA;&#x4E9B;&#x60C5;&#x51B5;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#xFF1F;"><span class="nav-number">1.1.4.1.2.</span> <span class="nav-text">&amp;#x54EA;&amp;#x4E9B;&amp;#x60C5;&amp;#x51B5;&amp;#x9700;&amp;#x8981;&amp;#x521B;&amp;#x5EFA;&amp;#x7D22;&amp;#x5F15;&amp;#xFF1F;</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#&#x54EA;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#xFF1F;"><span class="nav-number">1.1.4.1.3.</span> <span class="nav-text">&amp;#x54EA;&amp;#x4E9B;&amp;#x60C5;&amp;#x51B5;&amp;#x4E0B;&amp;#x4E0D;&amp;#x9700;&amp;#x8981;&amp;#x5EFA;&amp;#x7ACB;&amp;#x7D22;&amp;#x5F15;&amp;#xFF1F;</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#&#x6027;&#x80FD;&#x5206;&#x6790;"><span class="nav-number">1.1.4.1.4.</span> <span class="nav-text">&amp;#x6027;&amp;#x80FD;&amp;#x5206;&amp;#x6790;</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mysql&#x9501;&#x7406;&#x8BBA;&#xFF1A;"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">mysql&amp;#x9501;&amp;#x7406;&amp;#x8BBA;&amp;#xFF1A;</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql-ACID&#x6267;&#x884C;&#x539F;&#x7406;"><span class="nav-number">2.</span> <span class="nav-text">mysql ACID&amp;#x6267;&amp;#x884C;&amp;#x539F;&amp;#x7406;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql&#x7684;-mvcc"><span class="nav-number">3.</span> <span class="nav-text">mysql&amp;#x7684; mvcc</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B&#x6811;&#x548C;B-&#x6811;&#x7684;&#x533A;&#x522B;&#xFF1F;"><span class="nav-number">4.</span> <span class="nav-text">B&amp;#x6811;&amp;#x548C;B+&amp;#x6811;&amp;#x7684;&amp;#x533A;&amp;#x522B;&amp;#xFF1F;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql-&#x805A;&#x7C07;&#x7D22;&#x5F15;&#x548C;&#x975E;&#x805A;&#x7C07;&#x7D22;&#x5F15;"><span class="nav-number">5.</span> <span class="nav-text">mysql &amp;#x805A;&amp;#x7C07;&amp;#x7D22;&amp;#x5F15;&amp;#x548C;&amp;#x975E;&amp;#x805A;&amp;#x7C07;&amp;#x7D22;&amp;#x5F15;</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql性能优化"><span class="nav-number">1.</span> <span class="nav-text">mysql性能优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql-逻辑架构"><span class="nav-number">1.1.</span> <span class="nav-text">mysql 逻辑架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sql性能下降的原因？"><span class="nav-number">1.1.1.</span> <span class="nav-text">sql性能下降的原因？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sql执行加载顺序"><span class="nav-number">1.1.2.</span> <span class="nav-text">sql执行加载顺序?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是索引？"><span class="nav-number">1.1.3.</span> <span class="nav-text">什么是索引？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引的优势和劣势？"><span class="nav-number">1.1.4.</span> <span class="nav-text">索引的优势和劣势？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#索引类型有哪些？"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">索引类型有哪些？</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#mysql-索引结构"><span class="nav-number">1.1.4.1.1.</span> <span class="nav-text">mysql 索引结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#哪些情况需要创建索引？"><span class="nav-number">1.1.4.1.2.</span> <span class="nav-text">哪些情况需要创建索引？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#哪些情况下不需要建立索引？"><span class="nav-number">1.1.4.1.3.</span> <span class="nav-text">哪些情况下不需要建立索引？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#性能分析"><span class="nav-number">1.1.4.1.4.</span> <span class="nav-text">性能分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mysql锁理论："><span class="nav-number">1.1.4.2.</span> <span class="nav-text">mysql锁理论：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql-ACID执行原理"><span class="nav-number">2.</span> <span class="nav-text">mysql ACID执行原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql的-mvcc"><span class="nav-number">3.</span> <span class="nav-text">mysql的 mvcc</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B树和B-树的区别？"><span class="nav-number">4.</span> <span class="nav-text">B树和B+树的区别？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql-聚簇索引和非聚簇索引"><span class="nav-number">5.</span> <span class="nav-text">mysql 聚簇索引和非聚簇索引</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
