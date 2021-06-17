@@ -268,7 +268,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-17 06:28:01" itemprop="dateModified" datetime="2021-06-17T06:28:01Z">2021-06-17</time>
+                <time title="修改时间：2021-06-17 08:46:22" itemprop="dateModified" datetime="2021-06-17T08:46:22Z">2021-06-17</time>
               </span>
 
           
@@ -291,14 +291,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>576</span>
+              <span>2.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -327,6 +327,46 @@
 <h4 id="zookeeper数据结构"><a href="#zookeeper数据结构" class="headerlink" title="zookeeper数据结构"></a>zookeeper数据结构</h4><p>​     zookeeper的数据模型的结构与unix文件系统类似，整体可以看做是一颗树，每个节点称作一个znode。</p>
 <p>每个znode默认能够存储1MB的数据，每个znode都可以通过其路径唯一标识。</p>
 <p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_01-06-38.png" alt></p>
+<h4 id="zookeeper应用场景"><a href="#zookeeper应用场景" class="headerlink" title="zookeeper应用场景"></a>zookeeper应用场景</h4><p>​    提供的服务包括：统一命名服务、统一配置管理、统一集群管理、服务节点动态上下线、软负载均衡等。</p>
+<p><strong>统一名称服务</strong></p>
+<p>​    在分布式环境下，经常需要对服务应用/服务进行统一命名，便于识别。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_14-50-41.png" alt></p>
+<p><strong>统一配置管理</strong></p>
+<p>（1）分布式环境下，配置文件同步非常常见。</p>
+<p>​       1、一般要求一个集群中，所有节点的配置信息是一致的，比如kafka集群。</p>
+<p>​       2、对配置文件修改后，希望能够快速同步到各个节点上。</p>
+<p>（2）配置管理可交由zookeeper实现。</p>
+<p>​        1、可将配置信息写入zookeeper上的一个ZNode。</p>
+<p>​        2、各个客户端服务监听这个ZNode。</p>
+<p>​        3、一旦Znode中的数据被修改，zookeeper将通知各个客户服务器。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_14-56-56.png" alt></p>
+<p><strong>统一集群管理</strong></p>
+<p>（1） 分布式环境中，实时掌握每个节点的状态是必要的。</p>
+<p>​         1、可根据节点实时状态做出一些调整</p>
+<p>（2）zookeeper可以实现实时监控节点状态变化</p>
+<p>​        1、可将节点信息写入zookeeper上的一个ZNode。</p>
+<p>​        2、监听这个ZNode可获得它的实时状态变化。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_14-50-41.png" alt></p>
+<p><strong>服务器动态上下线</strong></p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_15-04-16.png" alt></p>
+<p><strong>软负载均衡</strong></p>
+<p>​       在zookeeper中记录每台服务器的访问数，让访问数最少的服务器去处理最新的客户端请求。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_15-05-46.png" alt></p>
+<h4 id="zookeeper命令"><a href="#zookeeper命令" class="headerlink" title="zookeeper命令"></a>zookeeper命令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 单体启动zookeeper服务</span></span><br><span class="line">./zkServer.sh start</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 检查zookeeper服务是否启动成功， 出现名称为 QuorumPeerMain ，说明启动成功</span></span><br><span class="line">jps</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看zookeeper状态</span></span><br><span class="line">./zkServer.sh status</span><br><span class="line"> </span><br><span class="line">ZooKeeper JMX enabled by default</span><br><span class="line">Using config: /usr/local/zookeeper/zookeeper-3.4.14/bin/../conf/zoo.cfg</span><br><span class="line">Mode: standalone</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 客户端连接zookeeper</span></span><br><span class="line"> ./zkCli.sh -server localhost:2181</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>zookeeper配置参数含义</strong></p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_16-03-15.png" alt></p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_16-05-48.png" alt></p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_16-07-40.png" alt></p>
+<h4 id="zookeeper内部原理"><a href="#zookeeper内部原理" class="headerlink" title="zookeeper内部原理"></a>zookeeper内部原理</h4><p><strong>选举机制</strong></p>
+<p>1、半数机制：集群中半数以上机器存活，集群可用。所以zookeeper适合安装奇数台服务器。</p>
+<p>2、zookeeper虽然在配置文件并没有指定Master和Slave。但是，Zookeeper工作时，是一个</p>
+<p>节点为Leader，其他则为Follwer，Leader是通过内部内部的选举机制临时产生的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">zookeeper 的 leader 选举存在两个阶段，一个是服务器启动时 leader 选举，另一个是运行过程中 leader 服务器宕机。在分析选举原理前，先介绍几个重要的参数。</span><br><span class="line"></span><br><span class="line">服务器 ID(myid)：编号越大在选举算法中权重越大</span><br><span class="line">事务 ID(zxid)：值越大说明数据越新，权重越大</span><br><span class="line">逻辑时钟(epoch-logicalclock)：同一轮投票过程中的逻辑时钟值是相同的，每投完一次值会增加</span><br><span class="line">选举状态：</span><br><span class="line"></span><br><span class="line">LOOKING: 竞选状态</span><br><span class="line">FOLLOWING: 随从状态，同步 leader 状态，参与投票</span><br><span class="line">OBSERVING: 观察状态，同步 leader 状态，不参与投票</span><br><span class="line">LEADING: 领导者状态</span><br><span class="line">1、服务器启动时的 leader 选举</span><br><span class="line">每个节点启动的时候都 LOOKING 观望状态，接下来就开始进行选举主流程。这里选取三台机器组成的集群为例。第一台服务器 server1启动时，无法进行 leader 选举，当第二台服务器 server2 启动时，两台机器可以相互通信，进入 leader 选举过程。</span><br><span class="line"></span><br><span class="line">（1）每台 server 发出一个投票，由于是初始情况，server1 和 server2 都将自己作为 leader 服务器进行投票，每次投票包含所推举的服务器myid、zxid、epoch，使用（myid，zxid）表示，此时 server1 投票为（1,0），server2 投票为（2,0），然后将各自投票发送给集群中其他机器。</span><br><span class="line"></span><br><span class="line">（2）接收来自各个服务器的投票。集群中的每个服务器收到投票后，首先判断该投票的有效性，如检查是否是本轮投票（epoch）、是否来自 LOOKING 状态的服务器。</span><br><span class="line"></span><br><span class="line">（3）分别处理投票。针对每一次投票，服务器都需要将其他服务器的投票和自己的投票进行对比，对比规则如下：</span><br><span class="line"></span><br><span class="line">a. 优先比较 epoch</span><br><span class="line">b. 检查 zxid，zxid 比较大的服务器优先作为 leader</span><br><span class="line">c. 如果 zxid 相同，那么就比较 myid，myid 较大的服务器作为 leader 服务器</span><br><span class="line">（4）统计投票。每次投票后，服务器统计投票信息，判断是都有过半机器接收到相同的投票信息。server1、server2 都统计出集群中有两台机器接受了（2,0）的投票信息，此时已经选出了 server2 为 leader 节点。</span><br><span class="line"></span><br><span class="line">（5）改变服务器状态。一旦确定了 leader，每个服务器响应更新自己的状态，如果是 follower，那么就变更为 FOLLOWING，如果是 Leader，变更为 LEADING。此时 server3继续启动，直接加入变更自己为 FOLLOWING。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2、运行过程中的 leader 选举</span><br><span class="line">当集群中 leader 服务器出现宕机或者不可用情况时，整个集群无法对外提供服务，进入新一轮的 leader 选举。</span><br><span class="line"></span><br><span class="line">（1）变更状态。leader 挂后，其他非 Oberver服务器将自身服务器状态变更为 LOOKING。</span><br><span class="line">（2）每个 server 发出一个投票。在运行期间，每个服务器上 zxid 可能不同。</span><br><span class="line">（3）处理投票。规则同启动过程。</span><br><span class="line">（4）统计投票。与启动过程相同。</span><br><span class="line">（5）改变服务器状态。与启动过程相同。</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_16-45-44.png" alt></p>
 
       
     </div>
@@ -2174,13 +2214,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">45k</span>
+    <span title="站点总字数">47k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">40 分钟</span>
+    <span title="站点阅读时长">43 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>

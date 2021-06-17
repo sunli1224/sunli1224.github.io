@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HTTP权限指南--HTTP报文</title>
-    <url>/2020/06/07/HTTP%E6%9D%83%E9%99%90%E6%8C%87%E5%8D%97-HTTP%E6%8A%A5%E6%96%87/</url>
-    <content><![CDATA[<p><strong>HTTPS</strong></p>
-<p>HTTPS是常见的HTTP安全版本，HTTPS将HTTP协议与一组强大的对称、非对称和基于证书的加密技术结合在一起。特点：安全、灵活。</p>
-<p>HTTPS就是在安全层的基础上发送HTTP。</p>
-<p>HTTPS将发送给安全层对其进行加密</p>
-<p>HTTP安全层通过SSL以及现代替协议TLS来实现的。</p>
-<p>HTTP建立安全连接：</p>
-<p>客户端打开一条web服务器</p>
-<p><strong>HTTP常问面试题</strong></p>
-<p>1、Http与Https的区别</p>
-<p>默认端口不同，http默认端口80而HTTPS默认端口443，</p>
-<p>2、什么是Http协议无状态协议?怎么解决Http协议无状态协议?</p>
-<p>3、URI和URL的区别？</p>
-<p>4、常用的HTTP方法有哪些？</p>
-<p>6、HTTP请求报文与响应报文格式HTTP请求报文与响应报文格式？</p>
-<p>7、HTTPS工作原理</p>
-<p>8、一次完整的HTTP请求所经历的7个步骤</p>
-<p>9、常见的HTTP相应状态码？</p>
-<p>10、HTTP1.1版本新特性?</p>
-<p>11、HTTP优化方案？</p>
-]]></content>
-      <tags>
-        <tag>HTTP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JVM学习</title>
     <url>/2021/05/26/JVM%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h3 id="什么是虚拟机？"><a href="#什么是虚拟机？" class="headerlink" title="什么是虚拟机？"></a>什么是虚拟机？</h3><p>所谓虚拟机，就是一台虚拟的计算机。它是一款软件，用来执行一系列虚拟计算机指令，大体上，虚拟机可以分为系统虚拟机和程序虚拟机。</p>
@@ -68,17 +41,36 @@
       </tags>
   </entry>
   <entry>
-    <title>java基础之接口</title>
-    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
-    <content><![CDATA[]]></content>
+    <title>HTTP权限指南--HTTP报文</title>
+    <url>/2020/06/07/HTTP%E6%9D%83%E9%99%90%E6%8C%87%E5%8D%97-HTTP%E6%8A%A5%E6%96%87/</url>
+    <content><![CDATA[<p><strong>HTTPS</strong></p>
+<p>HTTPS是常见的HTTP安全版本，HTTPS将HTTP协议与一组强大的对称、非对称和基于证书的加密技术结合在一起。特点：安全、灵活。</p>
+<p>HTTPS就是在安全层的基础上发送HTTP。</p>
+<p>HTTPS将发送给安全层对其进行加密</p>
+<p>HTTP安全层通过SSL以及现代替协议TLS来实现的。</p>
+<p>HTTP建立安全连接：</p>
+<p>客户端打开一条web服务器</p>
+<p><strong>HTTP常问面试题</strong></p>
+<p>1、Http与Https的区别</p>
+<p>默认端口不同，http默认端口80而HTTPS默认端口443，</p>
+<p>2、什么是Http协议无状态协议?怎么解决Http协议无状态协议?</p>
+<p>3、URI和URL的区别？</p>
+<p>4、常用的HTTP方法有哪些？</p>
+<p>6、HTTP请求报文与响应报文格式HTTP请求报文与响应报文格式？</p>
+<p>7、HTTPS工作原理</p>
+<p>8、一次完整的HTTP请求所经历的7个步骤</p>
+<p>9、常见的HTTP相应状态码？</p>
+<p>10、HTTP1.1版本新特性?</p>
+<p>11、HTTP优化方案？</p>
+]]></content>
       <tags>
-        <tag>java基础</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
-    <title>java基础之集合--深入研究</title>
-    <url>/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/</url>
-    <content><![CDATA[<h1 id="java基础之集合"><a href="#java基础之集合" class="headerlink" title="java基础之集合"></a>java基础之集合</h1>]]></content>
+    <title>java基础之接口</title>
+    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
+    <content><![CDATA[]]></content>
       <tags>
         <tag>java基础</tag>
       </tags>
@@ -243,6 +235,15 @@
       </tags>
   </entry>
   <entry>
+    <title>mysql--索引</title>
+    <url>/2020/06/03/mysql-%E7%B4%A2%E5%BC%95/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>mysql</tag>
+        <tag>索引</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>mysql--存储过程</title>
     <url>/2020/06/05/mysql-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="mysql存储过程"><a href="#mysql存储过程" class="headerlink" title="mysql存储过程"></a>mysql存储过程</h1><p>存储过程和函数：类似于java中的方法<br>好处：<br>1、提高代码的复用性<br>2、简化操作</p>
@@ -299,12 +300,68 @@
       </tags>
   </entry>
   <entry>
-    <title>mysql--索引</title>
-    <url>/2020/06/03/mysql-%E7%B4%A2%E5%BC%95/</url>
-    <content><![CDATA[]]></content>
+    <title>zookeeper学习</title>
+    <url>/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="zookeeper"><a href="#zookeeper" class="headerlink" title="zookeeper"></a>zookeeper</h1><p><strong>zookeeper是开源的分布式的、为分布式应用提供协调服务的Apache项目。</strong></p>
+<p>​     zookeeper从设计模式角度来理解：是一个基于观察者模式设计的分布式服务管理框架，它负责</p>
+<p>存储和管理大家关心的数据，然后接受观察者的注册，一旦这些数据的状态发生变化，zookeeper就</p>
+<p>将负责通知已经在zookeeper上注册的那些观察者做出相应的反应。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_00-46-15.png" alt></p>
+<p><strong>注意：</strong>了解了zookeeper的工作机制，我们就可以将zookeeper类比为<strong>文件系统+通知机制</strong></p>
+<h4 id="zookeeper特点"><a href="#zookeeper特点" class="headerlink" title="zookeeper特点"></a>zookeeper特点</h4><p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_00-52-18.png" alt></p>
+<p>1、zookeeper： 一个领导者（Leader），多个跟随者（Follower）组成的集群。</p>
+<p>2、集群中只要半数以上节点存活，zookeeper集群就能正常服务。</p>
+<p>3、全局数据一致性： 每个server保存一份相同的数据副本，client无论连接到那个</p>
+<p>server，数据都是一致。</p>
+<p>4、更新请求顺序进行，来自同一个client的更新请求按其顺序发送依次执行。</p>
+<p>5、数据更新原子性，一次数据更新要么成功，要么失败。</p>
+<p>6、实时性，在一定时间范围内，client能读到最新数据。</p>
+<h4 id="zookeeper数据结构"><a href="#zookeeper数据结构" class="headerlink" title="zookeeper数据结构"></a>zookeeper数据结构</h4><p>​     zookeeper的数据模型的结构与unix文件系统类似，整体可以看做是一颗树，每个节点称作一个znode。</p>
+<p>每个znode默认能够存储1MB的数据，每个znode都可以通过其路径唯一标识。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_01-06-38.png" alt></p>
+<h4 id="zookeeper应用场景"><a href="#zookeeper应用场景" class="headerlink" title="zookeeper应用场景"></a>zookeeper应用场景</h4><p>​    提供的服务包括：统一命名服务、统一配置管理、统一集群管理、服务节点动态上下线、软负载均衡等。</p>
+<p><strong>统一名称服务</strong></p>
+<p>​    在分布式环境下，经常需要对服务应用/服务进行统一命名，便于识别。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_14-50-41.png" alt></p>
+<p><strong>统一配置管理</strong></p>
+<p>（1）分布式环境下，配置文件同步非常常见。</p>
+<p>​       1、一般要求一个集群中，所有节点的配置信息是一致的，比如kafka集群。</p>
+<p>​       2、对配置文件修改后，希望能够快速同步到各个节点上。</p>
+<p>（2）配置管理可交由zookeeper实现。</p>
+<p>​        1、可将配置信息写入zookeeper上的一个ZNode。</p>
+<p>​        2、各个客户端服务监听这个ZNode。</p>
+<p>​        3、一旦Znode中的数据被修改，zookeeper将通知各个客户服务器。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_14-56-56.png" alt></p>
+<p><strong>统一集群管理</strong></p>
+<p>（1） 分布式环境中，实时掌握每个节点的状态是必要的。</p>
+<p>​         1、可根据节点实时状态做出一些调整</p>
+<p>（2）zookeeper可以实现实时监控节点状态变化</p>
+<p>​        1、可将节点信息写入zookeeper上的一个ZNode。</p>
+<p>​        2、监听这个ZNode可获得它的实时状态变化。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_14-50-41.png" alt></p>
+<p><strong>服务器动态上下线</strong></p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_15-04-16.png" alt></p>
+<p><strong>软负载均衡</strong></p>
+<p>​       在zookeeper中记录每台服务器的访问数，让访问数最少的服务器去处理最新的客户端请求。</p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_15-05-46.png" alt></p>
+<h4 id="zookeeper命令"><a href="#zookeeper命令" class="headerlink" title="zookeeper命令"></a>zookeeper命令</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 单体启动zookeeper服务</span></span><br><span class="line">./zkServer.sh start</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 检查zookeeper服务是否启动成功， 出现名称为 QuorumPeerMain ，说明启动成功</span></span><br><span class="line">jps</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看zookeeper状态</span></span><br><span class="line">./zkServer.sh status</span><br><span class="line"> </span><br><span class="line">ZooKeeper JMX enabled by default</span><br><span class="line">Using config: /usr/local/zookeeper/zookeeper-3.4.14/bin/../conf/zoo.cfg</span><br><span class="line">Mode: standalone</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 客户端连接zookeeper</span></span><br><span class="line"> ./zkCli.sh -server localhost:2181</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>zookeeper配置参数含义</strong></p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_16-03-15.png" alt></p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_16-05-48.png" alt></p>
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_16-07-40.png" alt></p>
+<h4 id="zookeeper内部原理"><a href="#zookeeper内部原理" class="headerlink" title="zookeeper内部原理"></a>zookeeper内部原理</h4><p><strong>选举机制</strong></p>
+<p>1、半数机制：集群中半数以上机器存活，集群可用。所以zookeeper适合安装奇数台服务器。</p>
+<p>2、zookeeper虽然在配置文件并没有指定Master和Slave。但是，Zookeeper工作时，是一个</p>
+<p>节点为Leader，其他则为Follwer，Leader是通过内部内部的选举机制临时产生的。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zookeeper 的 leader 选举存在两个阶段，一个是服务器启动时 leader 选举，另一个是运行过程中 leader 服务器宕机。在分析选举原理前，先介绍几个重要的参数。</span><br><span class="line"></span><br><span class="line">服务器 ID(myid)：编号越大在选举算法中权重越大</span><br><span class="line">事务 ID(zxid)：值越大说明数据越新，权重越大</span><br><span class="line">逻辑时钟(epoch-logicalclock)：同一轮投票过程中的逻辑时钟值是相同的，每投完一次值会增加</span><br><span class="line">选举状态：</span><br><span class="line"></span><br><span class="line">LOOKING: 竞选状态</span><br><span class="line">FOLLOWING: 随从状态，同步 leader 状态，参与投票</span><br><span class="line">OBSERVING: 观察状态，同步 leader 状态，不参与投票</span><br><span class="line">LEADING: 领导者状态</span><br><span class="line">1、服务器启动时的 leader 选举</span><br><span class="line">每个节点启动的时候都 LOOKING 观望状态，接下来就开始进行选举主流程。这里选取三台机器组成的集群为例。第一台服务器 server1启动时，无法进行 leader 选举，当第二台服务器 server2 启动时，两台机器可以相互通信，进入 leader 选举过程。</span><br><span class="line"></span><br><span class="line">（1）每台 server 发出一个投票，由于是初始情况，server1 和 server2 都将自己作为 leader 服务器进行投票，每次投票包含所推举的服务器myid、zxid、epoch，使用（myid，zxid）表示，此时 server1 投票为（1,0），server2 投票为（2,0），然后将各自投票发送给集群中其他机器。</span><br><span class="line"></span><br><span class="line">（2）接收来自各个服务器的投票。集群中的每个服务器收到投票后，首先判断该投票的有效性，如检查是否是本轮投票（epoch）、是否来自 LOOKING 状态的服务器。</span><br><span class="line"></span><br><span class="line">（3）分别处理投票。针对每一次投票，服务器都需要将其他服务器的投票和自己的投票进行对比，对比规则如下：</span><br><span class="line"></span><br><span class="line">a. 优先比较 epoch</span><br><span class="line">b. 检查 zxid，zxid 比较大的服务器优先作为 leader</span><br><span class="line">c. 如果 zxid 相同，那么就比较 myid，myid 较大的服务器作为 leader 服务器</span><br><span class="line">（4）统计投票。每次投票后，服务器统计投票信息，判断是都有过半机器接收到相同的投票信息。server1、server2 都统计出集群中有两台机器接受了（2,0）的投票信息，此时已经选出了 server2 为 leader 节点。</span><br><span class="line"></span><br><span class="line">（5）改变服务器状态。一旦确定了 leader，每个服务器响应更新自己的状态，如果是 follower，那么就变更为 FOLLOWING，如果是 Leader，变更为 LEADING。此时 server3继续启动，直接加入变更自己为 FOLLOWING。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2、运行过程中的 leader 选举</span><br><span class="line">当集群中 leader 服务器出现宕机或者不可用情况时，整个集群无法对外提供服务，进入新一轮的 leader 选举。</span><br><span class="line"></span><br><span class="line">（1）变更状态。leader 挂后，其他非 Oberver服务器将自身服务器状态变更为 LOOKING。</span><br><span class="line">（2）每个 server 发出一个投票。在运行期间，每个服务器上 zxid 可能不同。</span><br><span class="line">（3）处理投票。规则同启动过程。</span><br><span class="line">（4）统计投票。与启动过程相同。</span><br><span class="line">（5）改变服务器状态。与启动过程相同。</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_16-45-44.png" alt></p>
+]]></content>
       <tags>
-        <tag>mysql</tag>
-        <tag>索引</tag>
+        <tag>大数据</tag>
       </tags>
   </entry>
   <entry>
@@ -345,31 +402,6 @@
 ]]></content>
       <tags>
         <tag>消息队列</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>zookeeper学习</title>
-    <url>/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="zookeeper"><a href="#zookeeper" class="headerlink" title="zookeeper"></a>zookeeper</h1><p><strong>zookeeper是开源的分布式的、为分布式应用提供协调服务的Apache项目。</strong></p>
-<p>​     zookeeper从设计模式角度来理解：是一个基于观察者模式设计的分布式服务管理框架，它负责</p>
-<p>存储和管理大家关心的数据，然后接受观察者的注册，一旦这些数据的状态发生变化，zookeeper就</p>
-<p>将负责通知已经在zookeeper上注册的那些观察者做出相应的反应。</p>
-<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_00-46-15.png" alt></p>
-<p><strong>注意：</strong>了解了zookeeper的工作机制，我们就可以将zookeeper类比为<strong>文件系统+通知机制</strong></p>
-<h4 id="zookeeper特点"><a href="#zookeeper特点" class="headerlink" title="zookeeper特点"></a>zookeeper特点</h4><p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_00-52-18.png" alt></p>
-<p>1、zookeeper： 一个领导者（Leader），多个跟随者（Follower）组成的集群。</p>
-<p>2、集群中只要半数以上节点存活，zookeeper集群就能正常服务。</p>
-<p>3、全局数据一致性： 每个server保存一份相同的数据副本，client无论连接到那个</p>
-<p>server，数据都是一致。</p>
-<p>4、更新请求顺序进行，来自同一个client的更新请求按其顺序发送依次执行。</p>
-<p>5、数据更新原子性，一次数据更新要么成功，要么失败。</p>
-<p>6、实时性，在一定时间范围内，client能读到最新数据。</p>
-<h4 id="zookeeper数据结构"><a href="#zookeeper数据结构" class="headerlink" title="zookeeper数据结构"></a>zookeeper数据结构</h4><p>​     zookeeper的数据模型的结构与unix文件系统类似，整体可以看做是一颗树，每个节点称作一个znode。</p>
-<p>每个znode默认能够存储1MB的数据，每个znode都可以通过其路径唯一标识。</p>
-<p><img src="/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-17_01-06-38.png" alt></p>
-]]></content>
-      <tags>
-        <tag>大数据</tag>
       </tags>
   </entry>
   <entry>
@@ -414,6 +446,14 @@
 ]]></content>
       <tags>
         <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java基础之集合--深入研究</title>
+    <url>/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/</url>
+    <content><![CDATA[<h1 id="java基础之集合"><a href="#java基础之集合" class="headerlink" title="java基础之集合"></a>java基础之集合</h1>]]></content>
+      <tags>
+        <tag>java基础</tag>
       </tags>
   </entry>
   <entry>
