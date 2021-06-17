@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>HTTP权限指南--HTTP报文</title>
+    <url>/2020/06/07/HTTP%E6%9D%83%E9%99%90%E6%8C%87%E5%8D%97-HTTP%E6%8A%A5%E6%96%87/</url>
+    <content><![CDATA[<p><strong>HTTPS</strong></p>
+<p>HTTPS是常见的HTTP安全版本，HTTPS将HTTP协议与一组强大的对称、非对称和基于证书的加密技术结合在一起。特点：安全、灵活。</p>
+<p>HTTPS就是在安全层的基础上发送HTTP。</p>
+<p>HTTPS将发送给安全层对其进行加密</p>
+<p>HTTP安全层通过SSL以及现代替协议TLS来实现的。</p>
+<p>HTTP建立安全连接：</p>
+<p>客户端打开一条web服务器</p>
+<p><strong>HTTP常问面试题</strong></p>
+<p>1、Http与Https的区别</p>
+<p>默认端口不同，http默认端口80而HTTPS默认端口443，</p>
+<p>2、什么是Http协议无状态协议?怎么解决Http协议无状态协议?</p>
+<p>3、URI和URL的区别？</p>
+<p>4、常用的HTTP方法有哪些？</p>
+<p>6、HTTP请求报文与响应报文格式HTTP请求报文与响应报文格式？</p>
+<p>7、HTTPS工作原理</p>
+<p>8、一次完整的HTTP请求所经历的7个步骤</p>
+<p>9、常见的HTTP相应状态码？</p>
+<p>10、HTTP1.1版本新特性?</p>
+<p>11、HTTP优化方案？</p>
+]]></content>
+      <tags>
+        <tag>HTTP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java基础之接口</title>
+    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>java基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JVM学习</title>
     <url>/2021/05/26/JVM%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h3 id="什么是虚拟机？"><a href="#什么是虚拟机？" class="headerlink" title="什么是虚拟机？"></a>什么是虚拟机？</h3><p>所谓虚拟机，就是一台虚拟的计算机。它是一款软件，用来执行一系列虚拟计算机指令，大体上，虚拟机可以分为系统虚拟机和程序虚拟机。</p>
@@ -38,163 +73,6 @@
 ]]></content>
       <tags>
         <tag>JVM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java基础之接口</title>
-    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>java基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTTP权限指南--HTTP报文</title>
-    <url>/2020/06/07/HTTP%E6%9D%83%E9%99%90%E6%8C%87%E5%8D%97-HTTP%E6%8A%A5%E6%96%87/</url>
-    <content><![CDATA[<p><strong>HTTPS</strong></p>
-<p>HTTPS是常见的HTTP安全版本，HTTPS将HTTP协议与一组强大的对称、非对称和基于证书的加密技术结合在一起。特点：安全、灵活。</p>
-<p>HTTPS就是在安全层的基础上发送HTTP。</p>
-<p>HTTPS将发送给安全层对其进行加密</p>
-<p>HTTP安全层通过SSL以及现代替协议TLS来实现的。</p>
-<p>HTTP建立安全连接：</p>
-<p>客户端打开一条web服务器</p>
-<p><strong>HTTP常问面试题</strong></p>
-<p>1、Http与Https的区别</p>
-<p>默认端口不同，http默认端口80而HTTPS默认端口443，</p>
-<p>2、什么是Http协议无状态协议?怎么解决Http协议无状态协议?</p>
-<p>3、URI和URL的区别？</p>
-<p>4、常用的HTTP方法有哪些？</p>
-<p>6、HTTP请求报文与响应报文格式HTTP请求报文与响应报文格式？</p>
-<p>7、HTTPS工作原理</p>
-<p>8、一次完整的HTTP请求所经历的7个步骤</p>
-<p>9、常见的HTTP相应状态码？</p>
-<p>10、HTTP1.1版本新特性?</p>
-<p>11、HTTP优化方案？</p>
-]]></content>
-      <tags>
-        <tag>HTTP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java基础之集合--深入研究</title>
-    <url>/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/</url>
-    <content><![CDATA[<h1 id="java基础之集合"><a href="#java基础之集合" class="headerlink" title="java基础之集合"></a>java基础之集合</h1>]]></content>
-      <tags>
-        <tag>java基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>kafka</title>
-    <url>/2021/05/26/kafka/</url>
-    <content><![CDATA[<h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><p>分布式的基于发布/订阅模式的消息队列</p>
-<p>消息队列异步处理任务</p>
-<p>1、解耦</p>
-<p>2、流量削峰</p>
-<p>3、缓冲</p>
-<p>4、可恢复性</p>
-<p>5、灵活性</p>
-<p>6、异步处理能力</p>
-<p>消息队列的两种模式</p>
-<p>1、点对点模式  一对一模式</p>
-<p>2、发布与订阅模式 一对多模式</p>
-<p>producer   — 消息推送  —- topic（阻塞队列） —-  广播的形式发送到订阅的消费者中去 —- 多个消费者（消费者必须采取轮训的方式去查看topic中是否存在消息未消费）</p>
-<p><strong>kafka架构</strong></p>
-<p>![](D:\npm Registry\ss\source_posts\kafka\Snipaste_2021-05-25_19-54-42.png)</p>
-<p>1、producer: 消息生产者，就是向kafka broker （分区）发送消息</p>
-<p>2、consumer： 消息消费者，向kafka broker 取消息的客户端</p>
-<p>3、consumer group： 消费者组，由多个consumer组成。</p>
-<p><strong>一个消费者组里面的消费者只能消费不同分区的topic消息。</strong></p>
-<p>创建topic</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181  --topic test --partitions 1  -replication-factor 1</span><br><span class="line"></span><br><span class="line">创建副本数不能超过基数</span><br></pre></td></tr></table></figure>
-
-<p>查看topic总数</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --list --zookeeper localhost:2181</span><br></pre></td></tr></table></figure>
-
-<p>删除topic</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --delete --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
-
-<p>topic描述</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
-
-<p>默认端口号9092</p>
-<p>发送消息</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">集群接收消息</span><br><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092 --from-beginning</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><strong>kafka工作区流程：</strong></p>
-]]></content>
-      <tags>
-        <tag>消息队列</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mysql--存储过程</title>
-    <url>/2020/06/05/mysql-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="mysql存储过程"><a href="#mysql存储过程" class="headerlink" title="mysql存储过程"></a>mysql存储过程</h1><p>存储过程和函数：类似于java中的方法<br>好处：<br>1、提高代码的复用性<br>2、简化操作</p>
-<h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><p>含义：一组预先编译好的SQL语句的集合，理解为批处理语句</p>
-<p>1、提高代码的复用性<br>2、简化操作<br>3、减少编译次数并且减少和数据库服务器的连接次数，提高效率</p>
-<h2 id="创建语法"><a href="#创建语法" class="headerlink" title="创建语法"></a>创建语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">create procedure 存储过程名（参数列表）</span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">      存储过程体（一组合法的sql语句）</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-
-<p>注意：<br>1、参数列表包含三部分<br>参数模式  参数名 参数类型</p>
-<p>举例：<br>IN stuname varchar(20)</p>
-<p>参数模式：<br>in： 该参数可以作为输入，也就是该参数需要调用方法传入值</p>
-<p>out： 该参数可以作为输出，也就是该参数可以作为返回值</p>
-<p>inout：该参数既可以作为输入又可以作为输出，也就是该参数既需要传入值，又可以返回值</p>
-<p>2、如果存储过程体仅仅只有一句话，begin end 可以省略<br>存储过程中每条sql语句的结尾要求必须加分号。<br>存储过程的结尾可以使用delimiter 重新设置</p>
-<p>语法：<br>delimiter 结束标记</p>
-<p>案例：<br>delimiter $</p>
-<h2 id="调用语法"><a href="#调用语法" class="headerlink" title="调用语法"></a>调用语法</h2><p>call 存储过程名（实参列表）;</p>
-<h3 id="空参实例"><a href="#空参实例" class="headerlink" title="空参实例"></a>空参实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS &#96;pro01&#96;;</span><br><span class="line">DELIMITER $$</span><br><span class="line">CREATE PROCEDURE &#96;pro01&#96;()</span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">DECLARE item INT DEFAULT 0;</span><br><span class="line">WHILE item &lt; 5 DO</span><br><span class="line">INSERT INTO user(&#96;username&#96;,&#96;password&#96;) VALUES(CONCAT(&#39;stu&#39;,item),&#39;123&#39;);</span><br><span class="line">SET item&#x3D;item+1;</span><br><span class="line">END WHILE;</span><br><span class="line">END $$</span><br></pre></td></tr></table></figure>
-
-<h3 id="无返回值参数实例"><a href="#无返回值参数实例" class="headerlink" title="无返回值参数实例"></a>无返回值参数实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">DROP PROCEDURE IF EXISTS &#96;pro02&#96;;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE &#96;pro02&#96;(IN username VARCHAR(20),IN password VARCHAR(20))</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE result INT DEFAULT 0;</span><br><span class="line">SELECT COUNT(*) INTO result</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.username &#x3D; username AND u.password &#x3D; password;</span><br><span class="line">SELECT IF(result&gt;0,&#39;成功&#39;,&#39;失败&#39;);</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">CALL pro02(&#39;admin&#39;,&#39;123&#39;)$</span><br></pre></td></tr></table></figure>
-
-<h3 id="有返回值参数实例"><a href="#有返回值参数实例" class="headerlink" title="有返回值参数实例"></a>有返回值参数实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS &#96;pro03&#96;;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE &#96;pro03&#96;(IN id INT, OUT pass VARCHAR(20), OUT username VARCHAR(20))</span><br><span class="line">BEGIN</span><br><span class="line">SELECT u.username, u.password INTO username, pass</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.id &#x3D; id;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">CALL pro03(1,@pass,@name)$</span><br><span class="line">SELECT @pass,@name</span><br></pre></td></tr></table></figure>
-<h4 id="注意的是：-在mysql中是定义局部变量，-在mysql中定义全局变量"><a href="#注意的是：-在mysql中是定义局部变量，-在mysql中定义全局变量" class="headerlink" title="注意的是：@在mysql中是定义局部变量，@@在mysql中定义全局变量"></a>注意的是：@在mysql中是定义局部变量，@@在mysql中定义全局变量</h4><h3 id="既有输入值又有返回值实例"><a href="#既有输入值又有返回值实例" class="headerlink" title="既有输入值又有返回值实例"></a>既有输入值又有返回值实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS &#96;pro04&#96;;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE &#96;pro04&#96;(INOUT a INT,INOUT b INT)</span><br><span class="line">BEGIN</span><br><span class="line">SET a&#x3D;a*2;</span><br><span class="line">SET b&#x3D;b*2;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SET @a &#x3D; 10;</span><br><span class="line">SET @b &#x3D; 12;</span><br><span class="line"></span><br><span class="line">CALL pro04(@a,@b)$</span><br><span class="line">SELECT @a,@b;</span><br></pre></td></tr></table></figure>
-
-<h3 id="删除存储过程"><a href="#删除存储过程" class="headerlink" title="删除存储过程"></a>删除存储过程</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE 存储过程名</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看存储过程信息"><a href="#查看存储过程信息" class="headerlink" title="查看存储过程信息"></a>查看存储过程信息</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">show create procedure 存储过程名</span><br></pre></td></tr></table></figure>
-
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>函数和存储过程类似</p>
-<p>区别：<br>存储过程：可以有0个返回，也可以有多个返回，适合做批量插入、批量更新<br>函数：有且仅有一个返回，适合做处理数据后返回结果</p>
-<h2 id="创建语法-1"><a href="#创建语法-1" class="headerlink" title="创建语法"></a>创建语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create function 函数名（参数列表）returns 返回类型</span><br><span class="line">begin</span><br><span class="line">函数体</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-
-<p>1、### 注意：<br>参数列表 包含两个部分：<br>参数名 参数类型</p>
-<p>2、函数体：肯定会有return语句，如果没有报错<br>如果return语句没有放在函数体内的最后也不报错，但不建议</p>
-<p>3、return值<br>函数体中仅有一句话，则可以省略begin end</p>
-<p>4、使用delimiter语句设置结束标记</p>
-<h2 id="调用语法-1"><a href="#调用语法-1" class="headerlink" title="调用语法"></a>调用语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select 函数名（参数列表）</span><br></pre></td></tr></table></figure>
-
-<h2 id="案例演示"><a href="#案例演示" class="headerlink" title="案例演示"></a>案例演示</h2><h3 id="无参返回"><a href="#无参返回" class="headerlink" title="无参返回"></a>无参返回</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE FUNCTION &#96;fuc05&#96;()</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE name VARCHAR(20) DEFAULT &#39;&#39;;</span><br><span class="line">SELECT u.username INTO name</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.d&#x3D;1;</span><br><span class="line">RETURN name;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SELECT fuc05() $</span><br></pre></td></tr></table></figure>
-
-<h3 id="有参返回"><a href="#有参返回" class="headerlink" title="有参返回"></a>有参返回</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE FUNCTION &#96;fuc05&#96;(&#96;name&#96; VARCHAR(20)) RETURNS VARCHAR</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE na VARCHAR(20) DEFAULT &#39;&#39;;</span><br><span class="line">SELECT u.username INTO na</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.username&#x3D;&#96;name&#96;;</span><br><span class="line">RETURN na;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SELECT fuc05() $</span><br></pre></td></tr></table></figure>
-
-<h2 id="查看函数"><a href="#查看函数" class="headerlink" title="查看函数"></a>查看函数</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">show create function 函数名;</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除函数"><a href="#删除函数" class="headerlink" title="删除函数"></a>删除函数</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">drop function 函数名;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>mysql</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mysql--索引</title>
-    <url>/2020/06/03/mysql-%E7%B4%A2%E5%BC%95/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>mysql</tag>
-        <tag>索引</tag>
       </tags>
   </entry>
   <entry>
@@ -305,6 +183,128 @@
 ]]></content>
       <tags>
         <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java基础之集合--深入研究</title>
+    <url>/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/</url>
+    <content><![CDATA[<h1 id="java基础之集合"><a href="#java基础之集合" class="headerlink" title="java基础之集合"></a>java基础之集合</h1>]]></content>
+      <tags>
+        <tag>java基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>kafka</title>
+    <url>/2021/05/26/kafka/</url>
+    <content><![CDATA[<h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><p>分布式的基于发布/订阅模式的消息队列</p>
+<p>消息队列异步处理任务</p>
+<p>1、解耦</p>
+<p>2、流量削峰</p>
+<p>3、缓冲</p>
+<p>4、可恢复性</p>
+<p>5、灵活性</p>
+<p>6、异步处理能力</p>
+<p>消息队列的两种模式</p>
+<p>1、点对点模式  一对一模式</p>
+<p>2、发布与订阅模式 一对多模式</p>
+<p>producer   — 消息推送  —- topic（阻塞队列） —-  广播的形式发送到订阅的消费者中去 —- 多个消费者（消费者必须采取轮训的方式去查看topic中是否存在消息未消费）</p>
+<p><strong>kafka架构</strong></p>
+<p>![](D:\npm Registry\ss\source_posts\kafka\Snipaste_2021-05-25_19-54-42.png)</p>
+<p>1、producer: 消息生产者，就是向kafka broker （分区）发送消息</p>
+<p>2、consumer： 消息消费者，向kafka broker 取消息的客户端</p>
+<p>3、consumer group： 消费者组，由多个consumer组成。</p>
+<p><strong>一个消费者组里面的消费者只能消费不同分区的topic消息。</strong></p>
+<p>创建topic</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181  --topic test --partitions 1  -replication-factor 1</span><br><span class="line"></span><br><span class="line">创建副本数不能超过基数</span><br></pre></td></tr></table></figure>
+
+<p>查看topic总数</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --list --zookeeper localhost:2181</span><br></pre></td></tr></table></figure>
+
+<p>删除topic</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --delete --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
+
+<p>topic描述</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
+
+<p>默认端口号9092</p>
+<p>发送消息</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">集群接收消息</span><br><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092 --from-beginning</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>kafka工作区流程：</strong></p>
+]]></content>
+      <tags>
+        <tag>消息队列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysql--索引</title>
+    <url>/2020/06/03/mysql-%E7%B4%A2%E5%BC%95/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>mysql</tag>
+        <tag>索引</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysql--存储过程</title>
+    <url>/2020/06/05/mysql-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="mysql存储过程"><a href="#mysql存储过程" class="headerlink" title="mysql存储过程"></a>mysql存储过程</h1><p>存储过程和函数：类似于java中的方法<br>好处：<br>1、提高代码的复用性<br>2、简化操作</p>
+<h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><p>含义：一组预先编译好的SQL语句的集合，理解为批处理语句</p>
+<p>1、提高代码的复用性<br>2、简化操作<br>3、减少编译次数并且减少和数据库服务器的连接次数，提高效率</p>
+<h2 id="创建语法"><a href="#创建语法" class="headerlink" title="创建语法"></a>创建语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">create procedure 存储过程名（参数列表）</span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">      存储过程体（一组合法的sql语句）</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>注意：<br>1、参数列表包含三部分<br>参数模式  参数名 参数类型</p>
+<p>举例：<br>IN stuname varchar(20)</p>
+<p>参数模式：<br>in： 该参数可以作为输入，也就是该参数需要调用方法传入值</p>
+<p>out： 该参数可以作为输出，也就是该参数可以作为返回值</p>
+<p>inout：该参数既可以作为输入又可以作为输出，也就是该参数既需要传入值，又可以返回值</p>
+<p>2、如果存储过程体仅仅只有一句话，begin end 可以省略<br>存储过程中每条sql语句的结尾要求必须加分号。<br>存储过程的结尾可以使用delimiter 重新设置</p>
+<p>语法：<br>delimiter 结束标记</p>
+<p>案例：<br>delimiter $</p>
+<h2 id="调用语法"><a href="#调用语法" class="headerlink" title="调用语法"></a>调用语法</h2><p>call 存储过程名（实参列表）;</p>
+<h3 id="空参实例"><a href="#空参实例" class="headerlink" title="空参实例"></a>空参实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS &#96;pro01&#96;;</span><br><span class="line">DELIMITER $$</span><br><span class="line">CREATE PROCEDURE &#96;pro01&#96;()</span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">DECLARE item INT DEFAULT 0;</span><br><span class="line">WHILE item &lt; 5 DO</span><br><span class="line">INSERT INTO user(&#96;username&#96;,&#96;password&#96;) VALUES(CONCAT(&#39;stu&#39;,item),&#39;123&#39;);</span><br><span class="line">SET item&#x3D;item+1;</span><br><span class="line">END WHILE;</span><br><span class="line">END $$</span><br></pre></td></tr></table></figure>
+
+<h3 id="无返回值参数实例"><a href="#无返回值参数实例" class="headerlink" title="无返回值参数实例"></a>无返回值参数实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">DROP PROCEDURE IF EXISTS &#96;pro02&#96;;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE &#96;pro02&#96;(IN username VARCHAR(20),IN password VARCHAR(20))</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE result INT DEFAULT 0;</span><br><span class="line">SELECT COUNT(*) INTO result</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.username &#x3D; username AND u.password &#x3D; password;</span><br><span class="line">SELECT IF(result&gt;0,&#39;成功&#39;,&#39;失败&#39;);</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">CALL pro02(&#39;admin&#39;,&#39;123&#39;)$</span><br></pre></td></tr></table></figure>
+
+<h3 id="有返回值参数实例"><a href="#有返回值参数实例" class="headerlink" title="有返回值参数实例"></a>有返回值参数实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS &#96;pro03&#96;;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE &#96;pro03&#96;(IN id INT, OUT pass VARCHAR(20), OUT username VARCHAR(20))</span><br><span class="line">BEGIN</span><br><span class="line">SELECT u.username, u.password INTO username, pass</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.id &#x3D; id;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">CALL pro03(1,@pass,@name)$</span><br><span class="line">SELECT @pass,@name</span><br></pre></td></tr></table></figure>
+<h4 id="注意的是：-在mysql中是定义局部变量，-在mysql中定义全局变量"><a href="#注意的是：-在mysql中是定义局部变量，-在mysql中定义全局变量" class="headerlink" title="注意的是：@在mysql中是定义局部变量，@@在mysql中定义全局变量"></a>注意的是：@在mysql中是定义局部变量，@@在mysql中定义全局变量</h4><h3 id="既有输入值又有返回值实例"><a href="#既有输入值又有返回值实例" class="headerlink" title="既有输入值又有返回值实例"></a>既有输入值又有返回值实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS &#96;pro04&#96;;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE &#96;pro04&#96;(INOUT a INT,INOUT b INT)</span><br><span class="line">BEGIN</span><br><span class="line">SET a&#x3D;a*2;</span><br><span class="line">SET b&#x3D;b*2;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SET @a &#x3D; 10;</span><br><span class="line">SET @b &#x3D; 12;</span><br><span class="line"></span><br><span class="line">CALL pro04(@a,@b)$</span><br><span class="line">SELECT @a,@b;</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除存储过程"><a href="#删除存储过程" class="headerlink" title="删除存储过程"></a>删除存储过程</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE 存储过程名</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看存储过程信息"><a href="#查看存储过程信息" class="headerlink" title="查看存储过程信息"></a>查看存储过程信息</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">show create procedure 存储过程名</span><br></pre></td></tr></table></figure>
+
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>函数和存储过程类似</p>
+<p>区别：<br>存储过程：可以有0个返回，也可以有多个返回，适合做批量插入、批量更新<br>函数：有且仅有一个返回，适合做处理数据后返回结果</p>
+<h2 id="创建语法-1"><a href="#创建语法-1" class="headerlink" title="创建语法"></a>创建语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create function 函数名（参数列表）returns 返回类型</span><br><span class="line">begin</span><br><span class="line">函数体</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>1、### 注意：<br>参数列表 包含两个部分：<br>参数名 参数类型</p>
+<p>2、函数体：肯定会有return语句，如果没有报错<br>如果return语句没有放在函数体内的最后也不报错，但不建议</p>
+<p>3、return值<br>函数体中仅有一句话，则可以省略begin end</p>
+<p>4、使用delimiter语句设置结束标记</p>
+<h2 id="调用语法-1"><a href="#调用语法-1" class="headerlink" title="调用语法"></a>调用语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select 函数名（参数列表）</span><br></pre></td></tr></table></figure>
+
+<h2 id="案例演示"><a href="#案例演示" class="headerlink" title="案例演示"></a>案例演示</h2><h3 id="无参返回"><a href="#无参返回" class="headerlink" title="无参返回"></a>无参返回</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE FUNCTION &#96;fuc05&#96;()</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE name VARCHAR(20) DEFAULT &#39;&#39;;</span><br><span class="line">SELECT u.username INTO name</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.d&#x3D;1;</span><br><span class="line">RETURN name;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SELECT fuc05() $</span><br></pre></td></tr></table></figure>
+
+<h3 id="有参返回"><a href="#有参返回" class="headerlink" title="有参返回"></a>有参返回</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE FUNCTION &#96;fuc05&#96;(&#96;name&#96; VARCHAR(20)) RETURNS VARCHAR</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE na VARCHAR(20) DEFAULT &#39;&#39;;</span><br><span class="line">SELECT u.username INTO na</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.username&#x3D;&#96;name&#96;;</span><br><span class="line">RETURN na;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SELECT fuc05() $</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看函数"><a href="#查看函数" class="headerlink" title="查看函数"></a>查看函数</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">show create function 函数名;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除函数"><a href="#删除函数" class="headerlink" title="删除函数"></a>删除函数</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">drop function 函数名;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>

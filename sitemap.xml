@@ -144,7 +144,7 @@
 
   
   <url>
-    <loc>http://yoursite.com/tags/JVM/</loc>
+    <loc>http://yoursite.com/tags/HTTP/</loc>
     <lastmod>2021-06-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -158,7 +158,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/HTTP/</loc>
+    <loc>http://yoursite.com/tags/JVM/</loc>
+    <lastmod>2021-06-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2021-06-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -180,13 +187,6 @@
   
   <url>
     <loc>http://yoursite.com/tags/%E7%B4%A2%E5%BC%95/</loc>
-    <lastmod>2021-06-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2021-06-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
