@@ -28,22 +28,6 @@
       </tags>
   </entry>
   <entry>
-    <title>java基础之接口</title>
-    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>java基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java基础之集合--深入研究</title>
-    <url>/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/</url>
-    <content><![CDATA[<h1 id="java基础之集合"><a href="#java基础之集合" class="headerlink" title="java基础之集合"></a>java基础之集合</h1>]]></content>
-      <tags>
-        <tag>java基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JVM学习</title>
     <url>/2021/05/26/JVM%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h3 id="什么是虚拟机？"><a href="#什么是虚拟机？" class="headerlink" title="什么是虚拟机？"></a>什么是虚拟机？</h3><p>所谓虚拟机，就是一台虚拟的计算机。它是一款软件，用来执行一系列虚拟计算机指令，大体上，虚拟机可以分为系统虚拟机和程序虚拟机。</p>
@@ -81,6 +65,22 @@
 ]]></content>
       <tags>
         <tag>JVM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java基础之接口</title>
+    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>java基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java基础之集合--深入研究</title>
+    <url>/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/</url>
+    <content><![CDATA[<h1 id="java基础之集合"><a href="#java基础之集合" class="headerlink" title="java基础之集合"></a>java基础之集合</h1>]]></content>
+      <tags>
+        <tag>java基础</tag>
       </tags>
   </entry>
   <entry>
