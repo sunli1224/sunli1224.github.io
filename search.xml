@@ -28,6 +28,22 @@
       </tags>
   </entry>
   <entry>
+    <title>java基础之集合--深入研究</title>
+    <url>/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/</url>
+    <content><![CDATA[<h1 id="java基础之集合"><a href="#java基础之集合" class="headerlink" title="java基础之集合"></a>java基础之集合</h1>]]></content>
+      <tags>
+        <tag>java基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java基础之接口</title>
+    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>java基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JVM学习</title>
     <url>/2021/05/26/JVM%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h3 id="什么是虚拟机？"><a href="#什么是虚拟机？" class="headerlink" title="什么是虚拟机？"></a>什么是虚拟机？</h3><p>所谓虚拟机，就是一台虚拟的计算机。它是一款软件，用来执行一系列虚拟计算机指令，大体上，虚拟机可以分为系统虚拟机和程序虚拟机。</p>
@@ -68,68 +84,12 @@
       </tags>
   </entry>
   <entry>
-    <title>java基础之接口</title>
-    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
+    <title>mysql--索引</title>
+    <url>/2020/06/03/mysql-%E7%B4%A2%E5%BC%95/</url>
     <content><![CDATA[]]></content>
       <tags>
-        <tag>java基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java基础之集合--深入研究</title>
-    <url>/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/</url>
-    <content><![CDATA[<h1 id="java基础之集合"><a href="#java基础之集合" class="headerlink" title="java基础之集合"></a>java基础之集合</h1>]]></content>
-      <tags>
-        <tag>java基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>kafka</title>
-    <url>/2021/05/26/kafka/</url>
-    <content><![CDATA[<h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><p>分布式的基于发布/订阅模式的消息队列</p>
-<p>消息队列异步处理任务</p>
-<p>1、解耦</p>
-<p>2、流量削峰</p>
-<p>3、缓冲</p>
-<p>4、可恢复性</p>
-<p>5、灵活性</p>
-<p>6、异步处理能力</p>
-<p>消息队列的两种模式</p>
-<p>1、点对点模式  一对一模式</p>
-<p>2、发布与订阅模式 一对多模式</p>
-<p>producer   — 消息推送  —- topic（阻塞队列） —-  广播的形式发送到订阅的消费者中去 —- 多个消费者（消费者必须采取轮训的方式去查看topic中是否存在消息未消费）</p>
-<p><strong>kafka架构</strong></p>
-<p>![](D:\npm Registry\ss\source_posts\kafka\Snipaste_2021-05-25_19-54-42.png)</p>
-<p>1、producer: 消息生产者，就是向kafka broker （分区）发送消息</p>
-<p>2、consumer： 消息消费者，向kafka broker 取消息的客户端</p>
-<p>3、consumer group： 消费者组，由多个consumer组成。</p>
-<p><strong>一个消费者组里面的消费者只能消费不同分区的topic消息。</strong></p>
-<p>创建topic</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181  --topic test --partitions 1  -replication-factor 1</span><br><span class="line"></span><br><span class="line">创建副本数不能超过基数</span><br></pre></td></tr></table></figure>
-
-<p>查看topic总数</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --list --zookeeper localhost:2181</span><br></pre></td></tr></table></figure>
-
-<p>删除topic</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --delete --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
-
-<p>topic描述</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
-
-<p>默认端口号9092</p>
-<p>发送消息</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">集群接收消息</span><br><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092 --from-beginning</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><strong>kafka工作区流程：</strong></p>
-]]></content>
-      <tags>
-        <tag>消息队列</tag>
+        <tag>mysql</tag>
+        <tag>索引</tag>
       </tags>
   </entry>
   <entry>
@@ -243,15 +203,6 @@
       </tags>
   </entry>
   <entry>
-    <title>mysql--索引</title>
-    <url>/2020/06/03/mysql-%E7%B4%A2%E5%BC%95/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>mysql</tag>
-        <tag>索引</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mysql--存储过程</title>
     <url>/2020/06/05/mysql-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="mysql存储过程"><a href="#mysql存储过程" class="headerlink" title="mysql存储过程"></a>mysql存储过程</h1><p>存储过程和函数：类似于java中的方法<br>好处：<br>1、提高代码的复用性<br>2、简化操作</p>
@@ -342,6 +293,55 @@
 <p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p04.png" alt="rabbimq架构模型"></p>
 <h3 id="通配符模式"><a href="#通配符模式" class="headerlink" title="通配符模式"></a>通配符模式</h3><p>1、Topic类型与Direct相比，都是可以根据RoutingKey把消息路由到不同的队列。只不过Topic类型Exchange可以让队列在绑定Routing<br> key 的时候使用通配符！<br>2、Routingkey 一般都是有一个或多个单词组成，多个单词之间以”.”分割，例如： item.insert</p>
 <p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p05.png" alt="rabbimq架构模型"></p>
+]]></content>
+      <tags>
+        <tag>消息队列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>kafka</title>
+    <url>/2021/05/26/kafka/</url>
+    <content><![CDATA[<h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><p>分布式的基于发布/订阅模式的消息队列</p>
+<p>消息队列异步处理任务</p>
+<p>1、解耦</p>
+<p>2、流量削峰</p>
+<p>3、缓冲</p>
+<p>4、可恢复性</p>
+<p>5、灵活性</p>
+<p>6、异步处理能力</p>
+<p>消息队列的两种模式</p>
+<p>1、点对点模式  一对一模式</p>
+<p>2、发布与订阅模式 一对多模式</p>
+<p>producer   — 消息推送  —- topic（阻塞队列） —-  广播的形式发送到订阅的消费者中去 —- 多个消费者（消费者必须采取轮训的方式去查看topic中是否存在消息未消费）</p>
+<p><strong>kafka架构</strong></p>
+<p>![](D:\npm Registry\ss\source_posts\kafka\Snipaste_2021-05-25_19-54-42.png)</p>
+<p>1、producer: 消息生产者，就是向kafka broker （分区）发送消息</p>
+<p>2、consumer： 消息消费者，向kafka broker 取消息的客户端</p>
+<p>3、consumer group： 消费者组，由多个consumer组成。</p>
+<p><strong>一个消费者组里面的消费者只能消费不同分区的topic消息。</strong></p>
+<p>创建topic</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181  --topic test --partitions 1  -replication-factor 1</span><br><span class="line"></span><br><span class="line">创建副本数不能超过基数</span><br></pre></td></tr></table></figure>
+
+<p>查看topic总数</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --list --zookeeper localhost:2181</span><br></pre></td></tr></table></figure>
+
+<p>删除topic</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --delete --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
+
+<p>topic描述</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
+
+<p>默认端口号9092</p>
+<p>发送消息</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">集群接收消息</span><br><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092 --from-beginning</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>kafka工作区流程：</strong></p>
 ]]></content>
       <tags>
         <tag>消息队列</tag>
