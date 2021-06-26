@@ -1,30 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HTTP权限指南--HTTP报文</title>
-    <url>/2020/06/07/HTTP%E6%9D%83%E9%99%90%E6%8C%87%E5%8D%97-HTTP%E6%8A%A5%E6%96%87/</url>
-    <content><![CDATA[<p><strong>HTTPS</strong></p>
-<p>HTTPS是常见的HTTP安全版本，HTTPS将HTTP协议与一组强大的对称、非对称和基于证书的加密技术结合在一起。特点：安全、灵活。</p>
-<p>HTTPS就是在安全层的基础上发送HTTP。</p>
-<p>HTTPS将发送给安全层对其进行加密</p>
-<p>HTTP安全层通过SSL以及现代替协议TLS来实现的。</p>
-<p>HTTP建立安全连接：</p>
-<p>客户端打开一条web服务器</p>
-<p><strong>HTTP常问面试题</strong></p>
-<p>1、Http与Https的区别</p>
-<p>默认端口不同，http默认端口80而HTTPS默认端口443，</p>
-<p>2、什么是Http协议无状态协议?怎么解决Http协议无状态协议?</p>
-<p>3、URI和URL的区别？</p>
-<p>4、常用的HTTP方法有哪些？</p>
-<p>6、HTTP请求报文与响应报文格式HTTP请求报文与响应报文格式？</p>
-<p>7、HTTPS工作原理</p>
-<p>8、一次完整的HTTP请求所经历的7个步骤</p>
-<p>9、常见的HTTP相应状态码？</p>
-<p>10、HTTP1.1版本新特性?</p>
-<p>11、HTTP优化方案？</p>
-]]></content>
+    <title>java基础之接口</title>
+    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
+    <content><![CDATA[]]></content>
       <tags>
-        <tag>HTTP</tag>
+        <tag>java基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java基础之集合--深入研究</title>
+    <url>/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/</url>
+    <content><![CDATA[<h1 id="java基础之集合"><a href="#java基础之集合" class="headerlink" title="java基础之集合"></a>java基础之集合</h1>]]></content>
+      <tags>
+        <tag>java基础</tag>
       </tags>
   </entry>
   <entry>
@@ -68,19 +57,144 @@
       </tags>
   </entry>
   <entry>
-    <title>java基础之接口</title>
-    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
-    <content><![CDATA[]]></content>
+    <title>HTTP权限指南--HTTP报文</title>
+    <url>/2020/06/07/HTTP%E6%9D%83%E9%99%90%E6%8C%87%E5%8D%97-HTTP%E6%8A%A5%E6%96%87/</url>
+    <content><![CDATA[<p><strong>HTTPS</strong></p>
+<p>HTTPS是常见的HTTP安全版本，HTTPS将HTTP协议与一组强大的对称、非对称和基于证书的加密技术结合在一起。特点：安全、灵活。</p>
+<p>HTTPS就是在安全层的基础上发送HTTP。</p>
+<p>HTTPS将发送给安全层对其进行加密</p>
+<p>HTTP安全层通过SSL以及现代替协议TLS来实现的。</p>
+<p>HTTP建立安全连接：</p>
+<p>客户端打开一条web服务器</p>
+<p><strong>HTTP常问面试题</strong></p>
+<p>1、Http与Https的区别</p>
+<p>默认端口不同，http默认端口80而HTTPS默认端口443，</p>
+<p>2、什么是Http协议无状态协议?怎么解决Http协议无状态协议?</p>
+<p>3、URI和URL的区别？</p>
+<p>4、常用的HTTP方法有哪些？</p>
+<p>6、HTTP请求报文与响应报文格式HTTP请求报文与响应报文格式？</p>
+<p>7、HTTPS工作原理</p>
+<p>8、一次完整的HTTP请求所经历的7个步骤</p>
+<p>9、常见的HTTP相应状态码？</p>
+<p>10、HTTP1.1版本新特性?</p>
+<p>11、HTTP优化方案？</p>
+]]></content>
       <tags>
-        <tag>java基础</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
-    <title>java基础之集合--深入研究</title>
-    <url>/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/</url>
-    <content><![CDATA[<h1 id="java基础之集合"><a href="#java基础之集合" class="headerlink" title="java基础之集合"></a>java基础之集合</h1>]]></content>
+    <title>mysql--索引</title>
+    <url>/2020/06/03/mysql-%E7%B4%A2%E5%BC%95/</url>
+    <content><![CDATA[]]></content>
       <tags>
-        <tag>java基础</tag>
+        <tag>mysql</tag>
+        <tag>索引</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>kafka</title>
+    <url>/2021/05/26/kafka/</url>
+    <content><![CDATA[<h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><p>分布式的基于发布/订阅模式的消息队列</p>
+<p>消息队列异步处理任务</p>
+<p>1、解耦</p>
+<p>2、流量削峰</p>
+<p>3、缓冲</p>
+<p>4、可恢复性</p>
+<p>5、灵活性</p>
+<p>6、异步处理能力</p>
+<p>消息队列的两种模式</p>
+<p>1、点对点模式  一对一模式</p>
+<p>2、发布与订阅模式 一对多模式</p>
+<p>producer   — 消息推送  —- topic（阻塞队列） —-  广播的形式发送到订阅的消费者中去 —- 多个消费者（消费者必须采取轮训的方式去查看topic中是否存在消息未消费）</p>
+<p><strong>kafka架构</strong></p>
+<p>![](D:\npm Registry\ss\source_posts\kafka\Snipaste_2021-05-25_19-54-42.png)</p>
+<p>1、producer: 消息生产者，就是向kafka broker （分区）发送消息</p>
+<p>2、consumer： 消息消费者，向kafka broker 取消息的客户端</p>
+<p>3、consumer group： 消费者组，由多个consumer组成。</p>
+<p><strong>一个消费者组里面的消费者只能消费不同分区的topic消息。</strong></p>
+<p>创建topic</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181  --topic test --partitions 1  -replication-factor 1</span><br><span class="line"></span><br><span class="line">创建副本数不能超过基数</span><br></pre></td></tr></table></figure>
+
+<p>查看topic总数</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --list --zookeeper localhost:2181</span><br></pre></td></tr></table></figure>
+
+<p>删除topic</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --delete --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
+
+<p>topic描述</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
+
+<p>默认端口号9092</p>
+<p>发送消息</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">集群接收消息</span><br><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092 --from-beginning</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>kafka工作区流程：</strong></p>
+]]></content>
+      <tags>
+        <tag>消息队列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysql--存储过程</title>
+    <url>/2020/06/05/mysql-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="mysql存储过程"><a href="#mysql存储过程" class="headerlink" title="mysql存储过程"></a>mysql存储过程</h1><p>存储过程和函数：类似于java中的方法<br>好处：<br>1、提高代码的复用性<br>2、简化操作</p>
+<h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><p>含义：一组预先编译好的SQL语句的集合，理解为批处理语句</p>
+<p>1、提高代码的复用性<br>2、简化操作<br>3、减少编译次数并且减少和数据库服务器的连接次数，提高效率</p>
+<h2 id="创建语法"><a href="#创建语法" class="headerlink" title="创建语法"></a>创建语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">create procedure 存储过程名（参数列表）</span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">      存储过程体（一组合法的sql语句）</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>注意：<br>1、参数列表包含三部分<br>参数模式  参数名 参数类型</p>
+<p>举例：<br>IN stuname varchar(20)</p>
+<p>参数模式：<br>in： 该参数可以作为输入，也就是该参数需要调用方法传入值</p>
+<p>out： 该参数可以作为输出，也就是该参数可以作为返回值</p>
+<p>inout：该参数既可以作为输入又可以作为输出，也就是该参数既需要传入值，又可以返回值</p>
+<p>2、如果存储过程体仅仅只有一句话，begin end 可以省略<br>存储过程中每条sql语句的结尾要求必须加分号。<br>存储过程的结尾可以使用delimiter 重新设置</p>
+<p>语法：<br>delimiter 结束标记</p>
+<p>案例：<br>delimiter $</p>
+<h2 id="调用语法"><a href="#调用语法" class="headerlink" title="调用语法"></a>调用语法</h2><p>call 存储过程名（实参列表）;</p>
+<h3 id="空参实例"><a href="#空参实例" class="headerlink" title="空参实例"></a>空参实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS &#96;pro01&#96;;</span><br><span class="line">DELIMITER $$</span><br><span class="line">CREATE PROCEDURE &#96;pro01&#96;()</span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">DECLARE item INT DEFAULT 0;</span><br><span class="line">WHILE item &lt; 5 DO</span><br><span class="line">INSERT INTO user(&#96;username&#96;,&#96;password&#96;) VALUES(CONCAT(&#39;stu&#39;,item),&#39;123&#39;);</span><br><span class="line">SET item&#x3D;item+1;</span><br><span class="line">END WHILE;</span><br><span class="line">END $$</span><br></pre></td></tr></table></figure>
+
+<h3 id="无返回值参数实例"><a href="#无返回值参数实例" class="headerlink" title="无返回值参数实例"></a>无返回值参数实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">DROP PROCEDURE IF EXISTS &#96;pro02&#96;;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE &#96;pro02&#96;(IN username VARCHAR(20),IN password VARCHAR(20))</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE result INT DEFAULT 0;</span><br><span class="line">SELECT COUNT(*) INTO result</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.username &#x3D; username AND u.password &#x3D; password;</span><br><span class="line">SELECT IF(result&gt;0,&#39;成功&#39;,&#39;失败&#39;);</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">CALL pro02(&#39;admin&#39;,&#39;123&#39;)$</span><br></pre></td></tr></table></figure>
+
+<h3 id="有返回值参数实例"><a href="#有返回值参数实例" class="headerlink" title="有返回值参数实例"></a>有返回值参数实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS &#96;pro03&#96;;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE &#96;pro03&#96;(IN id INT, OUT pass VARCHAR(20), OUT username VARCHAR(20))</span><br><span class="line">BEGIN</span><br><span class="line">SELECT u.username, u.password INTO username, pass</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.id &#x3D; id;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">CALL pro03(1,@pass,@name)$</span><br><span class="line">SELECT @pass,@name</span><br></pre></td></tr></table></figure>
+<h4 id="注意的是：-在mysql中是定义局部变量，-在mysql中定义全局变量"><a href="#注意的是：-在mysql中是定义局部变量，-在mysql中定义全局变量" class="headerlink" title="注意的是：@在mysql中是定义局部变量，@@在mysql中定义全局变量"></a>注意的是：@在mysql中是定义局部变量，@@在mysql中定义全局变量</h4><h3 id="既有输入值又有返回值实例"><a href="#既有输入值又有返回值实例" class="headerlink" title="既有输入值又有返回值实例"></a>既有输入值又有返回值实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS &#96;pro04&#96;;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE &#96;pro04&#96;(INOUT a INT,INOUT b INT)</span><br><span class="line">BEGIN</span><br><span class="line">SET a&#x3D;a*2;</span><br><span class="line">SET b&#x3D;b*2;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SET @a &#x3D; 10;</span><br><span class="line">SET @b &#x3D; 12;</span><br><span class="line"></span><br><span class="line">CALL pro04(@a,@b)$</span><br><span class="line">SELECT @a,@b;</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除存储过程"><a href="#删除存储过程" class="headerlink" title="删除存储过程"></a>删除存储过程</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE 存储过程名</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看存储过程信息"><a href="#查看存储过程信息" class="headerlink" title="查看存储过程信息"></a>查看存储过程信息</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">show create procedure 存储过程名</span><br></pre></td></tr></table></figure>
+
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>函数和存储过程类似</p>
+<p>区别：<br>存储过程：可以有0个返回，也可以有多个返回，适合做批量插入、批量更新<br>函数：有且仅有一个返回，适合做处理数据后返回结果</p>
+<h2 id="创建语法-1"><a href="#创建语法-1" class="headerlink" title="创建语法"></a>创建语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create function 函数名（参数列表）returns 返回类型</span><br><span class="line">begin</span><br><span class="line">函数体</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>1、### 注意：<br>参数列表 包含两个部分：<br>参数名 参数类型</p>
+<p>2、函数体：肯定会有return语句，如果没有报错<br>如果return语句没有放在函数体内的最后也不报错，但不建议</p>
+<p>3、return值<br>函数体中仅有一句话，则可以省略begin end</p>
+<p>4、使用delimiter语句设置结束标记</p>
+<h2 id="调用语法-1"><a href="#调用语法-1" class="headerlink" title="调用语法"></a>调用语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select 函数名（参数列表）</span><br></pre></td></tr></table></figure>
+
+<h2 id="案例演示"><a href="#案例演示" class="headerlink" title="案例演示"></a>案例演示</h2><h3 id="无参返回"><a href="#无参返回" class="headerlink" title="无参返回"></a>无参返回</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE FUNCTION &#96;fuc05&#96;()</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE name VARCHAR(20) DEFAULT &#39;&#39;;</span><br><span class="line">SELECT u.username INTO name</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.d&#x3D;1;</span><br><span class="line">RETURN name;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SELECT fuc05() $</span><br></pre></td></tr></table></figure>
+
+<h3 id="有参返回"><a href="#有参返回" class="headerlink" title="有参返回"></a>有参返回</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE FUNCTION &#96;fuc05&#96;(&#96;name&#96; VARCHAR(20)) RETURNS VARCHAR</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE na VARCHAR(20) DEFAULT &#39;&#39;;</span><br><span class="line">SELECT u.username INTO na</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.username&#x3D;&#96;name&#96;;</span><br><span class="line">RETURN na;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SELECT fuc05() $</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看函数"><a href="#查看函数" class="headerlink" title="查看函数"></a>查看函数</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">show create function 函数名;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除函数"><a href="#删除函数" class="headerlink" title="删除函数"></a>删除函数</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">drop function 函数名;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
@@ -194,160 +308,6 @@
       </tags>
   </entry>
   <entry>
-    <title>kafka</title>
-    <url>/2021/05/26/kafka/</url>
-    <content><![CDATA[<h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><p>分布式的基于发布/订阅模式的消息队列</p>
-<p>消息队列异步处理任务</p>
-<p>1、解耦</p>
-<p>2、流量削峰</p>
-<p>3、缓冲</p>
-<p>4、可恢复性</p>
-<p>5、灵活性</p>
-<p>6、异步处理能力</p>
-<p>消息队列的两种模式</p>
-<p>1、点对点模式  一对一模式</p>
-<p>2、发布与订阅模式 一对多模式</p>
-<p>producer   — 消息推送  —- topic（阻塞队列） —-  广播的形式发送到订阅的消费者中去 —- 多个消费者（消费者必须采取轮训的方式去查看topic中是否存在消息未消费）</p>
-<p><strong>kafka架构</strong></p>
-<p>![](D:\npm Registry\ss\source_posts\kafka\Snipaste_2021-05-25_19-54-42.png)</p>
-<p>1、producer: 消息生产者，就是向kafka broker （分区）发送消息</p>
-<p>2、consumer： 消息消费者，向kafka broker 取消息的客户端</p>
-<p>3、consumer group： 消费者组，由多个consumer组成。</p>
-<p><strong>一个消费者组里面的消费者只能消费不同分区的topic消息。</strong></p>
-<p>创建topic</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181  --topic test --partitions 1  -replication-factor 1</span><br><span class="line"></span><br><span class="line">创建副本数不能超过基数</span><br></pre></td></tr></table></figure>
-
-<p>查看topic总数</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --list --zookeeper localhost:2181</span><br></pre></td></tr></table></figure>
-
-<p>删除topic</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --delete --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
-
-<p>topic描述</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic test</span><br></pre></td></tr></table></figure>
-
-<p>默认端口号9092</p>
-<p>发送消息</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">集群接收消息</span><br><span class="line">bin/kafka-console-consumer.sh --topic first --bootstrap-server localhost:9092 --from-beginning</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><strong>kafka工作区流程：</strong></p>
-]]></content>
-      <tags>
-        <tag>消息队列</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mysql--存储过程</title>
-    <url>/2020/06/05/mysql-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="mysql存储过程"><a href="#mysql存储过程" class="headerlink" title="mysql存储过程"></a>mysql存储过程</h1><p>存储过程和函数：类似于java中的方法<br>好处：<br>1、提高代码的复用性<br>2、简化操作</p>
-<h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><p>含义：一组预先编译好的SQL语句的集合，理解为批处理语句</p>
-<p>1、提高代码的复用性<br>2、简化操作<br>3、减少编译次数并且减少和数据库服务器的连接次数，提高效率</p>
-<h2 id="创建语法"><a href="#创建语法" class="headerlink" title="创建语法"></a>创建语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">create procedure 存储过程名（参数列表）</span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">      存储过程体（一组合法的sql语句）</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-
-<p>注意：<br>1、参数列表包含三部分<br>参数模式  参数名 参数类型</p>
-<p>举例：<br>IN stuname varchar(20)</p>
-<p>参数模式：<br>in： 该参数可以作为输入，也就是该参数需要调用方法传入值</p>
-<p>out： 该参数可以作为输出，也就是该参数可以作为返回值</p>
-<p>inout：该参数既可以作为输入又可以作为输出，也就是该参数既需要传入值，又可以返回值</p>
-<p>2、如果存储过程体仅仅只有一句话，begin end 可以省略<br>存储过程中每条sql语句的结尾要求必须加分号。<br>存储过程的结尾可以使用delimiter 重新设置</p>
-<p>语法：<br>delimiter 结束标记</p>
-<p>案例：<br>delimiter $</p>
-<h2 id="调用语法"><a href="#调用语法" class="headerlink" title="调用语法"></a>调用语法</h2><p>call 存储过程名（实参列表）;</p>
-<h3 id="空参实例"><a href="#空参实例" class="headerlink" title="空参实例"></a>空参实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS &#96;pro01&#96;;</span><br><span class="line">DELIMITER $$</span><br><span class="line">CREATE PROCEDURE &#96;pro01&#96;()</span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">DECLARE item INT DEFAULT 0;</span><br><span class="line">WHILE item &lt; 5 DO</span><br><span class="line">INSERT INTO user(&#96;username&#96;,&#96;password&#96;) VALUES(CONCAT(&#39;stu&#39;,item),&#39;123&#39;);</span><br><span class="line">SET item&#x3D;item+1;</span><br><span class="line">END WHILE;</span><br><span class="line">END $$</span><br></pre></td></tr></table></figure>
-
-<h3 id="无返回值参数实例"><a href="#无返回值参数实例" class="headerlink" title="无返回值参数实例"></a>无返回值参数实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">DROP PROCEDURE IF EXISTS &#96;pro02&#96;;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE &#96;pro02&#96;(IN username VARCHAR(20),IN password VARCHAR(20))</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE result INT DEFAULT 0;</span><br><span class="line">SELECT COUNT(*) INTO result</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.username &#x3D; username AND u.password &#x3D; password;</span><br><span class="line">SELECT IF(result&gt;0,&#39;成功&#39;,&#39;失败&#39;);</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">CALL pro02(&#39;admin&#39;,&#39;123&#39;)$</span><br></pre></td></tr></table></figure>
-
-<h3 id="有返回值参数实例"><a href="#有返回值参数实例" class="headerlink" title="有返回值参数实例"></a>有返回值参数实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS &#96;pro03&#96;;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE &#96;pro03&#96;(IN id INT, OUT pass VARCHAR(20), OUT username VARCHAR(20))</span><br><span class="line">BEGIN</span><br><span class="line">SELECT u.username, u.password INTO username, pass</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.id &#x3D; id;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">CALL pro03(1,@pass,@name)$</span><br><span class="line">SELECT @pass,@name</span><br></pre></td></tr></table></figure>
-<h4 id="注意的是：-在mysql中是定义局部变量，-在mysql中定义全局变量"><a href="#注意的是：-在mysql中是定义局部变量，-在mysql中定义全局变量" class="headerlink" title="注意的是：@在mysql中是定义局部变量，@@在mysql中定义全局变量"></a>注意的是：@在mysql中是定义局部变量，@@在mysql中定义全局变量</h4><h3 id="既有输入值又有返回值实例"><a href="#既有输入值又有返回值实例" class="headerlink" title="既有输入值又有返回值实例"></a>既有输入值又有返回值实例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS &#96;pro04&#96;;</span><br><span class="line">DELIMITER $</span><br><span class="line">CREATE PROCEDURE &#96;pro04&#96;(INOUT a INT,INOUT b INT)</span><br><span class="line">BEGIN</span><br><span class="line">SET a&#x3D;a*2;</span><br><span class="line">SET b&#x3D;b*2;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SET @a &#x3D; 10;</span><br><span class="line">SET @b &#x3D; 12;</span><br><span class="line"></span><br><span class="line">CALL pro04(@a,@b)$</span><br><span class="line">SELECT @a,@b;</span><br></pre></td></tr></table></figure>
-
-<h3 id="删除存储过程"><a href="#删除存储过程" class="headerlink" title="删除存储过程"></a>删除存储过程</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP PROCEDURE 存储过程名</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看存储过程信息"><a href="#查看存储过程信息" class="headerlink" title="查看存储过程信息"></a>查看存储过程信息</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">show create procedure 存储过程名</span><br></pre></td></tr></table></figure>
-
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>函数和存储过程类似</p>
-<p>区别：<br>存储过程：可以有0个返回，也可以有多个返回，适合做批量插入、批量更新<br>函数：有且仅有一个返回，适合做处理数据后返回结果</p>
-<h2 id="创建语法-1"><a href="#创建语法-1" class="headerlink" title="创建语法"></a>创建语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create function 函数名（参数列表）returns 返回类型</span><br><span class="line">begin</span><br><span class="line">函数体</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-
-<p>1、### 注意：<br>参数列表 包含两个部分：<br>参数名 参数类型</p>
-<p>2、函数体：肯定会有return语句，如果没有报错<br>如果return语句没有放在函数体内的最后也不报错，但不建议</p>
-<p>3、return值<br>函数体中仅有一句话，则可以省略begin end</p>
-<p>4、使用delimiter语句设置结束标记</p>
-<h2 id="调用语法-1"><a href="#调用语法-1" class="headerlink" title="调用语法"></a>调用语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select 函数名（参数列表）</span><br></pre></td></tr></table></figure>
-
-<h2 id="案例演示"><a href="#案例演示" class="headerlink" title="案例演示"></a>案例演示</h2><h3 id="无参返回"><a href="#无参返回" class="headerlink" title="无参返回"></a>无参返回</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE FUNCTION &#96;fuc05&#96;()</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE name VARCHAR(20) DEFAULT &#39;&#39;;</span><br><span class="line">SELECT u.username INTO name</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.d&#x3D;1;</span><br><span class="line">RETURN name;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SELECT fuc05() $</span><br></pre></td></tr></table></figure>
-
-<h3 id="有参返回"><a href="#有参返回" class="headerlink" title="有参返回"></a>有参返回</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE FUNCTION &#96;fuc05&#96;(&#96;name&#96; VARCHAR(20)) RETURNS VARCHAR</span><br><span class="line">BEGIN</span><br><span class="line">DECLARE na VARCHAR(20) DEFAULT &#39;&#39;;</span><br><span class="line">SELECT u.username INTO na</span><br><span class="line">FROM &#96;user&#96; u</span><br><span class="line">WHERE u.username&#x3D;&#96;name&#96;;</span><br><span class="line">RETURN na;</span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">SELECT fuc05() $</span><br></pre></td></tr></table></figure>
-
-<h2 id="查看函数"><a href="#查看函数" class="headerlink" title="查看函数"></a>查看函数</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">show create function 函数名;</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除函数"><a href="#删除函数" class="headerlink" title="删除函数"></a>删除函数</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">drop function 函数名;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>mysql</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mysql--索引</title>
-    <url>/2020/06/03/mysql-%E7%B4%A2%E5%BC%95/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>mysql</tag>
-        <tag>索引</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>rabbitmq学习</title>
-    <url>/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="rabbitmq学习"><a href="#rabbitmq学习" class="headerlink" title="rabbitmq学习"></a>rabbitmq学习</h1><p>rabbitmq整体架构就是生产者消费者模型，主要负责接收、存储和转发消息。</p>
-<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit01.png" alt="rabbimq架构模型"></p>
-<h1 id="生产者和消费者"><a href="#生产者和消费者" class="headerlink" title="生产者和消费者"></a>生产者和消费者</h1><h2 id="生产者"><a href="#生产者" class="headerlink" title="生产者"></a>生产者</h2><p>就是消息投递方，生产者创建消息，发布到rabbitmq中。<br>消息两部分构成，一个消息体，一个是标签。<br>消息体又称为payload（载体）</p>
-<p>消息体是带有业务逻辑的数据比如json字符串，消息标签用来表述消息，比如交换器名称<br>和路由键。生产者把消息根据标签发送到感兴趣的消费者。</p>
-<h2 id="消费者"><a href="#消费者" class="headerlink" title="消费者"></a>消费者</h2><p>就是消息的接收方<br>消费者连接到rabbitmq服务器，并订阅到队列上。消费者只是消费消息体，<br>消息标签在消费者消费后，不会丢失，消费者也不知道订阅了哪个生产者发送的消息，也没必要知道</p>
-<h2 id="broker"><a href="#broker" class="headerlink" title="broker"></a>broker</h2><p>消息中间件的服务节点<br>简单的来说就是rabbitmq的服务节点<br>可以看做是rabbitmq的服务器</p>
-<p>如下展示的就是消息队列的服务流程</p>
-<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit02.png" alt="rabbimq架构模型"></p>
-<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>rabbit的mq内部对象，就是用户存储消息里的内容</p>
-<p>多个消费者订阅同一个队列，队列里的消息会平均分摊给消费者。</p>
-<p>rabbitmq不支持广播的模式，如需要这个需求，需要二次开发。</p>
-<h2 id="交换器、路由键、绑定"><a href="#交换器、路由键、绑定" class="headerlink" title="交换器、路由键、绑定"></a>交换器、路由键、绑定</h2><h3 id="交换器"><a href="#交换器" class="headerlink" title="交换器"></a>交换器</h3><p>生产者将消息发送到交换器中，由交换器发送到指定的队列中。<br>可以简单的把交换器看做简单的实体。<br>在rabbitmq中交换器有四种。</p>
-<h3 id="RoutingKey路由键"><a href="#RoutingKey路由键" class="headerlink" title="RoutingKey路由键"></a>RoutingKey路由键</h3><p>用来指定消息的路由规则，路由键需要与绑定键绑定后，才可生效。<br>在路由键和绑定建固定的情况下，生产者发送消息到交换器，通过路由来指定消息最终流向哪个队列。</p>
-<h2 id="Binding绑定"><a href="#Binding绑定" class="headerlink" title="Binding绑定"></a>Binding绑定</h2><p>通过绑定将交换器与队列关联起来<br><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit03.png" alt="rabbimq架构模型"></p>
-<h2 id="交换器类型"><a href="#交换器类型" class="headerlink" title="交换器类型"></a>交换器类型</h2><h3 id="fanout"><a href="#fanout" class="headerlink" title="fanout"></a>fanout</h3><p>把所有发送到该交换器的消息路由到所有与该交换器绑定的路由。</p>
-<h3 id="direct"><a href="#direct" class="headerlink" title="direct"></a>direct</h3><p>它会把消息路由到那些绑定键和路由键完全匹配的队列中</p>
-<h3 id="topic"><a href="#topic" class="headerlink" title="topic"></a>topic</h3><p>它会把消息路由到那些绑定键和路由键匹配的队列中，但是规则有所不同。</p>
-<p>.代表分隔符，*匹配一个单词，#匹配多个单词可以是0个单词。</p>
-<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit04.png" alt="rabbimq架构模型"><br><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit05.png" alt="rabbimq架构模型"></p>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit06.png" alt="rabbimq架构模型"></p>
-<h3 id="headers"><a href="#headers" class="headerlink" title="headers"></a>headers</h3><p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit07.png" alt="rabbimq架构模型"></p>
-<h3 id="System"><a href="#System" class="headerlink" title="System"></a>System</h3><h3 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h3><h2 id="rabbitmq工作模式"><a href="#rabbitmq工作模式" class="headerlink" title="rabbitmq工作模式"></a>rabbitmq工作模式</h2><h3 id="简单工作模式"><a href="#简单工作模式" class="headerlink" title="简单工作模式"></a>简单工作模式</h3><p>一个生产者，一个消费者，整个工作流程中没有交换机</p>
-<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p01.png" alt="rabbimq架构模型"></p>
-<h3 id="工作队列模式"><a href="#工作队列模式" class="headerlink" title="工作队列模式"></a>工作队列模式</h3><p>一个生产者，多个消费者，整个工作流程中没有交换机</p>
-<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p02.png" alt="rabbimq架构模型"></p>
-<h3 id="发布与订阅模式"><a href="#发布与订阅模式" class="headerlink" title="发布与订阅模式"></a>发布与订阅模式</h3><p>发布订阅模式：<br>    1、每个消费者监听自己的队列。<br>    2、生产者将消息发给broker，由交换机将消息转发到绑定此交换机的每个队列，每个绑定交换机的队列都将接收<br>    到消息</p>
-<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p03.png" alt="rabbimq架构模型"></p>
-<h3 id="路由模式"><a href="#路由模式" class="headerlink" title="路由模式"></a>路由模式</h3><p>路由模式特点：</p>
-<p>1、队列与交换机的绑定，不能是任意绑定了，而是要指定一个RoutingKey（路由key）<br>2、消息的发送方在 向 Exchange发送消息时，也必须指定消息的 RoutingKey。<br>3、Exchange不再把消息交给每一个绑定的队列，而是根据消息的Routing<br>      Key进行判断，只有队列的Routingkey与消息的 Routing key完全一致，才会接收到消息</p>
-<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p04.png" alt="rabbimq架构模型"></p>
-<h3 id="通配符模式"><a href="#通配符模式" class="headerlink" title="通配符模式"></a>通配符模式</h3><p>1、Topic类型与Direct相比，都是可以根据RoutingKey把消息路由到不同的队列。只不过Topic类型Exchange可以让队列在绑定Routing<br> key 的时候使用通配符！<br>2、Routingkey 一般都是有一个或多个单词组成，多个单词之间以”.”分割，例如： item.insert</p>
-<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p05.png" alt="rabbimq架构模型"></p>
-]]></content>
-      <tags>
-        <tag>消息队列</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>zookeeper学习</title>
     <url>/2021/06/17/zookeeper%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h1 id="zookeeper"><a href="#zookeeper" class="headerlink" title="zookeeper"></a>zookeeper</h1><p><strong>zookeeper是开源的分布式的、为分布式应用提供协调服务的Apache项目。</strong></p>
@@ -416,6 +376,61 @@
       </tags>
   </entry>
   <entry>
+    <title>rabbitmq学习</title>
+    <url>/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="rabbitmq学习"><a href="#rabbitmq学习" class="headerlink" title="rabbitmq学习"></a>rabbitmq学习</h1><p>rabbitmq整体架构就是生产者消费者模型，主要负责接收、存储和转发消息。</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit01.png" alt="rabbimq架构模型"></p>
+<h1 id="生产者和消费者"><a href="#生产者和消费者" class="headerlink" title="生产者和消费者"></a>生产者和消费者</h1><h2 id="生产者"><a href="#生产者" class="headerlink" title="生产者"></a>生产者</h2><p>就是消息投递方，生产者创建消息，发布到rabbitmq中。<br>消息两部分构成，一个消息体，一个是标签。<br>消息体又称为payload（载体）</p>
+<p>消息体是带有业务逻辑的数据比如json字符串，消息标签用来表述消息，比如交换器名称<br>和路由键。生产者把消息根据标签发送到感兴趣的消费者。</p>
+<h2 id="消费者"><a href="#消费者" class="headerlink" title="消费者"></a>消费者</h2><p>就是消息的接收方<br>消费者连接到rabbitmq服务器，并订阅到队列上。消费者只是消费消息体，<br>消息标签在消费者消费后，不会丢失，消费者也不知道订阅了哪个生产者发送的消息，也没必要知道</p>
+<h2 id="broker"><a href="#broker" class="headerlink" title="broker"></a>broker</h2><p>消息中间件的服务节点<br>简单的来说就是rabbitmq的服务节点<br>可以看做是rabbitmq的服务器</p>
+<p>如下展示的就是消息队列的服务流程</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit02.png" alt="rabbimq架构模型"></p>
+<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>rabbit的mq内部对象，就是用户存储消息里的内容</p>
+<p>多个消费者订阅同一个队列，队列里的消息会平均分摊给消费者。</p>
+<p>rabbitmq不支持广播的模式，如需要这个需求，需要二次开发。</p>
+<h2 id="交换器、路由键、绑定"><a href="#交换器、路由键、绑定" class="headerlink" title="交换器、路由键、绑定"></a>交换器、路由键、绑定</h2><h3 id="交换器"><a href="#交换器" class="headerlink" title="交换器"></a>交换器</h3><p>生产者将消息发送到交换器中，由交换器发送到指定的队列中。<br>可以简单的把交换器看做简单的实体。<br>在rabbitmq中交换器有四种。</p>
+<h3 id="RoutingKey路由键"><a href="#RoutingKey路由键" class="headerlink" title="RoutingKey路由键"></a>RoutingKey路由键</h3><p>用来指定消息的路由规则，路由键需要与绑定键绑定后，才可生效。<br>在路由键和绑定建固定的情况下，生产者发送消息到交换器，通过路由来指定消息最终流向哪个队列。</p>
+<h2 id="Binding绑定"><a href="#Binding绑定" class="headerlink" title="Binding绑定"></a>Binding绑定</h2><p>通过绑定将交换器与队列关联起来<br><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit03.png" alt="rabbimq架构模型"></p>
+<h2 id="交换器类型"><a href="#交换器类型" class="headerlink" title="交换器类型"></a>交换器类型</h2><h3 id="fanout"><a href="#fanout" class="headerlink" title="fanout"></a>fanout</h3><p>把所有发送到该交换器的消息路由到所有与该交换器绑定的路由。</p>
+<h3 id="direct"><a href="#direct" class="headerlink" title="direct"></a>direct</h3><p>它会把消息路由到那些绑定键和路由键完全匹配的队列中</p>
+<h3 id="topic"><a href="#topic" class="headerlink" title="topic"></a>topic</h3><p>它会把消息路由到那些绑定键和路由键匹配的队列中，但是规则有所不同。</p>
+<p>.代表分隔符，*匹配一个单词，#匹配多个单词可以是0个单词。</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit04.png" alt="rabbimq架构模型"><br><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit05.png" alt="rabbimq架构模型"></p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit06.png" alt="rabbimq架构模型"></p>
+<h3 id="headers"><a href="#headers" class="headerlink" title="headers"></a>headers</h3><p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit07.png" alt="rabbimq架构模型"></p>
+<h3 id="System"><a href="#System" class="headerlink" title="System"></a>System</h3><h3 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h3><h2 id="rabbitmq工作模式"><a href="#rabbitmq工作模式" class="headerlink" title="rabbitmq工作模式"></a>rabbitmq工作模式</h2><h3 id="简单工作模式"><a href="#简单工作模式" class="headerlink" title="简单工作模式"></a>简单工作模式</h3><p>一个生产者，一个消费者，整个工作流程中没有交换机</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p01.png" alt="rabbimq架构模型"></p>
+<h3 id="工作队列模式"><a href="#工作队列模式" class="headerlink" title="工作队列模式"></a>工作队列模式</h3><p>一个生产者，多个消费者，整个工作流程中没有交换机</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p02.png" alt="rabbimq架构模型"></p>
+<h3 id="发布与订阅模式"><a href="#发布与订阅模式" class="headerlink" title="发布与订阅模式"></a>发布与订阅模式</h3><p>发布订阅模式：<br>    1、每个消费者监听自己的队列。<br>    2、生产者将消息发给broker，由交换机将消息转发到绑定此交换机的每个队列，每个绑定交换机的队列都将接收<br>    到消息</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p03.png" alt="rabbimq架构模型"></p>
+<h3 id="路由模式"><a href="#路由模式" class="headerlink" title="路由模式"></a>路由模式</h3><p>路由模式特点：</p>
+<p>1、队列与交换机的绑定，不能是任意绑定了，而是要指定一个RoutingKey（路由key）<br>2、消息的发送方在 向 Exchange发送消息时，也必须指定消息的 RoutingKey。<br>3、Exchange不再把消息交给每一个绑定的队列，而是根据消息的Routing<br>      Key进行判断，只有队列的Routingkey与消息的 Routing key完全一致，才会接收到消息</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p04.png" alt="rabbimq架构模型"></p>
+<h3 id="通配符模式"><a href="#通配符模式" class="headerlink" title="通配符模式"></a>通配符模式</h3><p>1、Topic类型与Direct相比，都是可以根据RoutingKey把消息路由到不同的队列。只不过Topic类型Exchange可以让队列在绑定Routing<br> key 的时候使用通配符！<br>2、Routingkey 一般都是有一个或多个单词组成，多个单词之间以”.”分割，例如： item.insert</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p05.png" alt="rabbimq架构模型"></p>
+]]></content>
+      <tags>
+        <tag>消息队列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法之排序算法</title>
+    <url>/2020/06/07/%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p>使用Python编写算法</p>
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"># coding:utf-8</span><br><span class="line"></span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">冒泡排序法</span><br><span class="line">外层循环代表共进行几轮交换</span><br><span class="line">内层循环是一轮交换几次</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">相邻两数进行交换</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class BubbleSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)):</span><br><span class="line">            for j in range(0, len(self.List) - 1):</span><br><span class="line">                if (self.List[j] &gt; self.List[j+1]):</span><br><span class="line">                    self.List[j], self.List[j+1] &#x3D; self.List[j+1], self.List[j]</span><br><span class="line">                continue</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line">if  __name__&#x3D;&#x3D;&#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; BubbleSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding:utf-8</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">选择排序算法</span><br><span class="line">外层循环表示几轮比较</span><br><span class="line">内存循环表示比较多少次</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">每次比较找到最小值并进行交换</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class SelectionSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)-1):</span><br><span class="line">            if (self.List[i] !&#x3D; min(self.List[i:])):</span><br><span class="line">                minIndex &#x3D; self.List.index(min(self.List[i:]))</span><br><span class="line">                self.List[i], self.List[minIndex] &#x3D; self.List[minIndex], self.List[i]</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line">    def sort1(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)):</span><br><span class="line">            minIndex &#x3D; i</span><br><span class="line">            for j in range(i+1, len(self.List)):</span><br><span class="line">                if (self.List[minIndex] &gt; self.List[j]):</span><br><span class="line">                    self.List[minIndex], self.List[j] &#x3D; self.List[j], self.List[minIndex]</span><br><span class="line">                    minIndex &#x3D; j</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; SelectionSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort1()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
+
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"># coding:utf-8</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">插入排序</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">类似于抽排游戏</span><br><span class="line">左侧代表手中的牌，有测代表抽的牌</span><br><span class="line">每次抽牌，都需要和左侧手牌进行比较，将抽的牌放在合理的位置</span><br><span class="line">当抽玩牌后，左侧的手牌就是排好序的数组</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class InsertionSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for right in range(1, len(self.List)):</span><br><span class="line">            target &#x3D; self.List[right]</span><br><span class="line">            for left in range(0, right):</span><br><span class="line">                if (target &lt; self.List[left]):</span><br><span class="line">                    self.List[left+1:right+1] &#x3D; self.List[left:right]</span><br><span class="line">                    self.List[left] &#x3D; target</span><br><span class="line">                    break</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; InsertionSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>基于docker-compose 安装mysql</title>
     <url>/2020/05/27/%E5%9F%BA%E4%BA%8Edocker-compose-%E6%90%AD%E5%BB%BAmysql/</url>
     <content><![CDATA[<h1 id="docker-compose-安装mysql"><a href="#docker-compose-安装mysql" class="headerlink" title="docker-compose 安装mysql"></a>docker-compose 安装mysql</h1><p>  首先，必须要安装docker，以及docker-compose。</p>
@@ -442,21 +457,6 @@
       <tags>
         <tag>mysql</tag>
         <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法之排序算法</title>
-    <url>/2020/06/07/%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p>使用Python编写算法</p>
-<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"># coding:utf-8</span><br><span class="line"></span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">冒泡排序法</span><br><span class="line">外层循环代表共进行几轮交换</span><br><span class="line">内层循环是一轮交换几次</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">相邻两数进行交换</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class BubbleSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)):</span><br><span class="line">            for j in range(0, len(self.List) - 1):</span><br><span class="line">                if (self.List[j] &gt; self.List[j+1]):</span><br><span class="line">                    self.List[j], self.List[j+1] &#x3D; self.List[j+1], self.List[j]</span><br><span class="line">                continue</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line">if  __name__&#x3D;&#x3D;&#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; BubbleSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding:utf-8</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">选择排序算法</span><br><span class="line">外层循环表示几轮比较</span><br><span class="line">内存循环表示比较多少次</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">每次比较找到最小值并进行交换</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class SelectionSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)-1):</span><br><span class="line">            if (self.List[i] !&#x3D; min(self.List[i:])):</span><br><span class="line">                minIndex &#x3D; self.List.index(min(self.List[i:]))</span><br><span class="line">                self.List[i], self.List[minIndex] &#x3D; self.List[minIndex], self.List[i]</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line">    def sort1(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for i in range(0, len(self.List)):</span><br><span class="line">            minIndex &#x3D; i</span><br><span class="line">            for j in range(i+1, len(self.List)):</span><br><span class="line">                if (self.List[minIndex] &gt; self.List[j]):</span><br><span class="line">                    self.List[minIndex], self.List[j] &#x3D; self.List[j], self.List[minIndex]</span><br><span class="line">                    minIndex &#x3D; j</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; SelectionSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort1()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
-
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"># coding:utf-8</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">插入排序</span><br><span class="line"></span><br><span class="line">算法思路：</span><br><span class="line">类似于抽排游戏</span><br><span class="line">左侧代表手中的牌，有测代表抽的牌</span><br><span class="line">每次抽牌，都需要和左侧手牌进行比较，将抽的牌放在合理的位置</span><br><span class="line">当抽玩牌后，左侧的手牌就是排好序的数组</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line"></span><br><span class="line">class InsertionSort(object):</span><br><span class="line">    def __init__(self, list):</span><br><span class="line">        self.List &#x3D; list</span><br><span class="line"></span><br><span class="line">    def sort(self):</span><br><span class="line">        if (len(self.List) &lt;&#x3D; 1):</span><br><span class="line">            return self.List</span><br><span class="line">        for right in range(1, len(self.List)):</span><br><span class="line">            target &#x3D; self.List[right]</span><br><span class="line">            for left in range(0, right):</span><br><span class="line">                if (target &lt; self.List[left]):</span><br><span class="line">                    self.List[left+1:right+1] &#x3D; self.List[left:right]</span><br><span class="line">                    self.List[left] &#x3D; target</span><br><span class="line">                    break</span><br><span class="line">        return self.List</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    p1 &#x3D; InsertionSort([2, 1, 10, 33, 6])</span><br><span class="line">    list &#x3D; p1.sort()</span><br><span class="line">    print list</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -504,6 +504,55 @@
       </categories>
       <tags>
         <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java stream 学习</title>
+    <url>/2021/06/27/Java-stream-%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="Java-stream-学习"><a href="#Java-stream-学习" class="headerlink" title="Java stream 学习"></a>Java stream 学习</h1><p><img src="/2021/06/27/Java-stream-%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-26_20-38-54.png" alt></p>
+<h3 id="流（stream）到底是什么呢？"><a href="#流（stream）到底是什么呢？" class="headerlink" title="流（stream）到底是什么呢？"></a>流（stream）到底是什么呢？</h3><p>流就是数据渠道，用于数据源（集合、数组等），所生成得元素序列。</p>
+<p>集合讲的是数据，流讲的是计算。</p>
+<p><strong>注意：</strong></p>
+<p>1、stream自己不会存储元素。</p>
+<p>2、stream不会改变对象。相反，他们会返回一个持有结果的新stream。</p>
+<p>3、stream操作是延迟操作。这意味着他们会等到需要结果的时候才执行。</p>
+<p><strong>stream的三个操作流程</strong></p>
+<p><strong>1、创建stream</strong></p>
+<p>一个数据源（如：集合、数组），获取一个流</p>
+<p><strong>2、中间操作</strong></p>
+<p>一个中间操作链，对数据源的数据进行处理</p>
+<p><strong>3、终止操作</strong></p>
+<p>一个终止操作，执行中间操作链，并产生结果</p>
+<p><img src="/2021/06/27/Java-stream-%E5%AD%A6%E4%B9%A0/Snipaste_2021-06-26_20-51-29.png" alt></p>
+<p><strong>创建流的方式</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 创建流的方式</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/26 20:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StreamTest001</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test001</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 1、可以通过集合提供的stream() 或者  parallelStream() 创建流</span></span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list.add(<span class="string">"1"</span>);</span><br><span class="line">        Stream&lt;String&gt; stream = list.parallelStream();</span><br><span class="line">        stream.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 111"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2、通过Arrays中的静态方法stream() 获取数组流</span></span><br><span class="line">        Integer[] ants = <span class="keyword">new</span> Integer[<span class="number">10</span>];</span><br><span class="line">        ants[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        ants[<span class="number">1</span>] =  <span class="number">2</span>;</span><br><span class="line">        Stream&lt;Integer&gt; integerStream = Arrays.stream(ants);</span><br><span class="line">        integerStream.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 222"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3、通过stream类中的静态方法of()</span></span><br><span class="line">        Stream&lt;String&gt; stringStream = Stream.of(<span class="string">"aa"</span>, <span class="string">"bb"</span>, <span class="string">"cc"</span>);</span><br><span class="line">        stringStream.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 333"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4、创建无线流</span></span><br><span class="line">        <span class="comment">// 迭代器生成stream</span></span><br><span class="line">        Stream&lt;Integer&gt; iterate = Stream.iterate(<span class="number">0</span>, (x) -&gt; x + <span class="number">3</span>);</span><br><span class="line">        iterate.limit(<span class="number">2</span>).forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 444"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 生成</span></span><br><span class="line">        Stream.generate(Math::random)</span><br><span class="line">                .limit(<span class="number">3</span>)</span><br><span class="line">                .forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">打印结果:  </span><br><span class="line"><span class="number">1</span></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; <span class="number">111</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="keyword">null</span></span><br><span class="line"><span class="keyword">null</span></span><br><span class="line"><span class="keyword">null</span></span><br><span class="line"><span class="keyword">null</span></span><br><span class="line"><span class="keyword">null</span></span><br><span class="line"><span class="keyword">null</span></span><br><span class="line"><span class="keyword">null</span></span><br><span class="line"><span class="keyword">null</span></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; <span class="number">222</span></span><br><span class="line">aa</span><br><span class="line">bb</span><br><span class="line">cc</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; <span class="number">333</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; <span class="number">444</span></span><br><span class="line"><span class="number">0.4605040437941409</span></span><br><span class="line"><span class="number">0.12659822783210528</span></span><br><span class="line"><span class="number">0.7548741196526325</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>中间操作</strong></p>
+<p><strong>1、筛选与切片</strong></p>
+<p><strong>filter</strong> — 接受lambda，从流中排除某些元素</p>
+<p><strong>limit</strong> — 截断流，使其元素不超过给定数量</p>
+<p><strong>skip</strong> — 跳过元素，返回一个扔掉了前n个元素的流。若流中元素不足</p>
+<p>n个，则返回一个空流。与limit互补。</p>
+<p><strong>distinct</strong> — 筛选，通过流所生成元素的hashCode() 和 equals() 去除</p>
+<p>重复元素。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> String name;</span><br><span class="line">        <span class="keyword">private</span> Integer age;</span><br><span class="line">        <span class="keyword">private</span> Double score;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name, Integer age, Double score)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.name = name;</span><br><span class="line">            <span class="keyword">this</span>.age = age;</span><br><span class="line">            <span class="keyword">this</span>.score = score;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> name;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.name = name;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Integer <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> age;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(Integer age)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.age = age;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Double <span class="title">getScore</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> score;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setScore</span><span class="params">(Double score)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.score = score;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span> == o) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (o == <span class="keyword">null</span> || getClass() != o.getClass()) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            Employee employee = (Employee) o;</span><br><span class="line">            <span class="keyword">return</span> Objects.equals(name, employee.name) &amp;&amp;</span><br><span class="line">                    Objects.equals(age, employee.age) &amp;&amp;</span><br><span class="line">                    Objects.equals(score, employee.score);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> Objects.hash(name, age, score);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"Employee&#123;"</span> +</span><br><span class="line">                    <span class="string">"name='"</span> + name + <span class="string">'\''</span> +</span><br><span class="line">                    <span class="string">", age="</span> + age +</span><br><span class="line">                    <span class="string">", score="</span> + score +</span><br><span class="line">                    <span class="string">'&#125;'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test002</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;Employee&gt; employeeList = Arrays.asList(</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"张三"</span>, <span class="number">11</span>, <span class="number">78.66</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"王五"</span>, <span class="number">10</span>, <span class="number">50.00</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"刘思"</span>, <span class="number">35</span>, <span class="number">66.88</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>)</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 简单过滤操作</span></span><br><span class="line">        employeeList.stream()</span><br><span class="line">                .filter(e -&gt; e.getScore() &gt; <span class="number">60.00</span>)</span><br><span class="line">                .forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">结果:</span><br><span class="line">Employee&#123;name=<span class="string">'张三'</span>, age=<span class="number">11</span>, score=<span class="number">78.66</span>&#125;</span><br><span class="line">Employee&#123;name=<span class="string">'李四'</span>, age=<span class="number">15</span>, score=<span class="number">88.88</span>&#125;</span><br><span class="line">Employee&#123;name=<span class="string">'刘思'</span>, age=<span class="number">35</span>, score=<span class="number">66.88</span>&#125;</span><br><span class="line">Employee&#123;name=<span class="string">'李四'</span>, age=<span class="number">15</span>, score=<span class="number">88.88</span>&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果像下面这么操作，会有打印结果吗？</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test002</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;Employee&gt; employeeList = Arrays.asList(</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"张三"</span>, <span class="number">11</span>, <span class="number">78.66</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"王五"</span>, <span class="number">10</span>, <span class="number">50.00</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"刘思"</span>, <span class="number">35</span>, <span class="number">66.88</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>)</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 简单过滤操作</span></span><br><span class="line">        employeeList.stream()</span><br><span class="line">                .filter(e -&gt; &#123;</span><br><span class="line">                    System.out.println(<span class="string">"&gt;&gt;&gt;&gt;&gt; 过滤 &gt;&gt;&gt;&gt;&gt;"</span>);</span><br><span class="line">                    <span class="keyword">return</span> e.getScore() &gt; <span class="number">60.00</span>;</span><br><span class="line">                &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">结果:</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果是什么都没有打印，为什么呢？</span></span><br><span class="line"><span class="comment">// 就是stream的api做了一个惰性操作（惰性求值）只有当触发终止操作后，才会执行中间操作，</span></span><br><span class="line"><span class="comment">// 理由也是很容易就想出来，就是因为不用浪费资源，因为你不执行终止操作，整个中间操作就是没有意义的，</span></span><br><span class="line"><span class="comment">// 而且还浪费系统资源。</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test002</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;Employee&gt; employeeList = Arrays.asList(</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"张三"</span>, <span class="number">11</span>, <span class="number">78.66</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"王五"</span>, <span class="number">10</span>, <span class="number">50.00</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"刘思"</span>, <span class="number">35</span>, <span class="number">66.88</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>)</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 简单过滤操作</span></span><br><span class="line">        employeeList.stream()</span><br><span class="line">                .filter(e -&gt; &#123;</span><br><span class="line">                    System.out.println(<span class="string">"&gt;&gt;&gt;&gt;&gt; 过滤 &gt;&gt;&gt;&gt;&gt;"</span>);</span><br><span class="line">                    <span class="keyword">return</span> e.getScore() &gt; <span class="number">60.00</span>;</span><br><span class="line">                &#125;)</span><br><span class="line">                <span class="comment">// 终止操作</span></span><br><span class="line">                .forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">结果:</span><br><span class="line">&gt;&gt;&gt;&gt;&gt; 过滤 &gt;&gt;&gt;&gt;&gt;</span><br><span class="line">Employee&#123;name=<span class="string">'张三'</span>, age=<span class="number">11</span>, score=<span class="number">78.66</span>&#125;</span><br><span class="line">&gt;&gt;&gt;&gt;&gt; 过滤 &gt;&gt;&gt;&gt;&gt;</span><br><span class="line">Employee&#123;name=<span class="string">'李四'</span>, age=<span class="number">15</span>, score=<span class="number">88.88</span>&#125;</span><br><span class="line">&gt;&gt;&gt;&gt;&gt; 过滤 &gt;&gt;&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt;&gt;&gt; 过滤 &gt;&gt;&gt;&gt;&gt;</span><br><span class="line">Employee&#123;name=<span class="string">'刘思'</span>, age=<span class="number">35</span>, score=<span class="number">66.88</span>&#125;</span><br><span class="line">&gt;&gt;&gt;&gt;&gt; 过滤 &gt;&gt;&gt;&gt;&gt;</span><br><span class="line">Employee&#123;name=<span class="string">'李四'</span>, age=<span class="number">15</span>, score=<span class="number">88.88</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果一目了然！！！</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 截断流操作</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test002</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;Employee&gt; employeeList = Arrays.asList(</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"张三"</span>, <span class="number">11</span>, <span class="number">78.66</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"王五"</span>, <span class="number">10</span>, <span class="number">50.00</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"刘思"</span>, <span class="number">35</span>, <span class="number">66.88</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>)</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 截断流操作</span></span><br><span class="line">        employeeList.stream()</span><br><span class="line">                .limit(<span class="number">2</span>)</span><br><span class="line">                .forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">结果:</span><br><span class="line">Employee&#123;name=<span class="string">'张三'</span>, age=<span class="number">11</span>, score=<span class="number">78.66</span>&#125;</span><br><span class="line">Employee&#123;name=<span class="string">'李四'</span>, age=<span class="number">15</span>, score=<span class="number">88.88</span>&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// skip 操作</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test002</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;Employee&gt; employeeList = Arrays.asList(</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"张三"</span>, <span class="number">11</span>, <span class="number">78.66</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"王五"</span>, <span class="number">10</span>, <span class="number">50.00</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"刘思"</span>, <span class="number">35</span>, <span class="number">66.88</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>)</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        <span class="comment">// skip 操作</span></span><br><span class="line">        <span class="comment">// 1、正常操作</span></span><br><span class="line">        employeeList.stream()</span><br><span class="line">                .skip(<span class="number">2</span>)</span><br><span class="line">                .forEach(System.out::println);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;"</span>);</span><br><span class="line">        <span class="comment">// 2、如果选取跳过的值，超过容器内存储值的数量</span></span><br><span class="line">        employeeList.stream()</span><br><span class="line">                .skip(<span class="number">12</span>)</span><br><span class="line">                .forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">结果:</span><br><span class="line">Employee&#123;name=<span class="string">'王五'</span>, age=<span class="number">10</span>, score=<span class="number">50.0</span>&#125;</span><br><span class="line">Employee&#123;name=<span class="string">'刘思'</span>, age=<span class="number">35</span>, score=<span class="number">66.88</span>&#125;</span><br><span class="line">Employee&#123;name=<span class="string">'李四'</span>, age=<span class="number">15</span>, score=<span class="number">88.88</span>&#125;</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span><br><span class="line"> </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="comment">// distinct 操作</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test002</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;Employee&gt; employeeList = Arrays.asList(</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"张三"</span>, <span class="number">11</span>, <span class="number">78.66</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"王五"</span>, <span class="number">10</span>, <span class="number">50.00</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"刘思"</span>, <span class="number">35</span>, <span class="number">66.88</span>),</span><br><span class="line">                <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>)</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        <span class="comment">// distinct 操作</span></span><br><span class="line">        employeeList.stream()</span><br><span class="line">                .distinct()</span><br><span class="line">                .forEach(System.out::println);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 值得注意的是。如果是对象比较去重的话，如果不重写equals()和hashCode()方法，就无法进行去重的中间操作</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>2、映射</strong></p>
+<p>1、<strong>map</strong> — 接受lambda，将元素转换成其他形式或提取信息，接收一个函数为参数，该函数会被应用到每个元素上，并将其映射成一个新的元素。</p>
+<p>2、<strong>flatMap</strong> — 接收到一个函数作为参数，将流中的每个值都替换成另一个流，然后把所有的流连接成一个流。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">    <span class="keyword">private</span> Double score;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name, Integer age, Double score)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.score = score;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(Integer age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Double <span class="title">getScore</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> score;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setScore</span><span class="params">(Double score)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.score = score;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == o) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (o == <span class="keyword">null</span> || getClass() != o.getClass()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Employee employee = (Employee) o;</span><br><span class="line">        <span class="keyword">return</span> Objects.equals(name, employee.name) &amp;&amp;</span><br><span class="line">                Objects.equals(age, employee.age) &amp;&amp;</span><br><span class="line">                Objects.equals(score, employee.score);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Objects.hash(name, age, score);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Employee&#123;"</span> +</span><br><span class="line">                <span class="string">"name='"</span> + name + <span class="string">'\''</span> +</span><br><span class="line">                <span class="string">", age="</span> + age +</span><br><span class="line">                <span class="string">", score="</span> + score +</span><br><span class="line">                <span class="string">'&#125;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EmployeeDto</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">EmployeeDto</span><span class="params">(String name, Integer age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">EmployeeDto</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(Integer age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"EmployeeDto&#123;"</span> +</span><br><span class="line">                <span class="string">"name='"</span> + name + <span class="string">'\''</span> +</span><br><span class="line">                <span class="string">", age="</span> + age +</span><br><span class="line">                <span class="string">'&#125;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test003</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    List&lt;Employee&gt; employeeList = Arrays.asList(</span><br><span class="line">            <span class="keyword">new</span> Employee(<span class="string">"张三"</span>, <span class="number">11</span>, <span class="number">78.66</span>),</span><br><span class="line">            <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>),</span><br><span class="line">            <span class="keyword">new</span> Employee(<span class="string">"王五"</span>, <span class="number">10</span>, <span class="number">50.00</span>),</span><br><span class="line">            <span class="keyword">new</span> Employee(<span class="string">"刘思"</span>, <span class="number">35</span>, <span class="number">66.88</span>),</span><br><span class="line">            <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="comment">// map 操作</span></span><br><span class="line">    employeeList.stream()</span><br><span class="line">            .map(Employee::getName)</span><br><span class="line">            .forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">"++++++++++++++++++++++++++++"</span>);</span><br><span class="line"></span><br><span class="line">    employeeList.stream()</span><br><span class="line">            .map(e -&gt; e.getScore() + <span class="number">10</span>)</span><br><span class="line">            .forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">"++++++++++++++++++++++++++++"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 替换对象操作，web 开发中经常使用到的场景</span></span><br><span class="line">    List&lt;EmployeeDto&gt; list = employeeList.stream()</span><br><span class="line">            .map(e -&gt; <span class="keyword">new</span> EmployeeDto(e.getName(), e.getAge())).collect(Collectors.toList());</span><br><span class="line">    list.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// flatMap 嵌套集合使用</span></span><br><span class="line">    List&lt;Employee&gt; employeeList1 = Arrays.asList(</span><br><span class="line">            <span class="keyword">new</span> Employee(<span class="string">"张三"</span>, <span class="number">11</span>, <span class="number">78.66</span>),</span><br><span class="line">            <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>),</span><br><span class="line">            <span class="keyword">new</span> Employee(<span class="string">"王五"</span>, <span class="number">10</span>, <span class="number">50.00</span>),</span><br><span class="line">            <span class="keyword">new</span> Employee(<span class="string">"刘思"</span>, <span class="number">35</span>, <span class="number">66.88</span>),</span><br><span class="line">            <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">15</span>, <span class="number">88.88</span>)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">"++++++++++++++++++++++++++++"</span>);</span><br><span class="line"></span><br><span class="line">    List&lt;List&lt;Employee&gt;&gt; asList = Arrays.asList(employeeList, employeeList1);</span><br><span class="line">    asList.stream()</span><br><span class="line">            .map(employees -&gt; employees.stream()</span><br><span class="line">                    .map(Employee::getName))</span><br><span class="line">            .forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">"++++++++++++++++++++++++++++"</span>);</span><br><span class="line"></span><br><span class="line">    asList.stream()</span><br><span class="line">            .flatMap(e -&gt; e.stream()</span><br><span class="line">                    .map(Employee::getName))</span><br><span class="line">            .forEach(System.out::println);</span><br><span class="line">    System.out.println(<span class="string">"++++++++++++++++++++++++++++"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 嵌套数组合并,就相当于 add() 和 addAll() 的区别</span></span><br><span class="line">    asList.stream().flatMap(Collection::stream).forEach(System.out::println);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <tags>
+        <tag>java基础</tag>
       </tags>
   </entry>
   <entry>

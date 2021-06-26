@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-06-20T15:52:23.405Z</updated>
+  <updated>2021-06-26T15:22:00.576Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java stream 学习</title>
+    <link href="http://yoursite.com/2021/06/27/Java-stream-%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2021/06/27/Java-stream-%E5%AD%A6%E4%B9%A0/</id>
+    <published>2021-06-26T20:29:41.000Z</published>
+    <updated>2021-06-26T15:22:00.576Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Java-stream-学习&quot;&gt;&lt;a href=&quot;#Java-stream-学习&quot; class=&quot;headerlink&quot; title=&quot;Java stream 学习&quot;&gt;&lt;/a&gt;Java stream 学习&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="java基础" scheme="http://yoursite.com/tags/java%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式之模板设计模式</title>

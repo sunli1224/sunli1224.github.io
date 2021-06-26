@@ -163,7 +163,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">16</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">17</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -233,6 +233,130 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1111.jpg">
+      <meta itemprop="name" content="孙力">
+      <meta itemprop="description" content="总结分享的个人博客平台">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="bblike博客小站">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">rabbitmq学习</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-06-08 00:23:05" itemprop="dateCreated datePublished" datetime="2020-06-08T00:23:05Z">2020-06-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-07 20:28:44" itemprop="dateModified" datetime="2020-06-07T20:28:44Z">2020-06-07</time>
+              </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="rabbitmq学习"><a href="#rabbitmq学习" class="headerlink" title="rabbitmq学习"></a>rabbitmq学习</h1><p>rabbitmq整体架构就是生产者消费者模型，主要负责接收、存储和转发消息。</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit01.png" alt="rabbimq架构模型"></p>
+<h1 id="生产者和消费者"><a href="#生产者和消费者" class="headerlink" title="生产者和消费者"></a>生产者和消费者</h1><h2 id="生产者"><a href="#生产者" class="headerlink" title="生产者"></a>生产者</h2><p>就是消息投递方，生产者创建消息，发布到rabbitmq中。<br>消息两部分构成，一个消息体，一个是标签。<br>消息体又称为payload（载体）</p>
+<p>消息体是带有业务逻辑的数据比如json字符串，消息标签用来表述消息，比如交换器名称<br>和路由键。生产者把消息根据标签发送到感兴趣的消费者。</p>
+<h2 id="消费者"><a href="#消费者" class="headerlink" title="消费者"></a>消费者</h2><p>就是消息的接收方<br>消费者连接到rabbitmq服务器，并订阅到队列上。消费者只是消费消息体，<br>消息标签在消费者消费后，不会丢失，消费者也不知道订阅了哪个生产者发送的消息，也没必要知道</p>
+<h2 id="broker"><a href="#broker" class="headerlink" title="broker"></a>broker</h2><p>消息中间件的服务节点<br>简单的来说就是rabbitmq的服务节点<br>可以看做是rabbitmq的服务器</p>
+<p>如下展示的就是消息队列的服务流程</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit02.png" alt="rabbimq架构模型"></p>
+<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>rabbit的mq内部对象，就是用户存储消息里的内容</p>
+<p>多个消费者订阅同一个队列，队列里的消息会平均分摊给消费者。</p>
+<p>rabbitmq不支持广播的模式，如需要这个需求，需要二次开发。</p>
+<h2 id="交换器、路由键、绑定"><a href="#交换器、路由键、绑定" class="headerlink" title="交换器、路由键、绑定"></a>交换器、路由键、绑定</h2><h3 id="交换器"><a href="#交换器" class="headerlink" title="交换器"></a>交换器</h3><p>生产者将消息发送到交换器中，由交换器发送到指定的队列中。<br>可以简单的把交换器看做简单的实体。<br>在rabbitmq中交换器有四种。</p>
+<h3 id="RoutingKey路由键"><a href="#RoutingKey路由键" class="headerlink" title="RoutingKey路由键"></a>RoutingKey路由键</h3><p>用来指定消息的路由规则，路由键需要与绑定键绑定后，才可生效。<br>在路由键和绑定建固定的情况下，生产者发送消息到交换器，通过路由来指定消息最终流向哪个队列。</p>
+<h2 id="Binding绑定"><a href="#Binding绑定" class="headerlink" title="Binding绑定"></a>Binding绑定</h2><p>通过绑定将交换器与队列关联起来<br><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit03.png" alt="rabbimq架构模型"></p>
+<h2 id="交换器类型"><a href="#交换器类型" class="headerlink" title="交换器类型"></a>交换器类型</h2><h3 id="fanout"><a href="#fanout" class="headerlink" title="fanout"></a>fanout</h3><p>把所有发送到该交换器的消息路由到所有与该交换器绑定的路由。</p>
+<h3 id="direct"><a href="#direct" class="headerlink" title="direct"></a>direct</h3><p>它会把消息路由到那些绑定键和路由键完全匹配的队列中</p>
+<h3 id="topic"><a href="#topic" class="headerlink" title="topic"></a>topic</h3><p>它会把消息路由到那些绑定键和路由键匹配的队列中，但是规则有所不同。</p>
+<p>.代表分隔符，*匹配一个单词，#匹配多个单词可以是0个单词。</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit04.png" alt="rabbimq架构模型"><br><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit05.png" alt="rabbimq架构模型"></p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit06.png" alt="rabbimq架构模型"></p>
+<h3 id="headers"><a href="#headers" class="headerlink" title="headers"></a>headers</h3><p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/rabbit07.png" alt="rabbimq架构模型"></p>
+<h3 id="System"><a href="#System" class="headerlink" title="System"></a>System</h3><h3 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h3><h2 id="rabbitmq工作模式"><a href="#rabbitmq工作模式" class="headerlink" title="rabbitmq工作模式"></a>rabbitmq工作模式</h2><h3 id="简单工作模式"><a href="#简单工作模式" class="headerlink" title="简单工作模式"></a>简单工作模式</h3><p>一个生产者，一个消费者，整个工作流程中没有交换机</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p01.png" alt="rabbimq架构模型"></p>
+<h3 id="工作队列模式"><a href="#工作队列模式" class="headerlink" title="工作队列模式"></a>工作队列模式</h3><p>一个生产者，多个消费者，整个工作流程中没有交换机</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p02.png" alt="rabbimq架构模型"></p>
+<h3 id="发布与订阅模式"><a href="#发布与订阅模式" class="headerlink" title="发布与订阅模式"></a>发布与订阅模式</h3><p>发布订阅模式：<br>    1、每个消费者监听自己的队列。<br>    2、生产者将消息发给broker，由交换机将消息转发到绑定此交换机的每个队列，每个绑定交换机的队列都将接收<br>    到消息</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p03.png" alt="rabbimq架构模型"></p>
+<h3 id="路由模式"><a href="#路由模式" class="headerlink" title="路由模式"></a>路由模式</h3><p>路由模式特点：</p>
+<p>1、队列与交换机的绑定，不能是任意绑定了，而是要指定一个RoutingKey（路由key）<br>2、消息的发送方在 向 Exchange发送消息时，也必须指定消息的 RoutingKey。<br>3、Exchange不再把消息交给每一个绑定的队列，而是根据消息的Routing<br>      Key进行判断，只有队列的Routingkey与消息的 Routing key完全一致，才会接收到消息</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p04.png" alt="rabbimq架构模型"></p>
+<h3 id="通配符模式"><a href="#通配符模式" class="headerlink" title="通配符模式"></a>通配符模式</h3><p>1、Topic类型与Direct相比，都是可以根据RoutingKey把消息路由到不同的队列。只不过Topic类型Exchange可以让队列在绑定Routing<br> key 的时候使用通配符！<br>2、Routingkey 一般都是有一个或多个单词组成，多个单词之间以”.”分割，例如： item.insert</p>
+<p><img src="/2020/06/08/rabbitmq%E5%AD%A6%E4%B9%A0/p05.png" alt="rabbimq架构模型"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -945,7 +1069,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -996,13 +1120,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">51k</span>
+    <span title="站点总字数">62k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">46 分钟</span>
+    <span title="站点阅读时长">56 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>
