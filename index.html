@@ -163,7 +163,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">17</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">18</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -233,6 +233,104 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/06/28/ElasticSearch%E4%BB%A5%E5%8F%8Akibana%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1111.jpg">
+      <meta itemprop="name" content="孙力">
+      <meta itemprop="description" content="总结分享的个人博客平台">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="bblike博客小站">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/28/ElasticSearch%E4%BB%A5%E5%8F%8Akibana%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">ElasticSearch以及kibana安装与配置</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-06-27 19:04:03 / 修改时间：12:00:54" itemprop="dateCreated datePublished" datetime="2021-06-27T19:04:03Z">2021-06-27</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/06/28/ElasticSearch%E4%BB%A5%E5%8F%8Akibana%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/28/ElasticSearch%E4%BB%A5%E5%8F%8Akibana%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="ElasticSearch以及kibana安装与配置"><a href="#ElasticSearch以及kibana安装与配置" class="headerlink" title="ElasticSearch以及kibana安装与配置"></a>ElasticSearch以及kibana安装与配置</h1><p>​      这篇博客记录我今天安装ElasticSearch以及kibana的成功安装和配置的所有记录，经历了无数个坑，属实有点惨！！！</p>
+<p><strong>注意：</strong>所有的下载包一定要去官方中文网站下载，否则可能在其他镜像仓库下载的安装包，是不全的，就会出现安装采坑的死循环，切记！！</p>
+<p>官方中文网站下载地址：<a href="https://elasticsearch.cn/download/" target="_blank" rel="noopener external nofollow noreferrer">https://elasticsearch.cn/download/</a></p>
+<p><strong>单体安装(后面出集群配置)</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 首相我们要下载好ElasticSearch和kibana以及jdk9以上 安装包</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 1、创建新用户</span></span><br><span class="line">useradd es # 创建用户</span><br><span class="line">passwd es  # 设置该用户的密码</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改 /etc/sudoers 的内容（作用：可以用sudo su）</span></span><br><span class="line">vim  /etc/sudoers</span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加  es ALL=(ALL) ALL</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 解压es安装包放到指定文件目录下</span></span><br><span class="line">tar -zxvf /opt/software/[es压缩包名称] -C /usr/local/[es压缩包名称] # 解压</span><br><span class="line">mv /usr/local/[es压缩包名称] /usr/local/elasticSearch # 将文件夹替换为其他名字</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 将解压好的es文件夹所有权赋给创建的新用户</span></span><br><span class="line">chown es:es -R /usr/local/elasticSearch</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改 /etc/sysctl.conf</span></span><br><span class="line">vim /etc/sysctl.conf</span><br><span class="line"><span class="meta">#</span><span class="bash"> 将参数修改为 vm.max_map_count=655360，并且执行命令： sysctl -p，该修改生效。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改 /etc/security/limits.conf</span></span><br><span class="line">vim /etc/security/limits.conf</span><br><span class="line"></span><br><span class="line">添加： </span><br><span class="line">* soft nofile 65536</span><br><span class="line">* hard nofile 131072</span><br><span class="line">* soft nproc 2048</span><br><span class="line">* hard nproc 4096</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改/etc/security/limit.d/20-nproc.conf</span></span><br><span class="line">vim /etc/security/limit.d/20-nproc.conf</span><br><span class="line">添加：</span><br><span class="line">*          soft    nproc     4096</span><br><span class="line">*          hard    nproc     4096</span><br><span class="line">root       soft    nproc     unlimited</span><br><span class="line">elasticsearch soft nofile    65536</span><br><span class="line">elasticsearch hard nofile    65536</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改： /usr/<span class="built_in">local</span>/elasticSearch/config/jvm.options</span></span><br><span class="line">vim /usr/local/elasticSearch/config/jvm.options</span><br><span class="line">修改为：</span><br><span class="line">-Xms1024m</span><br><span class="line">-Xmx1024m</span><br><span class="line"></span><br><span class="line">将GC垃圾回收器改为G1</span><br><span class="line">-XX:+UseG1GC</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改：/usr/<span class="built_in">local</span>/elasticSearch/config/elasticsearch.yml</span></span><br><span class="line">（单节点配置）</span><br><span class="line"></span><br><span class="line">修改：</span><br><span class="line">cluster.name: master</span><br><span class="line">node.name: node-1</span><br><span class="line">path.data: /usr/local/elasticsearch/data</span><br><span class="line">path.logs: /usr/local/elasticsearch/log</span><br><span class="line">network.host: 0.0.0.0</span><br><span class="line">http.port: 9200</span><br><span class="line">cluster.initial_master_nodes: ["node-1"]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 切换成新用户，启动es</span></span><br><span class="line">su es</span><br><span class="line">cd /usr/local/elasticsearch/bin/</span><br><span class="line"> ./elasticsearch -d # 守护进程启动</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> 注意： 在安装之前一定要安装jdk9以上，只是根据我安装的es版本决定的，如果配置了环境变量是jdk9以下的，那么就要修改es的启动脚本了，这里就不叙述jdk的安装过程了。</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="meta"> #</span><span class="bash"> kibana 安装</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="meta"> #</span><span class="bash"> 解压，并修改文件夹名称</span></span><br><span class="line">tar -zxvf /opt/software/[kibana压缩包名称] -C /usr/local/[kibana压缩包名称] # 解压</span><br><span class="line">mv /usr/local/[kibana压缩包名称] /usr/local/kibana # 将文件夹替换为其他名字</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改kibanna的文件权限以及所属用户</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 在root下为 为kibana赋权</span></span><br><span class="line">chown -R es:es /usr/local/kibana/</span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改kibana所在文件夹的权限</span></span><br><span class="line">chmod 770 es:es /usr/local/kibana</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改配置/usr/<span class="built_in">local</span>/kibana/config/kibana.yml</span></span><br><span class="line">vim /usr/local/kibana/config/kibana.yml</span><br><span class="line"></span><br><span class="line">添加：</span><br><span class="line">i18n.locale: "zh-CN"</span><br><span class="line">elasticsearch.url: "http://localhost:9200"</span><br><span class="line">server.host: "【本机ip】"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 切换用户以及启动kibanna</span></span><br><span class="line">su es</span><br><span class="line">cd /usr/local/kibana/bin</span><br><span class="line">./kibana</span><br></pre></td></tr></table></figure>
+
+
+
+<p>验证es是否安装成功地址： http://【ip】9200/</p>
+<p>kibanna图形化界面地址：http://【ip】:5601/</p>
+<p><strong>文档终于写完了，我的天！！！</strong></p>
+<p><strong>后面继续更新集群部署</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -2045,92 +2143,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/1111.jpg">
-      <meta itemprop="name" content="孙力">
-      <meta itemprop="description" content="总结分享的个人博客平台">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="bblike博客小站">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/" class="post-title-link" itemprop="url">java基础之集合--深入研究</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-06-09 21:31:38 / 修改时间：15:03:35" itemprop="dateCreated datePublished" datetime="2020-06-09T21:31:38Z">2020-06-09</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/10/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9B%86%E5%90%88-%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>9</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="java基础之集合"><a href="#java基础之集合" class="headerlink" title="java基础之集合"></a>java基础之集合</h1>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -2203,7 +2215,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -2254,13 +2266,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">62k</span>
+    <span title="站点总字数">64k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">56 分钟</span>
+    <span title="站点阅读时长">58 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>

@@ -1,30 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HTTP权限指南--HTTP报文</title>
-    <url>/2020/06/07/HTTP%E6%9D%83%E9%99%90%E6%8C%87%E5%8D%97-HTTP%E6%8A%A5%E6%96%87/</url>
-    <content><![CDATA[<p><strong>HTTPS</strong></p>
-<p>HTTPS是常见的HTTP安全版本，HTTPS将HTTP协议与一组强大的对称、非对称和基于证书的加密技术结合在一起。特点：安全、灵活。</p>
-<p>HTTPS就是在安全层的基础上发送HTTP。</p>
-<p>HTTPS将发送给安全层对其进行加密</p>
-<p>HTTP安全层通过SSL以及现代替协议TLS来实现的。</p>
-<p>HTTP建立安全连接：</p>
-<p>客户端打开一条web服务器</p>
-<p><strong>HTTP常问面试题</strong></p>
-<p>1、Http与Https的区别</p>
-<p>默认端口不同，http默认端口80而HTTPS默认端口443，</p>
-<p>2、什么是Http协议无状态协议?怎么解决Http协议无状态协议?</p>
-<p>3、URI和URL的区别？</p>
-<p>4、常用的HTTP方法有哪些？</p>
-<p>6、HTTP请求报文与响应报文格式HTTP请求报文与响应报文格式？</p>
-<p>7、HTTPS工作原理</p>
-<p>8、一次完整的HTTP请求所经历的7个步骤</p>
-<p>9、常见的HTTP相应状态码？</p>
-<p>10、HTTP1.1版本新特性?</p>
-<p>11、HTTP优化方案？</p>
+    <title>ElasticSearch以及kibana安装与配置</title>
+    <url>/2021/06/28/ElasticSearch%E4%BB%A5%E5%8F%8Akibana%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="ElasticSearch以及kibana安装与配置"><a href="#ElasticSearch以及kibana安装与配置" class="headerlink" title="ElasticSearch以及kibana安装与配置"></a>ElasticSearch以及kibana安装与配置</h1><p>​      这篇博客记录我今天安装ElasticSearch以及kibana的成功安装和配置的所有记录，经历了无数个坑，属实有点惨！！！</p>
+<p><strong>注意：</strong>所有的下载包一定要去官方中文网站下载，否则可能在其他镜像仓库下载的安装包，是不全的，就会出现安装采坑的死循环，切记！！</p>
+<p>官方中文网站下载地址：<a href="https://elasticsearch.cn/download/" target="_blank" rel="noopener external nofollow noreferrer">https://elasticsearch.cn/download/</a></p>
+<p><strong>单体安装(后面出集群配置)</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 首相我们要下载好ElasticSearch和kibana以及jdk9以上 安装包</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 1、创建新用户</span></span><br><span class="line">useradd es # 创建用户</span><br><span class="line">passwd es  # 设置该用户的密码</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改 /etc/sudoers 的内容（作用：可以用sudo su）</span></span><br><span class="line">vim  /etc/sudoers</span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加  es ALL=(ALL) ALL</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 解压es安装包放到指定文件目录下</span></span><br><span class="line">tar -zxvf /opt/software/[es压缩包名称] -C /usr/local/[es压缩包名称] # 解压</span><br><span class="line">mv /usr/local/[es压缩包名称] /usr/local/elasticSearch # 将文件夹替换为其他名字</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 将解压好的es文件夹所有权赋给创建的新用户</span></span><br><span class="line">chown es:es -R /usr/local/elasticSearch</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改 /etc/sysctl.conf</span></span><br><span class="line">vim /etc/sysctl.conf</span><br><span class="line"><span class="meta">#</span><span class="bash"> 将参数修改为 vm.max_map_count=655360，并且执行命令： sysctl -p，该修改生效。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改 /etc/security/limits.conf</span></span><br><span class="line">vim /etc/security/limits.conf</span><br><span class="line"></span><br><span class="line">添加： </span><br><span class="line">* soft nofile 65536</span><br><span class="line">* hard nofile 131072</span><br><span class="line">* soft nproc 2048</span><br><span class="line">* hard nproc 4096</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改/etc/security/limit.d/20-nproc.conf</span></span><br><span class="line">vim /etc/security/limit.d/20-nproc.conf</span><br><span class="line">添加：</span><br><span class="line">*          soft    nproc     4096</span><br><span class="line">*          hard    nproc     4096</span><br><span class="line">root       soft    nproc     unlimited</span><br><span class="line">elasticsearch soft nofile    65536</span><br><span class="line">elasticsearch hard nofile    65536</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改： /usr/<span class="built_in">local</span>/elasticSearch/config/jvm.options</span></span><br><span class="line">vim /usr/local/elasticSearch/config/jvm.options</span><br><span class="line">修改为：</span><br><span class="line">-Xms1024m</span><br><span class="line">-Xmx1024m</span><br><span class="line"></span><br><span class="line">将GC垃圾回收器改为G1</span><br><span class="line">-XX:+UseG1GC</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改：/usr/<span class="built_in">local</span>/elasticSearch/config/elasticsearch.yml</span></span><br><span class="line">（单节点配置）</span><br><span class="line"></span><br><span class="line">修改：</span><br><span class="line">cluster.name: master</span><br><span class="line">node.name: node-1</span><br><span class="line">path.data: /usr/local/elasticsearch/data</span><br><span class="line">path.logs: /usr/local/elasticsearch/log</span><br><span class="line">network.host: 0.0.0.0</span><br><span class="line">http.port: 9200</span><br><span class="line">cluster.initial_master_nodes: ["node-1"]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 切换成新用户，启动es</span></span><br><span class="line">su es</span><br><span class="line">cd /usr/local/elasticsearch/bin/</span><br><span class="line"> ./elasticsearch -d # 守护进程启动</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> 注意： 在安装之前一定要安装jdk9以上，只是根据我安装的es版本决定的，如果配置了环境变量是jdk9以下的，那么就要修改es的启动脚本了，这里就不叙述jdk的安装过程了。</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="meta"> #</span><span class="bash"> kibana 安装</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="meta"> #</span><span class="bash"> 解压，并修改文件夹名称</span></span><br><span class="line">tar -zxvf /opt/software/[kibana压缩包名称] -C /usr/local/[kibana压缩包名称] # 解压</span><br><span class="line">mv /usr/local/[kibana压缩包名称] /usr/local/kibana # 将文件夹替换为其他名字</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改kibanna的文件权限以及所属用户</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 在root下为 为kibana赋权</span></span><br><span class="line">chown -R es:es /usr/local/kibana/</span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改kibana所在文件夹的权限</span></span><br><span class="line">chmod 770 es:es /usr/local/kibana</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改配置/usr/<span class="built_in">local</span>/kibana/config/kibana.yml</span></span><br><span class="line">vim /usr/local/kibana/config/kibana.yml</span><br><span class="line"></span><br><span class="line">添加：</span><br><span class="line">i18n.locale: "zh-CN"</span><br><span class="line">elasticsearch.url: "http://localhost:9200"</span><br><span class="line">server.host: "【本机ip】"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 切换用户以及启动kibanna</span></span><br><span class="line">su es</span><br><span class="line">cd /usr/local/kibana/bin</span><br><span class="line">./kibana</span><br></pre></td></tr></table></figure>
+
+
+
+<p>验证es是否安装成功地址： http://【ip】9200/</p>
+<p>kibanna图形化界面地址：http://【ip】:5601/</p>
+<p><strong>文档终于写完了，我的天！！！</strong></p>
+<p><strong>后面继续更新集群部署</strong></p>
 ]]></content>
       <tags>
-        <tag>HTTP</tag>
+        <tag>大数据</tag>
       </tags>
   </entry>
   <entry>
@@ -68,11 +61,30 @@
       </tags>
   </entry>
   <entry>
-    <title>java基础之接口</title>
-    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
-    <content><![CDATA[]]></content>
+    <title>HTTP权限指南--HTTP报文</title>
+    <url>/2020/06/07/HTTP%E6%9D%83%E9%99%90%E6%8C%87%E5%8D%97-HTTP%E6%8A%A5%E6%96%87/</url>
+    <content><![CDATA[<p><strong>HTTPS</strong></p>
+<p>HTTPS是常见的HTTP安全版本，HTTPS将HTTP协议与一组强大的对称、非对称和基于证书的加密技术结合在一起。特点：安全、灵活。</p>
+<p>HTTPS就是在安全层的基础上发送HTTP。</p>
+<p>HTTPS将发送给安全层对其进行加密</p>
+<p>HTTP安全层通过SSL以及现代替协议TLS来实现的。</p>
+<p>HTTP建立安全连接：</p>
+<p>客户端打开一条web服务器</p>
+<p><strong>HTTP常问面试题</strong></p>
+<p>1、Http与Https的区别</p>
+<p>默认端口不同，http默认端口80而HTTPS默认端口443，</p>
+<p>2、什么是Http协议无状态协议?怎么解决Http协议无状态协议?</p>
+<p>3、URI和URL的区别？</p>
+<p>4、常用的HTTP方法有哪些？</p>
+<p>6、HTTP请求报文与响应报文格式HTTP请求报文与响应报文格式？</p>
+<p>7、HTTPS工作原理</p>
+<p>8、一次完整的HTTP请求所经历的7个步骤</p>
+<p>9、常见的HTTP相应状态码？</p>
+<p>10、HTTP1.1版本新特性?</p>
+<p>11、HTTP优化方案？</p>
+]]></content>
       <tags>
-        <tag>java基础</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
@@ -84,113 +96,11 @@
       </tags>
   </entry>
   <entry>
-    <title>java并发学习</title>
-    <url>/2020/06/12/java%E5%B9%B6%E5%8F%91%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="java多线程"><a href="#java多线程" class="headerlink" title="java多线程"></a>java多线程</h1><p><strong>进程</strong></p>
-<p>是操作系统分配资源的最小单位，系统在运行时，会为每个进程分配不同的内部区域</p>
-<p><strong>线程</strong></p>
-<p>是操作系统调度资源的最小单位</p>
-<p><strong>并行</strong></p>
-<p>多个cpu执行多个任务</p>
-<p><strong>并发</strong></p>
-<p>一个cpu（时间片算法）同时执行多个任务。</p>
-<p><strong>多线程的优势</strong>：<br>1、提高应用程序的响应速度。</p>
-<p>2、提高cpu的利用率</p>
-<p>3、改善程序结构。</p>
-<p><strong>创建线程的方式</strong></p>
-<p>java5之前</p>
-<p>1、继承thread</p>
-<p>2、实现runnable接口</p>
-<p>java5后</p>
-<p>1、实现callable接口</p>
-<p>2、创建线程池方式（ExecutorService和Executors)</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> thread;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020/6/12 22:48</span></span><br><span class="line"><span class="comment"> * 1、继承Thread类</span></span><br><span class="line"><span class="comment"> * 2、实现Runnable接口，实现run方法</span></span><br><span class="line"><span class="comment"> * 3、实现callable接口</span></span><br><span class="line"><span class="comment"> * 4、使用线程池的方式创建线程</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 方式1： 继承Thread类，实现run方法</span></span><br><span class="line"><span class="comment">//        ThreadMethod01 threadMethod01 = new ThreadMethod01();</span></span><br><span class="line"><span class="comment">//        threadMethod01.start();</span></span><br><span class="line">        <span class="comment">// 方式2： 实现Runnable接口，实现run方法</span></span><br><span class="line"><span class="comment">//        ThreadMethod02  threadMethod02 = new ThreadMethod02();</span></span><br><span class="line"><span class="comment">//        threadMethod02.run();</span></span><br><span class="line">        <span class="comment">// 方式3：实现callable接口</span></span><br><span class="line"><span class="comment">//        FutureTask&lt;Integer&gt; futureTask = new FutureTask&lt;Integer&gt;(new ThreadMethod03());</span></span><br><span class="line"><span class="comment">//        new Thread(futureTask).start();</span></span><br><span class="line"><span class="comment">//        try &#123;</span></span><br><span class="line"><span class="comment">//            Integer value = futureTask.get();</span></span><br><span class="line"><span class="comment">//            System.out.println(value);</span></span><br><span class="line"><span class="comment">//        &#125; catch (Exception e) &#123;</span></span><br><span class="line"><span class="comment">//            e.printStackTrace();</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line">        <span class="comment">// 方式4： 使用线程池的方式创建线程</span></span><br><span class="line">        ExecutorService threadPool = Executors.newFixedThreadPool(<span class="number">10</span>);</span><br><span class="line">        threadPool.execute(<span class="keyword">new</span> Thread04());</span><br><span class="line">        threadPool.execute(<span class="keyword">new</span> Thread04());</span><br><span class="line">        threadPool.execute(<span class="keyword">new</span> Thread04());</span><br><span class="line">        threadPool.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Thread04</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span> ; i++) &#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName() + <span class="string">":"</span> + i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ThreadMethod03</span> <span class="keyword">implements</span> <span class="title">Callable</span>&lt;<span class="title">Integer</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">200</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ThreadMethod02</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span> ; i++) &#123;</span><br><span class="line">            Thread.currentThread().setName(<span class="string">"thread"</span> + i);</span><br><span class="line">            System.out.println(Thread.currentThread().getId() + <span class="string">"---"</span> +Thread.currentThread().getName());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ThreadMethod01</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span> ; i++) &#123;</span><br><span class="line">            currentThread().setName(<span class="string">"thread"</span> + i);</span><br><span class="line">            System.out.println(currentThread().getName());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>线程池</strong></p>
-<p>java的线程池是通过Executor框架实现的，该框架使用到了Executor.Executors,ExecutorService,ThreadPoolExecutor</p>
-<p><img src="/2020/06/12/java%E5%B9%B6%E5%8F%91%E5%AD%A6%E4%B9%A0/sp03.png" alt></p>
-<p>好处：<br>1、降低资源的消耗，避免了重复创建的线程，降低线程创建和销毁资源的消耗</p>
-<p>2、提高响应速度，当任务到达时，无需等待线程创建的时间</p>
-<p>3、提高线程的可管理性。</p>
-<p><strong>线程池的创建</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p>​     java中可以通过修改setPriority(int)来修改线程优先级，但是这并不起作用，因为操作系统可以不用理会java线程对于优先级的限制。</p>
-<p><strong>线程的生命周期</strong></p>
-<p>java线程在运行的生命周期有6中运行状态。</p>
-<table>
-<thead>
-<tr>
-<th>状态名称</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>new</td>
-<td>初始状态，线程被构建但是还没有调用start</td>
-</tr>
-<tr>
-<td>runnable</td>
-<td>运行状态，java线程将操作系统中的就绪状态和运行状态统称为运行中</td>
-</tr>
-<tr>
-<td>blocked</td>
-<td>阻塞状态，表示线程阻塞于锁</td>
-</tr>
-<tr>
-<td>waiting</td>
-<td>等待状态，表示线程进入等待状态，当前线程需要等待其他线程做一些特定的动作（中断或者通知）</td>
-</tr>
-<tr>
-<td>time_waiting</td>
-<td>超时等待状态，该状态不同于waiting，它是可以指定的时间内自行返回的</td>
-</tr>
-<tr>
-<td>terminated</td>
-<td>终止状态，表示当前线程已经执行完毕</td>
-</tr>
-</tbody></table>
-<p><strong>java线程状态变迁</strong></p>
-<p><img src="/2020/06/12/java%E5%B9%B6%E5%8F%91%E5%AD%A6%E4%B9%A0/sp01.png" alt></p>
-<p><img src="/2020/06/12/java%E5%B9%B6%E5%8F%91%E5%AD%A6%E4%B9%A0/sp02.png" alt></p>
-<p>并发编程的挑战：上下文的切换、死锁问题、以及软件和硬件资源的不足</p>
-<p><strong>上下文切换</strong>：我们平常说的单核cpu也可以实现多线程，cpu通过给每个线程分配时间片来实现这个机制。时间片是cpu分配给每个线程，所以时间非常的短，所以所以每个线程都在不停的切换，让人们感到像是多个线程同时执行一样。所以说上下文的切换也在消耗资源，也是并发编程的挑战之一。</p>
-<p>如何避免上下文的切换：</p>
-<p>方法：有无锁的并发编程、CAS算法、使用最少的线程和协程。</p>
-<p>有无锁的并发编程：多线程竞争锁时，就会引起上下文切换，所以多线程处理数据时，可以使用一些方法避免使用锁，如将数据的ID按照hash算法取模分段，不同的线程处理不同段的数据。</p>
-<p>CAS算法：使用CAS算法来更新数据，而不需要加锁。</p>
-<p>使用少的线程：根据不同的情况尽可能少的使用线程。</p>
-<p>协程：在单线程里实现多任务调度，并在单线程里维持多个任务间内切换。</p>
-<p><strong>死锁</strong></p>
-<p>死锁：两个线程都在互相等待对方的资源，导致程序崩溃。</p>
-<p>解决死锁方法：<br>1、避免一个线程同时获得多个锁</p>
-<p>2、避免一个线程在锁同时占用多个资源，尽量保证每个锁只占用一个资源。</p>
-<p>3、尝试使用定时锁，使用lock.tryLock(timetout)来替代适用内部锁机制。</p>
-<p>4、对于数据库锁，加锁和解锁必须在一个数据库连接里，否则会出现解锁失败的情况。</p>
-<p>​    </p>
-<p><strong>资源限制</strong></p>
-<h2 id="java并发机制的底层原理"><a href="#java并发机制的底层原理" class="headerlink" title="java并发机制的底层原理"></a>java并发机制的底层原理</h2><p>​      java在编译后会变成字节码，字节码被类加载器加载到JVM里，JVM执行字节码，最终需要转换为汇编指令在cpu执行，java中所使用的并发机制依赖于JVM的实现和cpu的指令。</p>
-<h3 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h3><p>volidate是轻量级的synchronized，它的特点就是可见性、禁止指令重排、不具有原子性。</p>
-<p>不可见性：当两个线程，同时操作一组数据，两组数据都从主内存中拷贝副本到线程私有的工作线程，当一个线程将其修改，另一个线程并不知道有个线程将数据修改，导致数据的安全性没有了保证。</p>
-<p>指令重排：java在编译多线程程序时，会将java程序编译成字节码去加载到JVM中，但是每个字节码并不一定按照程序的顺序执行，而是按照JVM加载顺序执行，这就时指令重排，而volatile关键字就会保证指令不重排，使得数据安全性得到了保证。</p>
-<p>原子性：一个操作或者多个操作要么全部执行、要么全部失败。</p>
-<p><strong>synchronized</strong></p>
-<p>​     很多人称它为重度锁，在java6后就进行了一定优化，引入了偏向锁和轻量级锁以及对锁的存储结构升级，使得synchronized不再那么重了。</p>
-<p>synchronized实现同步的基础，java中每个对象都可以作为锁。</p>
-<p>具体表现：</p>
-<p>1、对于普通方法，锁是当前实例对象。</p>
-<p>2、对于静态方法，锁是当前Class对象。</p>
-<p>3、对于同步方法块，锁是synchronized括号里的对象。</p>
-<p>当一个线程试图访问同步代码块时必须先得到锁，正常退出或者抛出异常时，必须释放锁。</p>
-<p>synchronized实现原理：</p>
-<p>​     对于synchronized在同步代码块中，将monitor命令解析的字节码是monitorenter和monitorexit指令放在要同步程序的前后，任何对象都有一个monitor与之关联，当且一个monitor被持有后，它将处于锁定状态。线程执行到monitorenter指令时，将会尝试获取对象所对应的monitor的所有权，即尝试获取对象的锁。</p>
-]]></content>
+    <title>java基础之接口</title>
+    <url>/2020/06/03/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%8E%A5%E5%8F%A3/</url>
+    <content><![CDATA[]]></content>
       <tags>
-        <tag>多线程</tag>
+        <tag>java基础</tag>
       </tags>
   </entry>
   <entry>
@@ -460,50 +370,113 @@
       </tags>
   </entry>
   <entry>
-    <title>设计模式之模板设计模式</title>
-    <url>/2021/06/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<h1 id="模板方法模式"><a href="#模板方法模式" class="headerlink" title="模板方法模式"></a>模板方法模式</h1><p>1、在一个抽象类公开定义了执行它的方法的模板。它的子类可以按照需要重写方法实现，</p>
-<p>但调用将以抽象类中定义的方式进行。</p>
-<p>2、简单说，模板方法模式定义一个操作中的算法的骨架，而将一些步骤延迟到子类中，使</p>
-<p>得子类可以不改变一个算法的结构，就可以重写定义该算法的某些特定的步骤。</p>
-<p>3、这种类型的设计模式属于<strong>行为型模式</strong>。</p>
-<img src="/2021/06/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Snipaste_2021-06-20_22-28-26.png" style="zoom: 67%;">
+    <title>java并发学习</title>
+    <url>/2020/06/12/java%E5%B9%B6%E5%8F%91%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="java多线程"><a href="#java多线程" class="headerlink" title="java多线程"></a>java多线程</h1><p><strong>进程</strong></p>
+<p>是操作系统分配资源的最小单位，系统在运行时，会为每个进程分配不同的内部区域</p>
+<p><strong>线程</strong></p>
+<p>是操作系统调度资源的最小单位</p>
+<p><strong>并行</strong></p>
+<p>多个cpu执行多个任务</p>
+<p><strong>并发</strong></p>
+<p>一个cpu（时间片算法）同时执行多个任务。</p>
+<p><strong>多线程的优势</strong>：<br>1、提高应用程序的响应速度。</p>
+<p>2、提高cpu的利用率</p>
+<p>3、改善程序结构。</p>
+<p><strong>创建线程的方式</strong></p>
+<p>java5之前</p>
+<p>1、继承thread</p>
+<p>2、实现runnable接口</p>
+<p>java5后</p>
+<p>1、实现callable接口</p>
+<p>2、创建线程池方式（ExecutorService和Executors)</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> thread;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020/6/12 22:48</span></span><br><span class="line"><span class="comment"> * 1、继承Thread类</span></span><br><span class="line"><span class="comment"> * 2、实现Runnable接口，实现run方法</span></span><br><span class="line"><span class="comment"> * 3、实现callable接口</span></span><br><span class="line"><span class="comment"> * 4、使用线程池的方式创建线程</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 方式1： 继承Thread类，实现run方法</span></span><br><span class="line"><span class="comment">//        ThreadMethod01 threadMethod01 = new ThreadMethod01();</span></span><br><span class="line"><span class="comment">//        threadMethod01.start();</span></span><br><span class="line">        <span class="comment">// 方式2： 实现Runnable接口，实现run方法</span></span><br><span class="line"><span class="comment">//        ThreadMethod02  threadMethod02 = new ThreadMethod02();</span></span><br><span class="line"><span class="comment">//        threadMethod02.run();</span></span><br><span class="line">        <span class="comment">// 方式3：实现callable接口</span></span><br><span class="line"><span class="comment">//        FutureTask&lt;Integer&gt; futureTask = new FutureTask&lt;Integer&gt;(new ThreadMethod03());</span></span><br><span class="line"><span class="comment">//        new Thread(futureTask).start();</span></span><br><span class="line"><span class="comment">//        try &#123;</span></span><br><span class="line"><span class="comment">//            Integer value = futureTask.get();</span></span><br><span class="line"><span class="comment">//            System.out.println(value);</span></span><br><span class="line"><span class="comment">//        &#125; catch (Exception e) &#123;</span></span><br><span class="line"><span class="comment">//            e.printStackTrace();</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line">        <span class="comment">// 方式4： 使用线程池的方式创建线程</span></span><br><span class="line">        ExecutorService threadPool = Executors.newFixedThreadPool(<span class="number">10</span>);</span><br><span class="line">        threadPool.execute(<span class="keyword">new</span> Thread04());</span><br><span class="line">        threadPool.execute(<span class="keyword">new</span> Thread04());</span><br><span class="line">        threadPool.execute(<span class="keyword">new</span> Thread04());</span><br><span class="line">        threadPool.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Thread04</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span> ; i++) &#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName() + <span class="string">":"</span> + i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ThreadMethod03</span> <span class="keyword">implements</span> <span class="title">Callable</span>&lt;<span class="title">Integer</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">200</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ThreadMethod02</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span> ; i++) &#123;</span><br><span class="line">            Thread.currentThread().setName(<span class="string">"thread"</span> + i);</span><br><span class="line">            System.out.println(Thread.currentThread().getId() + <span class="string">"---"</span> +Thread.currentThread().getName());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ThreadMethod01</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span> ; i++) &#123;</span><br><span class="line">            currentThread().setName(<span class="string">"thread"</span> + i);</span><br><span class="line">            System.out.println(currentThread().getName());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<p><strong>1、SoyaMilk抽象类，类中实现了模板方法，定义类算法的骨架具体子类需要去实现。</strong></p>
-<p><strong>2、（PeanutSoyaMilk、RedBeanSoyaMilk子类）继承抽象类，以完成算法中特定子类的步骤。</strong></p>
-<p><strong>代码实现：</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * SoyaMilk抽象类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:12</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 定义算法的具体实现顺序</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">final</span> <span class="keyword">void</span> <span class="title">make</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        select();</span><br><span class="line">        add();</span><br><span class="line">        soak();</span><br><span class="line">        beat();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">select</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第一步，选择好的新鲜的黄豆"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 添加不同口味的豆浆配料</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">soak</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第三步，黄豆和配料开始浸泡"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">beat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第四步，黄豆和配料放到豆浆机去打碎"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 花生豆浆子类</span></span><br><span class="line"><span class="comment"> * 重写抽象类总抽象方法</span></span><br><span class="line"><span class="comment"> * 添加花生配料</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:22</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PeanutSoyaMilk</span> <span class="keyword">extends</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第二步，放入配料花生"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 红豆豆浆子类</span></span><br><span class="line"><span class="comment"> * 重写抽象类总抽象方法</span></span><br><span class="line"><span class="comment"> * 添加红豆配料</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:21</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedBeanSoyaMilk</span> <span class="keyword">extends</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第二步，放入配料红豆"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 客户端去调用测试方法</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"++++++++ 开始制作红豆豆浆 ++++++++"</span>);</span><br><span class="line">        SoyaMilk redBeanSoyaMilk = <span class="keyword">new</span> RedBeanSoyaMilk();</span><br><span class="line">        redBeanSoyaMilk.make();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"++++++++ 开始制作花生豆浆 ++++++++"</span>);</span><br><span class="line">        SoyaMilk peanutSoyaMilk = <span class="keyword">new</span> PeanutSoyaMilk();</span><br><span class="line">        peanutSoyaMilk.make();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"++++++++ 开始制作纯豆浆 ++++++++"</span>);</span><br><span class="line">        SoyaMilk pureSoyaMilk = <span class="keyword">new</span> PureSoyaMilk();</span><br><span class="line">        pureSoyaMilk.make();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果如下:</span></span><br><span class="line">++++++++ 开始制作红豆豆浆 ++++++++</span><br><span class="line">第一步，选择好的新鲜的黄豆</span><br><span class="line">第二步，放入配料红豆</span><br><span class="line">第三步，黄豆和配料开始浸泡</span><br><span class="line">第四步，黄豆和配料放到豆浆机去打碎</span><br><span class="line">++++++++ 开始制作花生豆浆 ++++++++</span><br><span class="line">第一步，选择好的新鲜的黄豆</span><br><span class="line">第二步，放入配料花生</span><br><span class="line">第三步，黄豆和配料开始浸泡</span><br><span class="line">第四步，黄豆和配料放到豆浆机去打碎</span><br></pre></td></tr></table></figure>
+<p><strong>线程池</strong></p>
+<p>java的线程池是通过Executor框架实现的，该框架使用到了Executor.Executors,ExecutorService,ThreadPoolExecutor</p>
+<p><img src="/2020/06/12/java%E5%B9%B6%E5%8F%91%E5%AD%A6%E4%B9%A0/sp03.png" alt></p>
+<p>好处：<br>1、降低资源的消耗，避免了重复创建的线程，降低线程创建和销毁资源的消耗</p>
+<p>2、提高响应速度，当任务到达时，无需等待线程创建的时间</p>
+<p>3、提高线程的可管理性。</p>
+<p><strong>线程池的创建</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
-<p>​     这样就实现了简单的模板方法模式，但是我们仔细去思考一下，是否存在缺陷呢？就比如说，如果我们要制作一个纯豆浆的话，那么这种方式就存在缺陷了，需要修改原有的代码了，所以我们就需要想一种方法，在不需要修改了原有的子类的方法的前提下，实现纯豆浆也可以适用于这种模式。</p>
-<p>这就引出<strong>模板方法模式的钩子方法</strong>，就是为了解决现在存在的问题。</p>
-<p><strong>什么是模板方法模式的钩子方法呢？</strong></p>
-<p>1、在模板方法的父类中，我们可以定义一个方法，它默认不做任何事，子类可以视情况要不要覆盖它，该方法称为钩子方法。</p>
-<img src="/2021/06/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Snipaste_2021-06-20_23-23-32.png" style="zoom: 67%;">
-
+<p>​     java中可以通过修改setPriority(int)来修改线程优先级，但是这并不起作用，因为操作系统可以不用理会java线程对于优先级的限制。</p>
+<p><strong>线程的生命周期</strong></p>
+<p>java线程在运行的生命周期有6中运行状态。</p>
+<table>
+<thead>
+<tr>
+<th>状态名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>new</td>
+<td>初始状态，线程被构建但是还没有调用start</td>
+</tr>
+<tr>
+<td>runnable</td>
+<td>运行状态，java线程将操作系统中的就绪状态和运行状态统称为运行中</td>
+</tr>
+<tr>
+<td>blocked</td>
+<td>阻塞状态，表示线程阻塞于锁</td>
+</tr>
+<tr>
+<td>waiting</td>
+<td>等待状态，表示线程进入等待状态，当前线程需要等待其他线程做一些特定的动作（中断或者通知）</td>
+</tr>
+<tr>
+<td>time_waiting</td>
+<td>超时等待状态，该状态不同于waiting，它是可以指定的时间内自行返回的</td>
+</tr>
+<tr>
+<td>terminated</td>
+<td>终止状态，表示当前线程已经执行完毕</td>
+</tr>
+</tbody></table>
+<p><strong>java线程状态变迁</strong></p>
+<p><img src="/2020/06/12/java%E5%B9%B6%E5%8F%91%E5%AD%A6%E4%B9%A0/sp01.png" alt></p>
+<p><img src="/2020/06/12/java%E5%B9%B6%E5%8F%91%E5%AD%A6%E4%B9%A0/sp02.png" alt></p>
+<p>并发编程的挑战：上下文的切换、死锁问题、以及软件和硬件资源的不足</p>
+<p><strong>上下文切换</strong>：我们平常说的单核cpu也可以实现多线程，cpu通过给每个线程分配时间片来实现这个机制。时间片是cpu分配给每个线程，所以时间非常的短，所以所以每个线程都在不停的切换，让人们感到像是多个线程同时执行一样。所以说上下文的切换也在消耗资源，也是并发编程的挑战之一。</p>
+<p>如何避免上下文的切换：</p>
+<p>方法：有无锁的并发编程、CAS算法、使用最少的线程和协程。</p>
+<p>有无锁的并发编程：多线程竞争锁时，就会引起上下文切换，所以多线程处理数据时，可以使用一些方法避免使用锁，如将数据的ID按照hash算法取模分段，不同的线程处理不同段的数据。</p>
+<p>CAS算法：使用CAS算法来更新数据，而不需要加锁。</p>
+<p>使用少的线程：根据不同的情况尽可能少的使用线程。</p>
+<p>协程：在单线程里实现多任务调度，并在单线程里维持多个任务间内切换。</p>
+<p><strong>死锁</strong></p>
+<p>死锁：两个线程都在互相等待对方的资源，导致程序崩溃。</p>
+<p>解决死锁方法：<br>1、避免一个线程同时获得多个锁</p>
+<p>2、避免一个线程在锁同时占用多个资源，尽量保证每个锁只占用一个资源。</p>
+<p>3、尝试使用定时锁，使用lock.tryLock(timetout)来替代适用内部锁机制。</p>
+<p>4、对于数据库锁，加锁和解锁必须在一个数据库连接里，否则会出现解锁失败的情况。</p>
 <p>​    </p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * SoyaMilk抽象类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:12</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 定义算法的具体实现顺序</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">final</span> <span class="keyword">void</span> <span class="title">make</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        select();</span><br><span class="line">        <span class="keyword">if</span> (isAdd()) &#123;</span><br><span class="line">            add();</span><br><span class="line">        &#125;</span><br><span class="line">        soak();</span><br><span class="line">        beat();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">select</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第一步，选择好的新鲜的黄豆"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 添加不同口味的豆浆配料</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">soak</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第三步，黄豆和配料开始浸泡"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">beat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第四步，黄豆和配料放到豆浆机去打碎"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 模板方法中的钩子函数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 是否添加该方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">isAdd</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 花生豆浆子类</span></span><br><span class="line"><span class="comment"> * 重写抽象类总抽象方法</span></span><br><span class="line"><span class="comment"> * 添加花生配料</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:22</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PeanutSoyaMilk</span> <span class="keyword">extends</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第二步，放入配料花生"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 红豆豆浆子类</span></span><br><span class="line"><span class="comment"> * 重写抽象类总抽象方法</span></span><br><span class="line"><span class="comment"> * 添加红豆配料</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:21</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedBeanSoyaMilk</span> <span class="keyword">extends</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第二步，放入配料红豆"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 制作纯豆浆</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:33</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PureSoyaMilk</span> <span class="keyword">extends</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 空实现</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">isAdd</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 客户端去调用测试方法</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"++++++++ 开始制作红豆豆浆 ++++++++"</span>);</span><br><span class="line">        SoyaMilk redBeanSoyaMilk = <span class="keyword">new</span> RedBeanSoyaMilk();</span><br><span class="line">        redBeanSoyaMilk.make();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"++++++++ 开始制作花生豆浆 ++++++++"</span>);</span><br><span class="line">        SoyaMilk peanutSoyaMilk = <span class="keyword">new</span> PeanutSoyaMilk();</span><br><span class="line">        peanutSoyaMilk.make();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"++++++++ 开始制作纯豆浆 ++++++++"</span>);</span><br><span class="line">        SoyaMilk pureSoyaMilk = <span class="keyword">new</span> PureSoyaMilk();</span><br><span class="line">        pureSoyaMilk.make();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果如下:</span></span><br><span class="line">++++++++ 开始制作红豆豆浆 ++++++++</span><br><span class="line">第一步，选择好的新鲜的黄豆</span><br><span class="line">第二步，放入配料红豆</span><br><span class="line">第三步，黄豆和配料开始浸泡</span><br><span class="line">第四步，黄豆和配料放到豆浆机去打碎</span><br><span class="line">++++++++ 开始制作花生豆浆 ++++++++</span><br><span class="line">第一步，选择好的新鲜的黄豆</span><br><span class="line">第二步，放入配料花生</span><br><span class="line">第三步，黄豆和配料开始浸泡</span><br><span class="line">第四步，黄豆和配料放到豆浆机去打碎</span><br><span class="line">++++++++ 开始制作纯豆浆 ++++++++</span><br><span class="line">第一步，选择好的新鲜的黄豆</span><br><span class="line">第三步，黄豆和配料开始浸泡</span><br><span class="line">第四步，黄豆和配料放到豆浆机去打碎</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>模板方法模式具体应用</strong></p>
-<p>在spring的IOC源码中</p>
-<img src="/2021/06/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Snipaste_2021-06-20_23-42-03.png" style="zoom: 80%;">
-
-
-
-
-
-<p><strong>模板方法使用细节</strong></p>
-<img src="/2021/06/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Snipaste_2021-06-20_23-46-56.png" style="zoom:80%;">]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
+<p><strong>资源限制</strong></p>
+<h2 id="java并发机制的底层原理"><a href="#java并发机制的底层原理" class="headerlink" title="java并发机制的底层原理"></a>java并发机制的底层原理</h2><p>​      java在编译后会变成字节码，字节码被类加载器加载到JVM里，JVM执行字节码，最终需要转换为汇编指令在cpu执行，java中所使用的并发机制依赖于JVM的实现和cpu的指令。</p>
+<h3 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h3><p>volidate是轻量级的synchronized，它的特点就是可见性、禁止指令重排、不具有原子性。</p>
+<p>不可见性：当两个线程，同时操作一组数据，两组数据都从主内存中拷贝副本到线程私有的工作线程，当一个线程将其修改，另一个线程并不知道有个线程将数据修改，导致数据的安全性没有了保证。</p>
+<p>指令重排：java在编译多线程程序时，会将java程序编译成字节码去加载到JVM中，但是每个字节码并不一定按照程序的顺序执行，而是按照JVM加载顺序执行，这就时指令重排，而volatile关键字就会保证指令不重排，使得数据安全性得到了保证。</p>
+<p>原子性：一个操作或者多个操作要么全部执行、要么全部失败。</p>
+<p><strong>synchronized</strong></p>
+<p>​     很多人称它为重度锁，在java6后就进行了一定优化，引入了偏向锁和轻量级锁以及对锁的存储结构升级，使得synchronized不再那么重了。</p>
+<p>synchronized实现同步的基础，java中每个对象都可以作为锁。</p>
+<p>具体表现：</p>
+<p>1、对于普通方法，锁是当前实例对象。</p>
+<p>2、对于静态方法，锁是当前Class对象。</p>
+<p>3、对于同步方法块，锁是synchronized括号里的对象。</p>
+<p>当一个线程试图访问同步代码块时必须先得到锁，正常退出或者抛出异常时，必须释放锁。</p>
+<p>synchronized实现原理：</p>
+<p>​     对于synchronized在同步代码块中，将monitor命令解析的字节码是monitorenter和monitorexit指令放在要同步程序的前后，任何对象都有一个monitor与之关联，当且一个monitor被持有后，它将处于锁定状态。线程执行到monitorenter指令时，将会尝试获取对象所对应的monitor的所有权，即尝试获取对象的锁。</p>
+]]></content>
       <tags>
-        <tag>设计模式</tag>
+        <tag>多线程</tag>
       </tags>
   </entry>
   <entry>
@@ -1242,6 +1215,53 @@
 ]]></content>
       <tags>
         <tag>java面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计模式之模板设计模式</title>
+    <url>/2021/06/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="模板方法模式"><a href="#模板方法模式" class="headerlink" title="模板方法模式"></a>模板方法模式</h1><p>1、在一个抽象类公开定义了执行它的方法的模板。它的子类可以按照需要重写方法实现，</p>
+<p>但调用将以抽象类中定义的方式进行。</p>
+<p>2、简单说，模板方法模式定义一个操作中的算法的骨架，而将一些步骤延迟到子类中，使</p>
+<p>得子类可以不改变一个算法的结构，就可以重写定义该算法的某些特定的步骤。</p>
+<p>3、这种类型的设计模式属于<strong>行为型模式</strong>。</p>
+<img src="/2021/06/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Snipaste_2021-06-20_22-28-26.png" style="zoom: 67%;">
+
+
+
+<p><strong>1、SoyaMilk抽象类，类中实现了模板方法，定义类算法的骨架具体子类需要去实现。</strong></p>
+<p><strong>2、（PeanutSoyaMilk、RedBeanSoyaMilk子类）继承抽象类，以完成算法中特定子类的步骤。</strong></p>
+<p><strong>代码实现：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * SoyaMilk抽象类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:12</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 定义算法的具体实现顺序</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">final</span> <span class="keyword">void</span> <span class="title">make</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        select();</span><br><span class="line">        add();</span><br><span class="line">        soak();</span><br><span class="line">        beat();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">select</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第一步，选择好的新鲜的黄豆"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 添加不同口味的豆浆配料</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">soak</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第三步，黄豆和配料开始浸泡"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">beat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第四步，黄豆和配料放到豆浆机去打碎"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 花生豆浆子类</span></span><br><span class="line"><span class="comment"> * 重写抽象类总抽象方法</span></span><br><span class="line"><span class="comment"> * 添加花生配料</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:22</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PeanutSoyaMilk</span> <span class="keyword">extends</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第二步，放入配料花生"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 红豆豆浆子类</span></span><br><span class="line"><span class="comment"> * 重写抽象类总抽象方法</span></span><br><span class="line"><span class="comment"> * 添加红豆配料</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:21</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedBeanSoyaMilk</span> <span class="keyword">extends</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第二步，放入配料红豆"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 客户端去调用测试方法</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"++++++++ 开始制作红豆豆浆 ++++++++"</span>);</span><br><span class="line">        SoyaMilk redBeanSoyaMilk = <span class="keyword">new</span> RedBeanSoyaMilk();</span><br><span class="line">        redBeanSoyaMilk.make();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"++++++++ 开始制作花生豆浆 ++++++++"</span>);</span><br><span class="line">        SoyaMilk peanutSoyaMilk = <span class="keyword">new</span> PeanutSoyaMilk();</span><br><span class="line">        peanutSoyaMilk.make();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"++++++++ 开始制作纯豆浆 ++++++++"</span>);</span><br><span class="line">        SoyaMilk pureSoyaMilk = <span class="keyword">new</span> PureSoyaMilk();</span><br><span class="line">        pureSoyaMilk.make();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果如下:</span></span><br><span class="line">++++++++ 开始制作红豆豆浆 ++++++++</span><br><span class="line">第一步，选择好的新鲜的黄豆</span><br><span class="line">第二步，放入配料红豆</span><br><span class="line">第三步，黄豆和配料开始浸泡</span><br><span class="line">第四步，黄豆和配料放到豆浆机去打碎</span><br><span class="line">++++++++ 开始制作花生豆浆 ++++++++</span><br><span class="line">第一步，选择好的新鲜的黄豆</span><br><span class="line">第二步，放入配料花生</span><br><span class="line">第三步，黄豆和配料开始浸泡</span><br><span class="line">第四步，黄豆和配料放到豆浆机去打碎</span><br></pre></td></tr></table></figure>
+
+
+
+<p>​     这样就实现了简单的模板方法模式，但是我们仔细去思考一下，是否存在缺陷呢？就比如说，如果我们要制作一个纯豆浆的话，那么这种方式就存在缺陷了，需要修改原有的代码了，所以我们就需要想一种方法，在不需要修改了原有的子类的方法的前提下，实现纯豆浆也可以适用于这种模式。</p>
+<p>这就引出<strong>模板方法模式的钩子方法</strong>，就是为了解决现在存在的问题。</p>
+<p><strong>什么是模板方法模式的钩子方法呢？</strong></p>
+<p>1、在模板方法的父类中，我们可以定义一个方法，它默认不做任何事，子类可以视情况要不要覆盖它，该方法称为钩子方法。</p>
+<img src="/2021/06/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Snipaste_2021-06-20_23-23-32.png" style="zoom: 67%;">
+
+<p>​    </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * SoyaMilk抽象类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:12</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 定义算法的具体实现顺序</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">final</span> <span class="keyword">void</span> <span class="title">make</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        select();</span><br><span class="line">        <span class="keyword">if</span> (isAdd()) &#123;</span><br><span class="line">            add();</span><br><span class="line">        &#125;</span><br><span class="line">        soak();</span><br><span class="line">        beat();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">select</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第一步，选择好的新鲜的黄豆"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 添加不同口味的豆浆配料</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">soak</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第三步，黄豆和配料开始浸泡"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">beat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第四步，黄豆和配料放到豆浆机去打碎"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 模板方法中的钩子函数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 是否添加该方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">isAdd</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 花生豆浆子类</span></span><br><span class="line"><span class="comment"> * 重写抽象类总抽象方法</span></span><br><span class="line"><span class="comment"> * 添加花生配料</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:22</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PeanutSoyaMilk</span> <span class="keyword">extends</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第二步，放入配料花生"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 红豆豆浆子类</span></span><br><span class="line"><span class="comment"> * 重写抽象类总抽象方法</span></span><br><span class="line"><span class="comment"> * 添加红豆配料</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:21</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedBeanSoyaMilk</span> <span class="keyword">extends</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第二步，放入配料红豆"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 制作纯豆浆</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:33</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PureSoyaMilk</span> <span class="keyword">extends</span> <span class="title">SoyaMilk</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 空实现</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">isAdd</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 客户端去调用测试方法</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> sunli</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2021/6/20 22:11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"++++++++ 开始制作红豆豆浆 ++++++++"</span>);</span><br><span class="line">        SoyaMilk redBeanSoyaMilk = <span class="keyword">new</span> RedBeanSoyaMilk();</span><br><span class="line">        redBeanSoyaMilk.make();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"++++++++ 开始制作花生豆浆 ++++++++"</span>);</span><br><span class="line">        SoyaMilk peanutSoyaMilk = <span class="keyword">new</span> PeanutSoyaMilk();</span><br><span class="line">        peanutSoyaMilk.make();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"++++++++ 开始制作纯豆浆 ++++++++"</span>);</span><br><span class="line">        SoyaMilk pureSoyaMilk = <span class="keyword">new</span> PureSoyaMilk();</span><br><span class="line">        pureSoyaMilk.make();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果如下:</span></span><br><span class="line">++++++++ 开始制作红豆豆浆 ++++++++</span><br><span class="line">第一步，选择好的新鲜的黄豆</span><br><span class="line">第二步，放入配料红豆</span><br><span class="line">第三步，黄豆和配料开始浸泡</span><br><span class="line">第四步，黄豆和配料放到豆浆机去打碎</span><br><span class="line">++++++++ 开始制作花生豆浆 ++++++++</span><br><span class="line">第一步，选择好的新鲜的黄豆</span><br><span class="line">第二步，放入配料花生</span><br><span class="line">第三步，黄豆和配料开始浸泡</span><br><span class="line">第四步，黄豆和配料放到豆浆机去打碎</span><br><span class="line">++++++++ 开始制作纯豆浆 ++++++++</span><br><span class="line">第一步，选择好的新鲜的黄豆</span><br><span class="line">第三步，黄豆和配料开始浸泡</span><br><span class="line">第四步，黄豆和配料放到豆浆机去打碎</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>模板方法模式具体应用</strong></p>
+<p>在spring的IOC源码中</p>
+<img src="/2021/06/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Snipaste_2021-06-20_23-42-03.png" style="zoom: 80%;">
+
+
+
+
+
+<p><strong>模板方法使用细节</strong></p>
+<img src="/2021/06/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Snipaste_2021-06-20_23-46-56.png" style="zoom:80%;">]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
       </tags>
   </entry>
 </search>
